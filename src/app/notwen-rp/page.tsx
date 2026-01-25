@@ -40,6 +40,17 @@ export default function NotwenRpPage() {
                     Descubre lo que hace de notwen rp una experiencia de roleplay única.
                 </p>
             </div>
+
+            <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-border/20 mb-12">
+                <Image 
+                    src="https://media.discordapp.net/attachments/1110302343133663323/1462887330737164308/SPOILER_image.png?ex=697713be&is=6975c23e&hm=875925cec50db2d12691ecd0d1087dda3c31f6c94c7819279db624390850e525&=&format=webp&quality=lossless" 
+                    alt="Pause Menu Showcase" 
+                    fill 
+                    style={{ objectFit: 'contain' }}
+                    data-ai-hint="game menu"
+                />
+            </div>
+
             <div className="bg-card p-8 rounded-lg border border-border/20 text-white">
                 <h3 className="font-headline text-3xl tracking-wider mb-6">Bienvenidos a Los Santos</h3>
                 <div className="space-y-4 text-muted-foreground">
