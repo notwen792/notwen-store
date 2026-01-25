@@ -11,7 +11,7 @@ export type Product = {
 export const products: Product[] = [
   {
     id: 1,
-    name: 'ORIGEN POLICE + EMS',
+    name: 'notwen POLICE + EMS',
     category: 'Scripts',
     imageId: 'product1',
     price: 99.83,
@@ -19,7 +19,7 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    name: 'ORIGEN ALL SCRIPTS (40% OFF)',
+    name: 'notwen ALL SCRIPTS (40% OFF)',
     category: 'Packs',
     imageId: 'product2',
     price: 747.78,
@@ -28,7 +28,7 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    name: 'ORIGEN CLOTHING + CHARACTER CREATOR + PEDMENU',
+    name: 'notwen CLOTHING + CHARACTER CREATOR + PEDMENU',
     category: 'Scripts',
     imageId: 'product3',
     price: 60.50,
@@ -36,7 +36,7 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    name: 'ORIGEN HOUSING',
+    name: 'notwen HOUSING',
     category: 'Scripts',
     imageId: 'product4',
     price: 80.00,
