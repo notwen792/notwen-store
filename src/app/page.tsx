@@ -66,26 +66,26 @@ export default function Home() {
                       Administrators
                     </h3>
                     <ul className="space-y-4">
-                        <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg">
-                            <Avatar>
+                        <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
+                            <Avatar className="transition-transform duration-300 group-hover:rotate-12">
                                 <AvatarImage src="https://picsum.photos/seed/stewiexox/48/48" alt="stewiexox" />
                                 <AvatarFallback>S</AvatarFallback>
                             </Avatar>
-                            <span className="font-semibold text-white">stewiexox</span>
+                            <span className="font-semibold text-white transition-colors group-hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] group-hover:bg-clip-text group-hover:text-transparent">stewiexox</span>
                         </li>
-                        <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg">
-                            <Avatar>
+                        <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
+                            <Avatar className="transition-transform duration-300 group-hover:rotate-12">
                                 <AvatarImage src="https://picsum.photos/seed/1015040/48/48" alt="1015040" />
                                 <AvatarFallback>1</AvatarFallback>
                             </Avatar>
-                            <span className="font-semibold text-white">1015040</span>
+                            <span className="font-semibold text-white transition-colors group-hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] group-hover:bg-clip-text group-hover:text-transparent">1015040</span>
                         </li>
-                        <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg">
-                            <Avatar>
+                        <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
+                            <Avatar className="transition-transform duration-300 group-hover:rotate-12">
                                 <AvatarImage src="https://picsum.photos/seed/liitze/48/48" alt="liitze" />
                                 <AvatarFallback>L</AvatarFallback>
                             </Avatar>
-                            <span className="font-semibold text-white">liitze</span>
+                            <span className="font-semibold text-white transition-colors group-hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] group-hover:bg-clip-text group-hover:text-transparent">liitze</span>
                         </li>
                     </ul>
                 </div>
