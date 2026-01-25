@@ -24,7 +24,7 @@ export default function NotwenRpPage() {
                 Bienvenidos a nuestra comunidad notwen rp, un servidor de roleplay creado por entusiastas con la ambición de crecer.
             </p>
             <Button asChild size="lg" className="mt-8 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] hover:brightness-110 transition-all duration-300">
-                <Link href="#">
+                <Link href="https://discord.gg/Z6KvkfFVts" target="_blank" rel="noopener noreferrer">
                     Únete al servidor
                     <ArrowRight className="ml-2" />
                 </Link>
