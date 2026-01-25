@@ -4,7 +4,7 @@ import Link from 'next/link';
 export function Header() {
   return (
     <header className="p-4 pr-8 flex justify-end items-center h-20 border-b border-border">
-      <Button variant="outline" asChild className="text-sm uppercase hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] hover:text-primary-foreground hover:border-transparent transition-colors focus-visible:ring-0">
+      <Button variant="outline" asChild className="text-sm uppercase hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] hover:text-primary-foreground hover:border-transparent transition-all duration-300 hover:brightness-110 focus-visible:ring-0">
         <Link href="#" target="_blank" rel="noopener noreferrer">
           Join Discord
           <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="h-5 w-5">
