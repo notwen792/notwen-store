@@ -6,7 +6,7 @@ import { Sidebar } from '@/components/sidebar';
 import { Header } from '@/components/header';
 
 export const metadata: Metadata = {
-  title: 'Origen Store',
+  title: 'notwen Store',
   description: 'Scripts, Maps, and more for your server.',
 };
 

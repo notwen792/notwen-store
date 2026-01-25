@@ -20,7 +20,7 @@ export default function Home() {
         }
         <div className="relative z-20 flex flex-col items-center">
             <h1 className="font-headline text-6xl md:text-8xl uppercase tracking-widest">
-                Origen
+                notwen
             </h1>
             <p className="text-xl md:text-2xl text-primary font-light tracking-[0.3em] uppercase">
                 Network Store
@@ -39,7 +39,7 @@ export default function Home() {
 
       <section className="p-8 md:p-12">
         <div className="text-center mb-12">
-            <h2 className="font-headline text-4xl text-white tracking-wider">Why Origen?</h2>
+            <h2 className="font-headline text-4xl text-white tracking-wider">Why notwen?</h2>
             <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">We are committed to providing the best for our community.</p>
         </div>
 
