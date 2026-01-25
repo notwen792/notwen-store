@@ -19,7 +19,7 @@ export function ProductCard({ product }: { product: Product }) {
   const image = PlaceHolderImages.find((img) => img.id === product.imageId);
 
   return (
-    <Card className="bg-card border-none shadow-none rounded-lg overflow-hidden flex flex-col group">
+    <Card className="bg-card border-none shadow-none rounded-lg overflow-hidden flex flex-col group transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg hover:shadow-destructive/10">
       <Link href="#">
         <div className="relative h-64 w-full">
             {image && <Image src={image.imageUrl} alt={product.name} fill style={{objectFit: 'cover'}} data-ai-hint={image?.imageHint || ''} />}
