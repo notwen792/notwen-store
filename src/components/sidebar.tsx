@@ -1,6 +1,6 @@
 'use client';
 
-import { Home, Map, Package, Quote, ShoppingCart } from 'lucide-react';
+import { Home, Package, Quote, ShoppingCart } from 'lucide-react';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -18,7 +18,6 @@ export function Sidebar() {
   const navItems = [
     { href: '/', icon: Home, label: 'Home' },
     { href: '/scripts', icon: ShoppingCart, label: 'Scripts' },
-    { href: '/maps', icon: Map, label: 'Maps' },
     { href: '/packs', icon: Package, label: 'Packs' },
   ];
 
@@ -53,7 +52,6 @@ export function Sidebar() {
           ))
         ) : (
           <>
-            <div className="h-12 w-full rounded-md bg-transparent" />
             <div className="h-12 w-full rounded-md bg-transparent" />
             <div className="h-12 w-full rounded-md bg-transparent" />
             <div className="h-12 w-full rounded-md bg-transparent" />
