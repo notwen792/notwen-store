@@ -42,8 +42,8 @@ export function ProductCard({ product }: { product: Product }) {
               </div>
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-full">
-                      <ShoppingCart className="h-5 w-5" />
+                  <Button variant="ghost" size="icon" className="group text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-full">
+                      <ShoppingCart className="h-5 w-5 transition-transform duration-300 group-hover:rotate-12" />
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-md bg-card border-border text-white">
