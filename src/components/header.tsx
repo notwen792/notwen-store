@@ -1,31 +1,16 @@
-import { Gamepad2 } from 'lucide-react';
 import { Button } from './ui/button';
+import { LogIn } from 'lucide-react';
 
 export function Header() {
   return (
-    <header className="border-b border-border/50 p-4 sticky top-0 bg-background/80 backdrop-blur-sm z-10">
-      <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <Gamepad2 className="h-8 w-8 text-primary" />
-          <h1 className="font-headline text-3xl tracking-wider text-white">
-            GridGazer
-          </h1>
+    <header className="p-4 pr-8 flex justify-end items-center h-20 border-b border-border">
+      <Button variant="ghost" className="text-sm uppercase">
+        <div className="text-right mr-4">
+          <div className="font-semibold text-white text-xs">Sign In</div>
+          <div className="text-xs text-muted-foreground">Connect your account</div>
         </div>
-        <nav className="hidden md:flex items-center gap-2">
-          <Button variant="ghost" className="font-headline text-sm uppercase tracking-widest">
-            Leaderboard
-          </Button>
-          <Button variant="ghost" className="font-headline text-sm uppercase tracking-widest">
-            Streams
-          </Button>
-          <Button
-            variant="outline"
-            className="font-headline text-sm uppercase tracking-widest border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-          >
-            Login
-          </Button>
-        </nav>
-      </div>
+        <LogIn className="h-5 w-5 text-white" />
+      </Button>
     </header>
   );
 }
