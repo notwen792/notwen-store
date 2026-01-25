@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { products } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ArrowRight, CodeXml, Gamepad2, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Terminal, Gamepad2, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -16,7 +16,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent z-10" />
         {image && 
             <div className="absolute inset-0">
-                <Image src={image.imageUrl} alt="Hero background" fill style={{ objectFit: 'cover', objectPosition: 'right' }} className="opacity-20" data-ai-hint={image.imageHint} />
+                <Image src={'https://media.discordapp.net/attachments/1269644412875440128/1464997525227569317/dawndjawnd2.png?ex=697780c4&is=69762f44&hm=930eb81b8f580627cb68e24c19ec447c4dce99a2bcbadab70abfec6df2930c09&=&format=webp&quality=lossless'} alt="Hero background" fill style={{ objectFit: 'cover', objectPosition: 'right' }} className="opacity-20" data-ai-hint={'logo right'} />
             </div>
         }
         <div className="relative z-20 flex flex-col items-center">
@@ -48,7 +48,7 @@ export default function Home() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="bg-card p-8 rounded-lg border border-border/20">
-                        <CodeXml className="h-10 w-10 text-destructive mb-4" />
+                        <Terminal className="h-10 w-10 text-destructive mb-4" />
                         <h3 className="font-headline text-2xl tracking-wider mb-2">SCRIPTS UNICOS</h3>
                         <p className="text-muted-foreground text-sm">aqui veras nuestros scripts echos y rediseños por el programador stewiexox</p>
                     </div>
