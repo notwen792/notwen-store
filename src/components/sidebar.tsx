@@ -29,17 +29,17 @@ export function Sidebar() {
         {navItems.map((item) => (
            <Button
             key={item.label}
-            variant={pathname === item.href ? 'secondary' : 'ghost'}
+            variant='ghost'
             className={cn(
-              'justify-start gap-3 h-12 text-base',
+              'justify-start gap-3 h-12 text-base group',
               pathname === item.href
-                ? 'font-semibold text-primary border border-primary bg-transparent hover:bg-primary/10'
-                : 'text-muted-foreground hover:text-white'
+                ? 'font-semibold text-white bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] transition-all duration-300 hover:brightness-110'
+                : 'text-muted-foreground hover:text-white hover:bg-white/5'
             )}
             asChild
           >
             <Link href={item.href}>
-              <item.icon className="h-5 w-5" />
+              <item.icon className="h-5 w-5 transition-transform duration-300 ease-in-out group-hover:rotate-[15deg]" />
               <span>{item.label}</span>
             </Link>
           </Button>
