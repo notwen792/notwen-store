@@ -29,7 +29,7 @@ export default function Home() {
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
                 High-quality scripts and maps to enhance your Grand Theft Auto V experience.
             </p>
-            <Button asChild size="lg" className="mt-8">
+            <Button asChild size="lg" className="mt-8 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] hover:brightness-110 transition-all duration-300">
                 <Link href="/scripts">
                     Explore Scripts
                     <ArrowRight className="ml-2" />
