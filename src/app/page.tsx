@@ -49,7 +49,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="bg-card p-8 rounded-lg border border-border/20">
                         <CodeXml className="h-10 w-10 text-destructive mb-4" />
-                        <h3 className="font-headline text-2xl tracking-wider mb-2">Unique Scripts</h3>
+                        <h3 className="font-headline text-2xl tracking-wider mb-2">SCRIPTS UNICOS</h3>
                         <p className="text-muted-foreground text-sm">aqui veras nuestros scripts echos y rediseños por el programador stewiexox</p>
                     </div>
                     <div className="bg-card p-8 rounded-lg border border-border/20">
