@@ -56,7 +56,7 @@ export default function NotwenRpPage() {
                 </div>
             </div>
 
-            <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-border/20">
+            <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-border">
                 <Image 
                     src="https://media.discordapp.net/attachments/1110302343133663323/1462887330737164308/SPOILER_image.png?ex=697713be&is=6975c23e&hm=875925cec50db2d12691ecd0d1087dda3c31f6c94c7819279db624390850e525&=&format=webp&quality=lossless" 
                     alt="Pause Menu Showcase" 
