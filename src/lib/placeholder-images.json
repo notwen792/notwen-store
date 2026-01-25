@@ -23,6 +23,18 @@
       "description": "Modern house",
       "imageUrl": "https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBob3VzZXxlbnwwfHx8fDE3NjkyMTg5NzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern house"
+    },
+    {
+      "id": "unique-scripts",
+      "description": "Character holding a gun and briefcase",
+      "imageUrl": "https://images.unsplash.com/photo-1769107871686-4415f15e1932?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2hhcmFjdGVyJTIwZ2FtZXxlbnwwfHx8fDE3NjkzMDUyMzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "character game"
+    },
+    {
+      "id": "new-game-modes",
+      "description": "Two game characters",
+      "imageUrl": "https://images.unsplash.com/photo-1767169768227-79688439fb37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnYW1lJTIwY2hhcmFjdGVyc3xlbnwwfHx8fDE3NjkyNzk4MzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "game characters"
     }
   ]
 }

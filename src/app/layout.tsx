@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
+import { Sidebar } from '@/components/sidebar';
+import { Header } from '@/components/header';
 
 export const metadata: Metadata = {
   title: 'Origen Store',
@@ -23,7 +25,11 @@ export default function RootLayout({
       </head>
       <body className={cn('font-body antialiased bg-background text-foreground')}>
         <div className="flex min-h-screen">
-          {children}
+          <Sidebar />
+          <div className="flex-1 flex flex-col">
+            <Header />
+            {children}
+          </div>
         </div>
         <Toaster />
       </body>

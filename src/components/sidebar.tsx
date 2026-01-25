@@ -1,33 +1,49 @@
+'use client';
+
 import { Home, Map, Package, Quote, ShoppingCart } from 'lucide-react';
 import { Button } from './ui/button';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/utils';
 
 export function Sidebar() {
+  const pathname = usePathname();
+
+  const navItems = [
+    { href: '/', icon: Home, label: 'Home' },
+    { href: '/scripts', icon: ShoppingCart, label: 'Scripts' },
+    { href: '/maps', icon: Map, label: 'Maps' },
+    { href: '/packs', icon: Package, label: 'Packs' },
+  ];
+
   return (
     <aside className="w-72 min-h-screen bg-card flex-col p-6 border-r border-border hidden md:flex">
-      <div className="mb-12">
+      <Link href="/" className="mb-12">
         <h1 className="font-headline text-5xl text-white">ORIGEN</h1>
         <p className="font-headline text-2xl text-primary tracking-[0.2em]">
           &bull;STORE&bull;
         </p>
-      </div>
+      </Link>
 
       <nav className="flex flex-col gap-2">
-        <Button variant="ghost" className="justify-start gap-3 h-12 text-base text-muted-foreground hover:text-white">
-          <Home className="h-5 w-5" />
-          <span>Home</span>
-        </Button>
-        <Button variant="secondary" className="justify-start gap-3 h-12 text-base font-semibold text-primary border border-primary bg-transparent hover:bg-primary/10">
-          <ShoppingCart className="h-5 w-5" />
-          <span>Scripts</span>
-        </Button>
-        <Button variant="ghost" className="justify-start gap-3 h-12 text-base text-muted-foreground hover:text-white">
-          <Map className="h-5 w-5" />
-          <span>Maps</span>
-        </Button>
-        <Button variant="ghost" className="justify-start gap-3 h-12 text-base text-muted-foreground hover:text-white">
-          <Package className="h-5 w-5" />
-          <span>Packs</span>
-        </Button>
+        {navItems.map((item) => (
+           <Button
+            key={item.label}
+            variant={pathname === item.href ? 'secondary' : 'ghost'}
+            className={cn(
+              'justify-start gap-3 h-12 text-base',
+              pathname === item.href
+                ? 'font-semibold text-primary border border-primary bg-transparent hover:bg-primary/10'
+                : 'text-muted-foreground hover:text-white'
+            )}
+            asChild
+          >
+            <Link href={item.href}>
+              <item.icon className="h-5 w-5" />
+              <span>{item.label}</span>
+            </Link>
+          </Button>
+        ))}
       </nav>
 
       <div className="mt-auto flex flex-col gap-4">
