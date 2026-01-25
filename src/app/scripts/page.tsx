@@ -8,7 +8,7 @@ export default function ScriptsPage() {
     <main className="flex-grow p-8 md:p-12 bg-background">
       <div className="text-center mb-12">
         <h1 className="font-headline text-5xl uppercase tracking-wider text-white">
-          Our Scripts
+          SCRIPTS-NOTWEN
         </h1>
         <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">Explore our collection of high-quality scripts, designed to enhance your gaming experience.</p>
       </div>
