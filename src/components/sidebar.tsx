@@ -5,15 +5,9 @@ import { Button } from './ui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { useEffect, useState } from 'react';
 
 export function Sidebar() {
   const pathname = usePathname();
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   const navItems = [
     { href: '/', icon: Home, label: 'Home' },
@@ -33,30 +27,24 @@ export function Sidebar() {
       </Link>
 
       <nav className="flex flex-col gap-2">
-        {isClient ? (
-          navItems.map((item) => (
-            <Button
-              key={item.label}
-              variant="ghost"
-              className={cn(
-                'justify-start gap-3 h-12 text-base group',
-                pathname === item.href
-                  ? 'font-semibold text-white bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] transition-all duration-300 hover:brightness-110'
-                  : 'text-muted-foreground hover:text-white hover:bg-white/5'
-              )}
-              asChild
-            >
-              <Link href={item.href}>
-                <item.icon className="h-5 w-5 transition-transform duration-300 ease-in-out group-hover:rotate-[15deg]" />
-                <span>{item.label}</span>
-              </Link>
-            </Button>
-          ))
-        ) : (
-          navItems.map((item) => (
-            <div key={item.label} className="h-12 w-full rounded-md bg-transparent" />
-          ))
-        )}
+        {navItems.map((item) => (
+          <Button
+            key={item.label}
+            variant="ghost"
+            className={cn(
+              'justify-start gap-3 h-12 text-base group',
+              pathname === item.href
+                ? 'font-semibold text-white bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] transition-all duration-300 hover:brightness-110'
+                : 'text-muted-foreground hover:text-white hover:bg-white/5'
+            )}
+            asChild
+          >
+            <Link href={item.href}>
+              <item.icon className="h-5 w-5 transition-transform duration-300 ease-in-out group-hover:rotate-[15deg]" />
+              <span>{item.label}</span>
+            </Link>
+          </Button>
+        ))}
       </nav>
 
       <div className="mt-auto flex flex-col gap-4">
