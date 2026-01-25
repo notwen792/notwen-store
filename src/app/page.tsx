@@ -23,7 +23,7 @@ export default function Home() {
             <h1 className="font-headline text-6xl md:text-8xl uppercase tracking-widest">
                 notwen
             </h1>
-            <p className="text-xl md:text-2xl text-primary font-light tracking-[0.3em] uppercase">
+            <p className="text-xl md:text-2xl font-light tracking-[0.3em] uppercase bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] bg-clip-text text-transparent">
                 Network Store
             </p>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -48,12 +48,12 @@ export default function Home() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="bg-card p-8 rounded-lg border border-border/20">
-                        <CodeXml className="h-10 w-10 text-primary mb-4" />
+                        <CodeXml className="h-10 w-10 text-destructive mb-4" />
                         <h3 className="font-headline text-2xl tracking-wider mb-2">Unique Scripts</h3>
                         <p className="text-muted-foreground text-sm">aqui veras nuestros scripts echos y rediseños por el programador stewiexox</p>
                     </div>
                     <div className="bg-card p-8 rounded-lg border border-border/20">
-                        <Gamepad2 className="h-10 w-10 text-primary mb-4" />
+                        <Gamepad2 className="h-10 w-10 text-destructive mb-4" />
                         <h3 className="font-headline text-2xl tracking-wider mb-2">notwen rp</h3>
                         <p className="text-muted-foreground text-sm">bienvenidos a nuestra comunidad notwen rp un servidor de roleplay creados por unos randoms que les apetecia y estan intentando crecer</p>
                     </div>
@@ -62,7 +62,7 @@ export default function Home() {
             <div className="lg:col-span-1">
                 <div className="bg-card p-6 rounded-lg border border-border/20 h-full">
                     <h3 className="font-headline text-2xl tracking-wider mb-6 text-center flex items-center justify-center gap-2">
-                      <ShieldCheck className="h-7 w-7 text-primary" />
+                      <ShieldCheck className="h-7 w-7 text-destructive" />
                       Administrators
                     </h3>
                     <ul className="space-y-4">

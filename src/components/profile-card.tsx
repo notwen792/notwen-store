@@ -19,7 +19,7 @@ export function ProductCard({ product }: { product: Product }) {
       </Link>
       <div className="p-4 flex-grow flex flex-col bg-card">
           <Link href="#" className="group/text">
-            <h3 className="font-semibold text-white text-base mb-1 group-hover/text:text-primary transition-colors">{product.name}</h3>
+            <h3 className="font-semibold text-white text-base mb-1 group-hover/text:text-destructive transition-colors">{product.name}</h3>
           </Link>
           <p className="text-sm text-muted-foreground flex-grow">{product.category}</p>
           <div className="flex justify-between items-center mt-4">
@@ -31,7 +31,7 @@ export function ProductCard({ product }: { product: Product }) {
                       </p>
                   )}
               </div>
-              <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary hover:bg-primary/10 rounded-full">
+              <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-full">
                   <ShoppingCart className="h-5 w-5" />
               </Button>
           </div>

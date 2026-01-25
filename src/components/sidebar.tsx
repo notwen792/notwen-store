@@ -25,7 +25,7 @@ export function Sidebar() {
     <aside className="w-72 min-h-screen bg-card flex-col p-6 border-r border-border hidden md:flex">
       <Link href="/" className="mb-12 flex flex-col items-center">
         <h1 className="font-headline text-5xl text-white">notwen</h1>
-        <p className="font-headline text-2xl text-primary uppercase tracking-widest -mt-2">
+        <p className="font-headline text-2xl uppercase tracking-widest -mt-2 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] bg-clip-text text-transparent">
           Store
         </p>
       </Link>
@@ -51,11 +51,9 @@ export function Sidebar() {
             </Button>
           ))
         ) : (
-          <>
-            <div className="h-12 w-full rounded-md bg-transparent" />
-            <div className="h-12 w-full rounded-md bg-transparent" />
-            <div className="h-12 w-full rounded-md bg-transparent" />
-          </>
+          navItems.map((item) => (
+            <div key={item.label} className="h-12 w-full rounded-md bg-transparent" />
+          ))
         )}
       </nav>
 
@@ -64,7 +62,7 @@ export function Sidebar() {
           <p className="flex items-center gap-2 font-semibold text-white">
             <Quote className="h-4 w-4 transform -scale-x-100 fill-white" /> DOCUMENTATION
           </p>
-          <a href="#" className="text-primary hover:underline text-xs mt-2 block pl-6">
+          <a href="#" className="text-destructive hover:underline text-xs mt-2 block pl-6">
             Access our new website documentation!
           </a>
         </div>
