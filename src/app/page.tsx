@@ -68,7 +68,7 @@ export default function Home() {
                     <ul className="space-y-4">
                         <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
                             <Avatar className="transition-transform duration-300 group-hover:rotate-12">
-                                <AvatarImage src="https://media.discordapp.net/attachments/1269644412875440128/1464990711341387967/b066cf1f-88e3-4f72-bf81-7320b7c94428-profile_image-150x150.png?ex=69777a6b&is=697628eb&hm=c7ce8a0c10910649178d62372e6bce25cf1195486dc9a0d004f3a6a3901983eb&=&format=webp&quality=lossless" alt="stewiexox" />
+                                <AvatarImage src="https://media.discordapp.net/attachments/1269644412875440128/1464991511300149404/WgAd3pVL_400x400.jpg?ex=69777b2a&is=697629aa&hm=44ccff30d3444d31d0bb3c9029b2b007cec3a4143fec8a655f385b33cb762f97&=&format=webp" alt="stewiexox" />
                                 <AvatarFallback>S</AvatarFallback>
                             </Avatar>
                             <span className="font-semibold text-white transition-colors group-hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] group-hover:bg-clip-text group-hover:text-transparent">stewiexox</span>
