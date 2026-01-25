@@ -2,6 +2,8 @@ import { ProductCard } from '@/components/profile-card';
 import { products } from '@/lib/data';
 
 export default function ScriptsPage() {
+  const scriptProducts = products.filter(p => p.category === 'Scripts');
+
   return (
     <main className="flex-grow p-8 md:p-12 bg-background">
       <div className="text-center mb-12">
@@ -11,7 +13,7 @@ export default function ScriptsPage() {
         <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">Explore our collection of high-quality scripts, designed to enhance your gaming experience.</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-        {products.map((product) => (
+        {scriptProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
