@@ -5,9 +5,15 @@ import { Button } from './ui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import { useEffect, useState } from 'react';
 
 export function Sidebar() {
   const pathname = usePathname();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const navItems = [
     { href: '/', icon: Home, label: 'Home' },
@@ -26,7 +32,15 @@ export function Sidebar() {
       </Link>
 
       <nav className="flex flex-col gap-2">
-        {navItems.map((item) => (
+        {!isClient && (
+          <>
+            <div className="h-12 w-full rounded-md bg-white/5 animate-pulse" />
+            <div className="h-12 w-full rounded-md bg-white/5 animate-pulse" />
+            <div className="h-12 w-full rounded-md bg-white/5 animate-pulse" />
+            <div className="h-12 w-full rounded-md bg-white/5 animate-pulse" />
+          </>
+        )}
+        {isClient && navItems.map((item) => (
            <Button
             key={item.label}
             variant='ghost'
