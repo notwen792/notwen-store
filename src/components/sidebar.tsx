@@ -32,21 +32,13 @@ export function Sidebar() {
       </Link>
 
       <nav className="flex flex-col gap-2">
-        {!isClient && (
-          <>
-            <div className="h-12 w-full rounded-md bg-white/5 animate-pulse" />
-            <div className="h-12 w-full rounded-md bg-white/5 animate-pulse" />
-            <div className="h-12 w-full rounded-md bg-white/5 animate-pulse" />
-            <div className="h-12 w-full rounded-md bg-white/5 animate-pulse" />
-          </>
-        )}
-        {isClient && navItems.map((item) => (
+        {navItems.map((item) => (
            <Button
             key={item.label}
             variant='ghost'
             className={cn(
               'justify-start gap-3 h-12 text-base group',
-              pathname === item.href
+              isClient && pathname === item.href
                 ? 'font-semibold text-white bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] transition-all duration-300 hover:brightness-110'
                 : 'text-muted-foreground hover:text-white hover:bg-white/5'
             )}
