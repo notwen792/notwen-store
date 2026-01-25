@@ -54,7 +54,7 @@ export default function Home() {
                     </div>
                     <div className="bg-card p-8 rounded-lg border border-border/20">
                         <Gamepad2 className="h-10 w-10 text-primary mb-4" />
-                        <h3 className="font-headline text-2xl tracking-wider mb-2">New Game Modes</h3>
+                        <h3 className="font-headline text-2xl tracking-wider mb-2">notwen rp</h3>
                         <p className="text-muted-foreground text-sm">Discover a new way to play in FiveM. We have unique and innovative game modes to change up the experience.</p>
                     </div>
                 </div>
