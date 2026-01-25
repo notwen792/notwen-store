@@ -16,7 +16,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent z-10" />
         {image && 
             <div className="absolute inset-0">
-                <Image src={image.imageUrl} alt="Hero background" fill style={{ objectFit: 'cover' }} className="opacity-20" data-ai-hint={image.imageHint} />
+                <Image src={image.imageUrl} alt="Hero background" fill style={{ objectFit: 'cover', objectPosition: 'right' }} className="opacity-20" data-ai-hint={image.imageHint} />
             </div>
         }
         <div className="relative z-20 flex flex-col items-center">
