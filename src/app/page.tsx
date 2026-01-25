@@ -50,7 +50,7 @@ export default function Home() {
                     <div className="bg-card p-8 rounded-lg border border-border/20">
                         <CodeXml className="h-10 w-10 text-primary mb-4" />
                         <h3 className="font-headline text-2xl tracking-wider mb-2">Unique Scripts</h3>
-                        <p className="text-muted-foreground text-sm">Our programming team works to create new exclusive possibilities for our players, compatible with QBCore & ESX.</p>
+                        <p className="text-muted-foreground text-sm">aqui veras nuestros scripts echos y rediseños por el programador stewiexox</p>
                     </div>
                     <div className="bg-card p-8 rounded-lg border border-border/20">
                         <Gamepad2 className="h-10 w-10 text-primary mb-4" />
