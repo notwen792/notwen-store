@@ -1,6 +1,6 @@
 'use client';
 
-import { Home, Instagram, Package, Quote, Share2, ShoppingCart } from 'lucide-react';
+import { Home, Instagram, Package, Quote, Share2, ShoppingCart, BookText } from 'lucide-react';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -19,6 +19,7 @@ export function Sidebar() {
     { href: '/', icon: Home, label: 'Home' },
     { href: '/scripts', icon: ShoppingCart, label: 'Scripts' },
     { href: '/packs', icon: Package, label: 'Packs' },
+    { href: '/installation-guide', icon: BookText, label: 'Guía de instalación' },
   ];
 
   return (
