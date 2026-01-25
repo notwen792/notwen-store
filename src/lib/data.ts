@@ -9,40 +9,7 @@ export type Product = {
   description?: string;
 };
 
-export const products: Product[] = [
-  {
-    id: 1,
-    name: 'NOTWEN POLICE + EMS',
-    category: 'Scripts',
-    imageId: 'product1',
-    price: 99.83,
-    features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
-  },
-  {
-    id: 2,
-    name: 'NOTWEN ALL SCRIPTS (40% OFF)',
-    category: 'Packs',
-    imageId: 'product2',
-    price: 747.78,
-    originalPrice: 1246.30,
-    features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
-  },
-  {
-    id: 3,
-    name: 'NOTWEN CLOTHING + CHARACTER CREATOR + PEDMENU',
-    category: 'Scripts',
-    imageId: 'product3',
-    price: 60.50,
-    features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
-  },
-  {
-    id: 4,
-    name: 'NOTWEN HOUSING',
-    category: 'Scripts',
-    imageId: 'product4',
-    price: 80.00,
-    features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
-    description: `🌟 Exclusive Mapping for FiveM: Transform the LTD Central 🌟
+const scriptDescription = `🌟 Exclusive Mapping for FiveM: Transform the LTD Central 🌟
 
 🚀 Bring your city to life with this spectacular mapping for FiveM! 🚀
 
@@ -61,6 +28,43 @@ YOUTUBE VIDEO
 
 🔥 Make your LTD Central the most coveted hotspot in the city. Now is the time to upgrade your server with this premium-quality mapping! 🔥
 
-📩 Contact us now to get this incredible mapping and elevate your roleplay experience to the next level. 🌟`
+📩 Contact us now to get this incredible mapping and elevate your roleplay experience to the next level. 🌟`;
+
+export const products: Product[] = [
+  {
+    id: 1,
+    name: 'NOTWEN POLICE + EMS',
+    category: 'Scripts',
+    imageId: 'product1',
+    price: 99.83,
+    features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
+    description: scriptDescription,
+  },
+  {
+    id: 2,
+    name: 'NOTWEN ALL SCRIPTS (40% OFF)',
+    category: 'Packs',
+    imageId: 'product2',
+    price: 747.78,
+    originalPrice: 1246.30,
+    features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
+  },
+  {
+    id: 3,
+    name: 'NOTWEN CLOTHING + CHARACTER CREATOR + PEDMENU',
+    category: 'Scripts',
+    imageId: 'product3',
+    price: 60.50,
+    features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
+    description: scriptDescription,
+  },
+  {
+    id: 4,
+    name: 'NOTWEN HOUSING',
+    category: 'Scripts',
+    imageId: 'product4',
+    price: 80.00,
+    features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
+    description: scriptDescription,
   },
 ];
