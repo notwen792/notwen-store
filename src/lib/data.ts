@@ -6,6 +6,7 @@ export type Product = {
   price: number;
   originalPrice?: number;
   features: string[];
+  description?: string;
 };
 
 export const products: Product[] = [
@@ -41,5 +42,25 @@ export const products: Product[] = [
     imageId: 'product4',
     price: 80.00,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
+    description: `🌟 Exclusive Mapping for FiveM: Transform the LTD Central 🌟
+
+🚀 Bring your city to life with this spectacular mapping for FiveM! 🚀
+
+YOUTUBE VIDEO
+
+🌐 Main Features:
+1️⃣ 🌟 Preserve the Original Essence: The vanilla ground floor of the LTD Central is kept intact to maintain the classic format loved by players.
+2️⃣ 📦 Spacious Storage Area: A functional side space perfect for storing goods or hosting private staff meetings. Ideal for business roleplay and organization.
+3️⃣ 🏙️ Exclusive Upper Floor: Sky Bar Terrace: A chillout area featuring shishas, pool tables, and a relaxed vibe for maximum social interaction. 🌌 Luxury Restaurant: An enclosed area with a modern and elegant design, perfect for exclusive events, romantic dinners, or high-level meetings. 🍷🍴
+4️⃣ 💡 Redesigned Aesthetic: Vibrant LED lights and neons turn the LTD Central into the most intense and eye-catching spot in the city. Guaranteed to grab everyone’s attention! 🌈✨
+
+🎮 Why Choose This Mapping?
+✔️ Enhanced Functionality: Provide your players with new, immersive spaces for roleplay.
+✔️ Innovative Aesthetics: Refresh and modernize one of Los Santos’ most iconic locations.
+✔️ Seamless Integration: Designed to enhance without disrupting the classic format.
+
+🔥 Make your LTD Central the most coveted hotspot in the city. Now is the time to upgrade your server with this premium-quality mapping! 🔥
+
+📩 Contact us now to get this incredible mapping and elevate your roleplay experience to the next level. 🌟`
   },
 ];
