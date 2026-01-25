@@ -7,8 +7,7 @@ export function Header() {
       <Button variant="ghost" asChild className="text-sm uppercase">
         <Link href="#" target="_blank" rel="noopener noreferrer">
           <div className="text-right mr-4">
-            <div className="font-semibold text-white text-xs">Join our</div>
-            <div className="text-xs text-muted-foreground">Discord Channel</div>
+            <div className="font-semibold text-white text-xs">Join Discord</div>
           </div>
           <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="h-5 w-5 text-white">
             <title>Discord</title>
