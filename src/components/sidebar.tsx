@@ -76,7 +76,7 @@ export function Sidebar() {
       <div className="mt-auto flex flex-col gap-4">
         <div className="bg-background/50 rounded-lg p-4 text-sm">
           <p className="flex items-center gap-2 font-semibold text-white">
-            {FooterIcon && <FooterIcon className="h-4 w-4" />} WE HELP YOU IN WHAT YOU NEED
+            {FooterIcon && <FooterIcon className="h-4 w-4" />} {'WE HELP YOU IN WHAT YOU NEED'}
           </p>
           <p className="text-muted-foreground text-xs mt-2 pl-6">
             At notwen Network we are committed to providing the best possible experience for our customers.
