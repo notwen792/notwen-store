@@ -5,7 +5,7 @@ import { Button } from './ui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const iconMap: { [key: string]: React.ElementType } = {
   Home,
@@ -17,6 +17,11 @@ const iconMap: { [key: string]: React.ElementType } = {
 
 export function Sidebar() {
   const pathname = usePathname();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const navItems = [
     { href: '/', icon: 'Home', label: 'Home' },
@@ -32,7 +37,7 @@ export function Sidebar() {
 
   return (
     <aside className="w-72 min-h-screen bg-card flex-col p-6 border-r border-border hidden md:flex">
-      <Link href="/" className="mb-12 flex flex-col items-center animate-logo-pulse">
+      <Link href="/" className={cn("mb-12 flex flex-col items-center", isMounted && "animate-logo-pulse")}>
         <h1 className="font-headline text-5xl text-white">notwen</h1>
         <p className="font-headline text-2xl uppercase tracking-widest -mt-2 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] bg-clip-text text-transparent">
           Store
