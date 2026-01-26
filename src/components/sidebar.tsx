@@ -1,11 +1,11 @@
 'use client';
 
-import { Home, Package, Quote, ShoppingCart, BookText, Server } from 'lucide-react';
+import { Home, Package, ShoppingCart, BookText, Server } from 'lucide-react';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const iconMap: { [key: string]: React.ElementType } = {
   Home,
@@ -13,16 +13,10 @@ const iconMap: { [key: string]: React.ElementType } = {
   Package,
   Server,
   BookText,
-  Quote,
 };
 
 export function Sidebar() {
   const pathname = usePathname();
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   const navItems = [
     { href: '/', icon: 'Home', label: 'Home' },
@@ -73,7 +67,7 @@ export function Sidebar() {
       <div className="mt-auto flex flex-col gap-4">
         <div className="bg-background/50 rounded-lg p-4 text-sm">
           <p className="flex items-center gap-2 font-semibold text-white">
-            {isClient && FooterIcon && <FooterIcon className="h-4 w-4" />} WE HELP YOU IN WHAT YOU NEED
+            {FooterIcon && <FooterIcon className="h-4 w-4" />} WE HELP YOU IN WHAT YOU NEED
           </p>
           <p className="text-muted-foreground text-xs mt-2 pl-6">
             At notwen Network we are committed to providing the best possible experience for our customers.
