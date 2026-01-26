@@ -13,6 +13,7 @@ const iconMap: { [key: string]: React.ElementType } = {
   Package,
   Server,
   BookText,
+  Quote,
 };
 
 export function Sidebar() {
@@ -38,6 +39,7 @@ export function Sidebar() {
       <nav className="flex flex-col gap-2">
         {navItems.map((item) => {
           const Icon = iconMap[item.icon];
+          const isInstallationGuide = item.href === '/installation-guide';
           return (
           <Button
             key={item.label}
@@ -50,7 +52,11 @@ export function Sidebar() {
             )}
             asChild
           >
-            <Link href={item.href}>
+            <Link
+              href={item.href}
+              target={isInstallationGuide ? '_blank' : undefined}
+              rel={isInstallationGuide ? 'noopener noreferrer' : undefined}
+            >
               <Icon className="h-5 w-5 transition-transform duration-300 ease-in-out group-hover:rotate-[15deg]" />
               <span>{item.label}</span>
             </Link>
