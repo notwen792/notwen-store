@@ -36,12 +36,12 @@ const genericSteps = [
 
 export default function InstallationGuidePage() {
   const scriptProducts = products.filter(p => p.category === 'Scripts');
-  const [selectedTopic, setSelectedTopic] = useState({ scriptId: scriptProducts[0]?.id, sectionId: 'installation' });
-  const [openScripts, setOpenScripts] = useState<Record<string, boolean>>({ [scriptProducts[0]?.id.toString()]: true });
+  const [selectedTopic, setSelectedTopic] = useState<{ scriptId: number | string, sectionId: string }>({ scriptId: 'welcome', sectionId: 'welcome' });
+  const [openScripts, setOpenScripts] = useState<Record<string, boolean>>({ welcome: true });
 
   const selectedScript = scriptProducts.find(p => p.id === selectedTopic.scriptId);
 
-  const toggleScript = (scriptId: number) => {
+  const toggleScript = (scriptId: number | string) => {
     const scriptIdStr = scriptId.toString();
     setOpenScripts(prev => ({ ...prev, [scriptIdStr]: !prev[scriptIdStr] }));
   };
@@ -52,6 +52,37 @@ export default function InstallationGuidePage() {
       <aside className="w-80 min-h-full bg-card border-r border-border p-4 flex flex-col flex-shrink-0">
         <h2 className="font-headline text-2xl text-white tracking-wider mb-6 px-2">Documentation</h2>
         <nav className="flex flex-col gap-2 overflow-y-auto">
+          <div>
+            <button
+              onClick={() => toggleScript('welcome')}
+              className="w-full flex items-center justify-between text-left px-2 py-2 rounded-md hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] transition-colors"
+            >
+              <span className="font-semibold text-white">Welcome</span>
+              {openScripts['welcome'] ? <ChevronDown className="h-5 w-5" /> : <ChevronRight className="h-5 w-5" />}
+            </button>
+            {openScripts['welcome'] && (
+              <ul className="pl-4 mt-2 space-y-1 border-l border-border/50 ml-2">
+                <li>
+                  <a
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setSelectedTopic({ scriptId: 'welcome', sectionId: 'welcome' });
+                    }}
+                    className={cn(
+                      'flex items-center gap-3 px-3 py-2 rounded-md text-sm transition-colors w-full',
+                      selectedTopic.scriptId === 'welcome'
+                        ? 'bg-destructive text-white font-semibold'
+                        : 'text-muted-foreground hover:text-white hover:bg-white/10'
+                    )}
+                  >
+                    <BookOpen className="h-4 w-4" />
+                    <span>Introduction</span>
+                  </a>
+                </li>
+              </ul>
+            )}
+          </div>
           {scriptProducts.map(script => (
             <div key={script.id}>
               <button
@@ -92,7 +123,37 @@ export default function InstallationGuidePage() {
 
       {/* Right Content */}
       <div className="flex-1 p-8 md:p-12 overflow-y-auto">
-        {selectedScript ? (
+        {selectedTopic.scriptId === 'welcome' ? (
+           <div>
+            <h1 className="font-headline text-5xl uppercase tracking-wider text-white mb-2">
+              Welcome to the Documentation
+            </h1>
+            <p className="text-lg text-muted-foreground mb-8">
+              An introduction to our scripts and the installation process.
+            </p>
+            <div className="bg-card p-8 rounded-lg border border-border/20">
+                <h2 className="font-headline text-3xl tracking-wider mb-6 text-destructive flex items-center gap-3">
+                  <BookOpen className="h-6 w-6" />
+                  Introduction
+                </h2>
+                <div className="space-y-4 text-muted-foreground">
+                    <p>Welcome to the notwen Store documentation. Here you will find all the necessary information to install and configure our scripts on your FiveM server.</p>
+                    <p>Our scripts are designed to be "Plug & Play," which means they are easy to install. However, it's important to follow the steps correctly to avoid any issues.</p>
+                    <h3 className="font-headline text-xl tracking-wider pt-4 text-white">General Installation</h3>
+                    <p>Each script has its own specific installation guide, but most follow these general steps:</p>
+                    <div className="space-y-3 text-muted-foreground pl-4 border-l-2 border-destructive ml-2">
+                      {genericSteps.map((step, stepIndex) => (
+                      <p key={stepIndex}>
+                          <span className="font-bold text-white mr-2">{stepIndex + 1}.</span>
+                          {step.replace('[script_name]', 'script_name')}
+                      </p>
+                      ))}
+                    </div>
+                    <p className="pt-4">For specific details for each script, please select the script from the menu on the left.</p>
+                </div>
+            </div>
+          </div>
+        ) : selectedScript ? (
           <div>
             <h1 className="font-headline text-5xl uppercase tracking-wider text-white mb-2">
               {selectedScript.name}
