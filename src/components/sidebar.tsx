@@ -1,20 +1,29 @@
 'use client';
 
-import { Home, Instagram, Package, Quote, Share2, ShoppingCart, BookText, Server } from 'lucide-react';
+import { Home, Package, Quote, ShoppingCart, BookText, Server } from 'lucide-react';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import React from 'react';
+
+const iconMap: { [key: string]: React.ElementType } = {
+  Home,
+  ShoppingCart,
+  Package,
+  Server,
+  BookText,
+};
 
 export function Sidebar() {
   const pathname = usePathname();
 
   const navItems = [
-    { href: '/', icon: Home, label: 'Home' },
-    { href: '/scripts', icon: ShoppingCart, label: 'Scripts' },
-    { href: '/packs', icon: Package, label: 'Packs' },
-    { href: '/notwen-rp', icon: Server, label: 'notwen rp' },
-    { href: '/installation-guide', icon: BookText, label: 'Guía de instalación' },
+    { href: '/', icon: 'Home', label: 'Home' },
+    { href: '/scripts', icon: 'ShoppingCart', label: 'Scripts' },
+    { href: '/packs', icon: 'Package', label: 'Packs' },
+    { href: '/notwen-rp', icon: 'Server', label: 'notwen rp' },
+    { href: '/installation-guide', icon: 'BookText', label: 'Guía de instalación' },
   ];
 
   return (
@@ -27,7 +36,9 @@ export function Sidebar() {
       </Link>
 
       <nav className="flex flex-col gap-2">
-        {navItems.map((item) => (
+        {navItems.map((item) => {
+          const Icon = iconMap[item.icon];
+          return (
           <Button
             key={item.label}
             variant="ghost"
@@ -40,11 +51,11 @@ export function Sidebar() {
             asChild
           >
             <Link href={item.href}>
-              <item.icon className="h-5 w-5 transition-transform duration-300 ease-in-out group-hover:rotate-[15deg]" />
+              <Icon className="h-5 w-5 transition-transform duration-300 ease-in-out group-hover:rotate-[15deg]" />
               <span>{item.label}</span>
             </Link>
           </Button>
-        ))}
+        )})}
       </nav>
 
       <div className="mt-auto flex flex-col gap-4">
