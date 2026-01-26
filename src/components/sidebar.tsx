@@ -5,7 +5,7 @@ import { Button } from './ui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const iconMap: { [key: string]: React.ElementType } = {
   Home,
@@ -18,6 +18,11 @@ const iconMap: { [key: string]: React.ElementType } = {
 
 export function Sidebar() {
   const pathname = usePathname();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const navItems = [
     { href: '/', icon: 'Home', label: 'Home' },
@@ -54,8 +59,8 @@ export function Sidebar() {
           >
             <Link
               href={item.href}
-              target={isInstallationGuide ? '_blank' : undefined}
-              rel={isInstallationGuide ? 'noopener noreferrer' : undefined}
+              target={isClient && isInstallationGuide ? '_blank' : undefined}
+              rel={isClient && isInstallationGuide ? 'noopener noreferrer' : undefined}
             >
               <Icon className="h-5 w-5 transition-transform duration-300 ease-in-out group-hover:rotate-[15deg]" />
               <span>{item.label}</span>
