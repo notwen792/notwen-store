@@ -1,9 +1,3 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
 import { products } from '@/lib/data';
 
 export default function InstallationGuidePage() {
@@ -32,26 +26,21 @@ export default function InstallationGuidePage() {
         </p>
       </div>
       <div className="max-w-4xl mx-auto bg-card p-8 rounded-lg border border-border/20 text-white">
-        <h2 className="font-headline text-3xl tracking-wider mb-6">Instalación por Script</h2>
-        <Accordion type="single" collapsible className="w-full">
-          {scriptProducts.map((script, index) => (
-            <AccordionItem value={`item-${index + 1}`} key={script.id}>
-              <AccordionTrigger className="text-lg font-semibold text-white hover:no-underline hover:text-destructive transition-colors">
-                {script.name}
-              </AccordionTrigger>
-              <AccordionContent>
-                <div className="space-y-3 text-muted-foreground pt-4 pl-4 border-l-2 border-destructive ml-2">
-                  {genericSteps.map((step, stepIndex) => (
-                     <p key={stepIndex}>
-                        <span className="font-bold text-white mr-2">{stepIndex + 1}.</span>
-                        {step.includes('[script_name]') ? step.replace('[script_name]', 'the_script_folder_name') : step}
-                     </p>
-                  ))}
+        <div className="space-y-12">
+            {scriptProducts.map((script) => (
+                <div key={script.id}>
+                    <h2 className="font-headline text-3xl tracking-wider mb-6 text-destructive">{script.name}</h2>
+                    <div className="space-y-3 text-muted-foreground pl-4 border-l-2 border-destructive ml-2">
+                        {genericSteps.map((step, stepIndex) => (
+                        <p key={stepIndex}>
+                            <span className="font-bold text-white mr-2">{stepIndex + 1}.</span>
+                            {step.includes('[script_name]') ? step.replace('[script_name]', 'the_script_folder_name') : step}
+                        </p>
+                        ))}
+                    </div>
                 </div>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+            ))}
+        </div>
       </div>
     </main>
   );
