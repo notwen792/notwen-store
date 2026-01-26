@@ -56,7 +56,7 @@ export default function InstallationGuidePage() {
             <div key={script.id}>
               <button
                 onClick={() => toggleScript(script.id)}
-                className="w-full flex items-center justify-between text-left px-2 py-2 rounded-md hover:bg-white/5 transition-colors"
+                className="w-full flex items-center justify-between text-left px-2 py-2 rounded-md hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] transition-colors"
               >
                 <span className="font-semibold text-white">{script.name}</span>
                 {openScripts[script.id.toString()] ? <ChevronDown className="h-5 w-5" /> : <ChevronRight className="h-5 w-5" />}
