@@ -32,6 +32,10 @@ export function Sidebar() {
     { href: '/installation-guide', icon: 'BookText', label: 'Guía de instalación' },
   ];
 
+  const footerIcon = 'BookText';
+  const FooterIcon = iconMap[footerIcon];
+
+
   return (
     <aside className="w-72 min-h-screen bg-card flex-col p-6 border-r border-border hidden md:flex">
       <Link href="/" className="mb-12 flex flex-col items-center">
@@ -72,7 +76,7 @@ export function Sidebar() {
       <div className="mt-auto flex flex-col gap-4">
         <div className="bg-background/50 rounded-lg p-4 text-sm">
           <p className="flex items-center gap-2 font-semibold text-white">
-            <Quote className="h-4 w-4 transform -scale-x-100" /> WE HELP YOU IN WHAT YOU NEED
+            {FooterIcon && <FooterIcon className="h-4 w-4" />} WE HELP YOU IN WHAT YOU NEED
           </p>
           <p className="text-muted-foreground text-xs mt-2 pl-6">
             At notwen Network we are committed to providing the best possible experience for our customers.
