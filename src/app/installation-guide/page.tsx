@@ -37,7 +37,7 @@ const genericSteps = [
 export default function InstallationGuidePage() {
   const scriptProducts = products.filter(p => p.category === 'Scripts');
   const [selectedTopic, setSelectedTopic] = useState<{ scriptId: number | string, sectionId: string }>({ scriptId: 'welcome', sectionId: 'welcome' });
-  const [openScripts, setOpenScripts] = useState<Record<string, boolean>>({ welcome: true });
+  const [openScripts, setOpenScripts] = useState<Record<string, boolean>>({});
 
   const selectedScript = scriptProducts.find(p => p.id === selectedTopic.scriptId);
 
@@ -52,37 +52,22 @@ export default function InstallationGuidePage() {
       <aside className="w-80 min-h-full bg-card border-r border-border p-4 flex flex-col flex-shrink-0">
         <h2 className="font-headline text-2xl text-white tracking-wider mb-6 px-2">Documentation</h2>
         <nav className="flex flex-col gap-2 overflow-y-auto">
-          <div>
-            <button
-              onClick={() => toggleScript('welcome')}
-              className="w-full flex items-center justify-between text-left px-2 py-2 rounded-md hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] transition-colors"
-            >
-              <span className="font-semibold text-white">Welcome</span>
-              {openScripts['welcome'] ? <ChevronDown className="h-5 w-5" /> : <ChevronRight className="h-5 w-5" />}
-            </button>
-            {openScripts['welcome'] && (
-              <ul className="pl-4 mt-2 space-y-1 border-l border-border/50 ml-2">
-                <li>
-                  <a
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setSelectedTopic({ scriptId: 'welcome', sectionId: 'welcome' });
-                    }}
-                    className={cn(
-                      'flex items-center gap-3 px-3 py-2 rounded-md text-sm transition-colors w-full',
-                      selectedTopic.scriptId === 'welcome'
-                        ? 'bg-destructive text-white font-semibold'
-                        : 'text-muted-foreground hover:text-white hover:bg-white/10'
-                    )}
-                  >
-                    <BookOpen className="h-4 w-4" />
-                    <span>Introduction</span>
-                  </a>
-                </li>
-              </ul>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              setSelectedTopic({ scriptId: 'welcome', sectionId: 'welcome' });
+            }}
+            className={cn(
+              'w-full flex items-center text-left px-2 py-2 rounded-md transition-colors font-semibold',
+              selectedTopic.scriptId === 'welcome' 
+                ? 'bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] text-white' 
+                : 'text-white hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))]'
             )}
-          </div>
+          >
+            <BookOpen className="h-5 w-5 mr-3" />
+            <span>Welcome</span>
+          </a>
           {scriptProducts.map(script => (
             <div key={script.id}>
               <button
