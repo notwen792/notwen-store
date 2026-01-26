@@ -92,11 +92,16 @@ export default {
           '0%, 100%': { transform: 'scale(1)', opacity: '1' },
           '50%': { transform: 'scale(1.05)', opacity: '0.95' },
         },
+        'button-bob': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-2px)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'logo-pulse': 'logo-pulse 4s ease-in-out infinite',
+        'button-bob': 'button-bob 3s ease-in-out infinite',
       },
     },
   },
