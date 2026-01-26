@@ -88,10 +88,15 @@ export default {
             height: '0',
           },
         },
+        'logo-pulse': {
+          '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+          '50%': { transform: 'scale(1.05)', opacity: '0.95' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'logo-pulse': 'logo-pulse 4s ease-in-out infinite',
       },
     },
   },
