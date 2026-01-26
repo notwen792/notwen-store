@@ -50,15 +50,15 @@ export function Sidebar() {
       <div className="mt-auto flex flex-col gap-4">
         <div className="bg-background/50 rounded-lg p-4 text-sm">
           <p className="flex items-center gap-2 font-semibold text-white">
-            <Quote className="h-4 w-4 transform -scale-x-100 fill-white" /> DOCUMENTATION
+            <BookText className="h-4 w-4" /> DOCUMENTATION
           </p>
-          <a href="#" className="text-destructive hover:underline text-xs mt-2 block pl-6">
+          <Link href="/installation-guide" className="text-destructive hover:underline text-xs mt-2 block pl-6">
             Access our new website documentation!
-          </a>
+          </Link>
         </div>
         <div className="bg-background/50 rounded-lg p-4 text-sm">
           <p className="flex items-center gap-2 font-semibold text-white">
-            <Quote className="h-4 w-4 transform -scale-x-100 fill-white" /> WE HELP YOU IN WHAT YOU NEED
+            <Quote className="h-4 w-4 transform -scale-x-100" /> WE HELP YOU IN WHAT YOU NEED
           </p>
           <p className="text-muted-foreground text-xs mt-2 pl-6">
             At notwen Network we are committed to providing the best possible experience for our customers.
