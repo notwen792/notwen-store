@@ -47,7 +47,7 @@ export default function InstallationGuidePage() {
   };
 
   return (
-    <main className="flex-grow bg-background text-white flex min-h-[calc(100vh-80px)]">
+    <main className="flex-grow bg-background text-white flex min-h-screen">
       {/* Left Sidebar */}
       <aside className="w-80 min-h-full bg-card border-r border-border p-4 flex flex-col flex-shrink-0">
         <h2 className="font-headline text-2xl text-white tracking-wider mb-6 px-2">Documentation</h2>
