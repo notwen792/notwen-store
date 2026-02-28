@@ -44,7 +44,7 @@ export const products: Product[] = [
     id: 2,
     name: 'NOTWEN ALL SCRIPTS (40% OFF)',
     category: 'Packs',
-    imageId: 'product2',
+    imageId: 'unique-scripts',
     price: 747.78,
     originalPrice: 1246.30,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],

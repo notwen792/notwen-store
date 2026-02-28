@@ -10,7 +10,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import React, { useState, useEffect } from 'react';
 
 export default function Home() {
-  const image = PlaceHolderImages.find((img) => img.id === 'product1');
+  const image = PlaceHolderImages.find((img) => img.id === 'product2');
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
