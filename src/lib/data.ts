@@ -44,16 +44,16 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    name: 'NOTWEN HOUSING',
+    name: 'BEAN MACHINE',
     category: 'Negocios',
     imageId: 'product4',
     price: 80.00,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
     description: formatDescription(
-      "Sistema de casas de última generación con inmobiliaria.",
-      "Toda la ciudad",
-      "Gestión por inmobiliaria",
-      "Alquiler, venta y sistema de mobiliario."
+      "Cafetería icónica de Los Santos, el lugar perfecto para un café rápido y un donut.",
+      "Mission Row",
+      "Min 2 / Max 6",
+      "Café, donuts, bollería y snacks."
     ),
   },
   {
