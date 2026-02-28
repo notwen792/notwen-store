@@ -32,7 +32,7 @@ export const products: Product[] = [
     id: 3,
     name: "BENNY'S",
     category: 'Negocios',
-    imageId: 'bahamas',
+    imageId: 'pearls',
     price: 60.50,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
     description: formatDescription(
@@ -60,7 +60,7 @@ export const products: Product[] = [
     id: 8,
     name: 'PEARLS',
     category: 'Negocios',
-    imageId: 'pearls',
+    imageId: 'bahamas',
     price: 120.00,
     features: ['Tuning avanzado', 'Pinturas únicas', 'Plug & Play'],
     description: formatDescription(
@@ -74,7 +74,7 @@ export const products: Product[] = [
     id: 9,
     name: 'LTD',
     category: 'Negocios',
-    imageId: 'bahamas',
+    imageId: 'ltd',
     price: 150.00,
     features: ['Sistema de DJ', 'Luces LED', 'Bebidas'],
     description: formatDescription(
@@ -88,14 +88,14 @@ export const products: Product[] = [
     id: 10,
     name: 'BURGERSHOT',
     category: 'Negocios',
-    imageId: 'ltd',
+    imageId: 'burgershot',
     price: 45.00,
-    features: ['Gasolina', 'Tienda 24/7', 'Robos configurados'],
+    features: ['Cocina interactiva', 'Menú variado', 'Servicio rápido'],
     description: formatDescription(
-      "Gasolinera estratégica con tienda de conveniencia incorporada.",
-      "Centro de Los Santos",
-      "Min 1 / Max 3",
-      "Repostaje, snacks y kit de reparación."
+      "Restaurante de comida rápida icónico especializado en las mejores hamburguesas de la ciudad.",
+      "Vespucci Canals",
+      "Min 2 / Max 8",
+      "Hamburguesas, patatas, bebidas y helados."
     ),
   },
   {
