@@ -1,3 +1,4 @@
+
 export type Product = {
   id: number;
   name: string;
@@ -60,7 +61,7 @@ export const products: Product[] = [
     id: 8,
     name: 'PEARLS',
     category: 'Negocios',
-    imageId: 'bennys',
+    imageId: 'pearls',
     price: 120.00,
     features: ['Tuning avanzado', 'Pinturas únicas', 'Plug & Play'],
     description: formatDescription(
