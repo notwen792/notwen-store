@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, MessageSquare, BookOpen, CheckCircle, Play, Instagram, Share2, ShieldCheck } from 'lucide-react';
+import { ArrowRight, MessageSquare, BookOpen, CheckCircle, Play, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -12,16 +12,18 @@ export default function NotwenRpPage() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center text-center p-8 bg-card/20 border-b border-white/5">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/80" />
         <div className="relative z-20 flex flex-col items-center">
-            <h1 className="font-headline text-6xl md:text-8xl uppercase tracking-widest text-white">
-                notwen rp
+            <h1 className="font-headline text-6xl md:text-9xl uppercase tracking-widest text-white animate-title-float select-none">
+                <span className="bg-clip-text text-transparent bg-gradient-to-b from-white via-white/90 to-destructive/20 drop-shadow-sm">
+                  notwen rp
+                </span>
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto px-4">
                 Bienvenidos a nuestra comunidad notwen rp, un servidor de roleplay creado por entusiastas con la ambición de crecer.
             </p>
-            <Button asChild size="lg" className="mt-8 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] hover:brightness-110 transition-all duration-300">
+            <Button asChild size="lg" className="mt-10 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] hover:brightness-110 transition-all duration-300 shadow-xl shadow-destructive/20 hover:scale-105 active:scale-95">
                 <Link href="https://discord.gg/Z6KvkfFVts" target="_blank" rel="noopener noreferrer">
                     Únete al servidor
-                    <ArrowRight className="ml-2" />
+                    <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
             </Button>
         </div>
