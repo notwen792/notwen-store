@@ -24,7 +24,7 @@ export function Header() {
         )}
       >
         <Link href="https://discord.gg/Z6KvkfFVts" target="_blank" rel="noopener noreferrer">
-          DISCORD STORE
+          DISCORD
           <ShoppingCart className="h-5 w-5" />
         </Link>
       </Button>
