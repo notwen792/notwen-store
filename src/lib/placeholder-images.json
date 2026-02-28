@@ -1,64 +1,52 @@
 {
   "placeholderImages": [
     {
-      "id": "product1",
+      "id": "img-marie",
       "description": "Marie Blachere Interior",
       "imageUrl": "https://media.discordapp.net/attachments/1269644412875440128/1477384251002585099/image.png?ex=69a490cd&is=69a33f4d&hm=bc0f98a51ca0f9f3759173bf1becb5e64d599fafe22eab5972dd54625992772b&=&format=webp&quality=lossless&width=1465&height=864",
       "imageHint": "bakery shop"
     },
     {
-      "id": "product-city",
-      "description": "GTA Style City Night",
-      "imageUrl": "https://media.discordapp.net/attachments/1110302343133663323/1477390984093630535/image.png?ex=69a49713&is=69a34593&hm=0db7e9898ade96a7cc124726894f7e7d22f6c210504971a1daa3dae13d224e13&=&format=webp&quality=lossless",
-      "imageHint": "city night"
-    },
-    {
-      "id": "bennys",
-      "description": "Pearls Night Club Image",
+      "id": "img-bennys",
+      "description": "Benny's Customs (Intercambiada)",
       "imageUrl": "https://media.discordapp.net/attachments/1110302343133663323/1477390984093630535/image.png?ex=69a49713&is=69a34593&hm=0db7e9898ade96a7cc124726894f7e7d22f6c210504971a1daa3dae13d224e13&=&format=webp&quality=lossless",
       "imageHint": "night club"
     },
     {
-      "id": "bean-machine",
-      "description": "Bean Machine House",
+      "id": "img-bean",
+      "description": "Bean Machine Coffee Shop",
       "imageUrl": "https://cdn.discordapp.com/attachments/1110302343133663323/1477392002160132278/image.png?ex=69a49805&is=69a34685&hm=95ae40f9f77572502cabd80efbe4032897323e24cf06b59cb25c214dee7202c6&",
-      "imageHint": "modern house"
+      "imageHint": "coffee house"
     },
     {
-      "id": "pearls",
-      "description": "Benny's Car Image",
+      "id": "img-upnatom",
+      "description": "UpnAtom (Intercambiada)",
       "imageUrl": "https://cdn.discordapp.com/attachments/1110302343133663323/1477393948589822042/image.png?ex=69a499d5&is=69a34855&hm=e57d0531a018a056e95bfe1253e0e245962cf22a174ec11ea0c5ba01fe5ec4ab&",
-      "imageHint": "mechanical car"
+      "imageHint": "custom car"
     },
     {
-      "id": "bahamas",
-      "description": "Nightclub interior",
-      "imageUrl": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1080",
-      "imageHint": "nightclub party"
-    },
-    {
-      "id": "ltd",
-      "description": "Gas station",
-      "imageUrl": "https://images.unsplash.com/photo-1563906267088-b02d4471f1f9?q=80&w=1080",
-      "imageHint": "gas station"
-    },
-    {
-      "id": "vanilla",
-      "description": "Bar club",
-      "imageUrl": "https://images.unsplash.com/photo-1514525253361-b83f859b73c0?q=80&w=1080",
-      "imageHint": "bar neon"
-    },
-    {
-      "id": "pillbox",
-      "description": "Hospital hallway",
-      "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1080",
-      "imageHint": "hospital"
-    },
-    {
-      "id": "burgershot",
-      "description": "Fast food burger",
+      "id": "img-burgershot",
+      "description": "Burgershot Restaurant",
       "imageUrl": "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1080",
-      "imageHint": "burger"
+      "imageHint": "burger shop"
+    },
+    {
+      "id": "img-vanilla",
+      "description": "Vanilla Unicorn Club",
+      "imageUrl": "https://images.unsplash.com/photo-1514525253361-b83f859b73c0?q=80&w=1080",
+      "imageHint": "neon club"
+    },
+    {
+      "id": "img-pillbox",
+      "description": "Pillbox Medical Center",
+      "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1080",
+      "imageHint": "hospital hallway"
+    },
+    {
+      "id": "img-city",
+      "description": "GTA City View",
+      "imageUrl": "https://media.discordapp.net/attachments/1110302343133663323/1477390984093630535/image.png?ex=69a49713&is=69a34593&hm=0db7e9898ade96a7cc124726894f7e7d22f6c210504971a1daa3dae13d224e13&=&format=webp&quality=lossless",
+      "imageHint": "city lights"
     }
   ]
 }

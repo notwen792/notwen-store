@@ -9,114 +9,75 @@ export type Product = {
   description?: string;
 };
 
-const formatDescription = (desc: string, loc: string, workers: string, services: string) => {
-  return `${desc}\n\n📍 Ubicación: ${loc}\n👥 Trabajadores: ${workers}\n🥐 Servicios y productos: ${services}`;
-};
-
 export const products: Product[] = [
   {
     id: 1,
     name: "MARIE'BLACHERE",
     category: 'Negocios',
-    imageId: 'product1',
+    imageId: 'img-marie',
     price: 99.83,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
-    description: formatDescription(
-      "Panaderia pequeña, donde pararte a comprar un buen bocadillo o una barra de pan.",
-      "Grove Street",
-      "Min 3 / Max 8",
-      "Bollería, bocadillos fríos y calientes, comida para llevar."
-    ),
+    description: "Panaderia pequeña, donde pararte a comprar un buen bocadillo o una barra de pan.\n\n📍 Ubicación: Grove Street\n👥 Trabajadores: Min 3 / Max 8\n🥐 Servicios y productos: Bollería, bocadillos fríos y calientes, comida para llevar.",
   },
   {
     id: 3,
     name: "BENNY'S",
     category: 'Negocios',
-    imageId: 'pearls',
+    imageId: 'img-bennys',
     price: 60.50,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
-    description: formatDescription(
-      "Taller mecánico especializado en modificaciones de alto rendimiento.",
-      "Strawberry",
-      "Min 5 / Max 15",
-      "Tuning motor, estética avanzada y reparaciones."
-    ),
+    description: "Taller mecánico especializado en modificaciones de alto rendimiento.\n\n📍 Ubicación: Strawberry\n👥 Trabajadores: Min 5 / Max 15\n🥐 Servicios y productos: Tuning motor, estética avanzada y reparaciones.",
   },
   {
     id: 4,
     name: 'BEAN MACHINE',
     category: 'Negocios',
-    imageId: 'bean-machine',
+    imageId: 'img-bean',
     price: 80.00,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
-    description: formatDescription(
-      "Cafetería icónica de Los Santos, el lugar perfecto para un café rápido y un donut.",
-      "Mission Row",
-      "Min 2 / Max 6",
-      "Café, donuts, bollería y snacks."
-    ),
+    description: "Cafetería icónica de Los Santos, el lugar perfecto para un café rápido y un donut.\n\n📍 Ubicación: Mission Row\n👥 Trabajadores: Min 2 / Max 6\n🥐 Servicios y productos: Café, donuts, bollería y snacks.",
   },
   {
     id: 8,
     name: 'UpnAtom',
     category: 'Negocios',
-    imageId: 'bennys',
+    imageId: 'img-upnatom',
     price: 120.00,
     features: ['Exclusividad', 'Eventos VIP', 'Plug & Play'],
-    description: formatDescription(
-      "Establecimiento de lujo ideal para reuniones sociales y eventos corporativos.",
-      "Puerto de Los Santos",
-      "Min 5 / Max 15",
-      "Servicio de bar, zona lounge y gestión de eventos."
-    ),
+    description: "Establecimiento de lujo ideal para reuniones sociales y eventos corporativos.\n\n📍 Ubicación: Puerto de Los Santos\n👥 Trabajadores: Min 5 / Max 15\n🥐 Servicios y productos: Servicio de bar, zona lounge y gestión de eventos.",
   },
   {
     id: 9,
     name: 'BURGERSHOT',
     category: 'Negocios',
-    imageId: 'ltd',
+    imageId: 'img-burgershot',
     price: 150.00,
     features: ['Cocina rápida', 'Menú icónico', 'Gestión de stock'],
-    description: formatDescription(
-      "Restaurante de comida rápida especializado en las mejores hamburguesas de la ciudad.",
-      "Vespucci Canals",
-      "Min 2 / Max 8",
-      "Hamburguesas, patatas, bebidas y helados."
-    ),
+    description: "Restaurante de comida rápida especializado en las mejores hamburguesas de la ciudad.\n\n📍 Ubicación: Vespucci Canals\n👥 Trabajadores: Min 2 / Max 8\n🥐 Servicios y productos: Hamburguesas, patatas, bebidas y helados.",
   },
   {
     id: 11,
     name: 'VANILLA UNICORN',
     category: 'Negocios',
-    imageId: 'vanilla',
+    imageId: 'img-vanilla',
     price: 180.00,
     features: ['Rol adulto', 'Gestión de club', 'Barra'],
-    description: formatDescription(
-      "Club nocturno icónico con gestión empresarial completa.",
-      "Strawberry",
-      "Min 5 / Max 25",
-      "Bailes, bebidas premium y control de seguridad."
-    ),
+    description: "Club nocturno icónico con gestión empresarial completa.\n\n📍 Ubicación: Strawberry\n👥 Trabajadores: Min 5 / Max 25\n🥐 Servicios y productos: Bailes, bebidas premium y control de seguridad.",
   },
   {
     id: 12,
     name: 'PILLBOX HOSPITAL',
     category: 'Negocios',
-    imageId: 'pillbox',
+    imageId: 'img-pillbox',
     price: 200.00,
     features: ['Sistema médico', 'Farmacia', 'Ambulancias'],
-    description: formatDescription(
-      "Centro hospitalario avanzado con sistemas de tratamiento médico.",
-      "Pillbox Hill",
-      "Min 10 / Max 40",
-      "Revive, curación de heridas y recetas médicas."
-    ),
+    description: "Centro hospitalario avanzado con sistemas de tratamiento médico.\n\n📍 Ubicación: Pillbox Hill\n👥 Trabajadores: Min 10 / Max 40\n🥐 Servicios y productos: Revive, curación de heridas y recetas médicas.",
   },
   {
     id: 2,
     name: 'NOTWEN ALL SCRIPTS (40% OFF)',
     category: 'Packs',
-    imageId: 'product-city',
+    imageId: 'img-city',
     price: 747.78,
     originalPrice: 1246.30,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
@@ -126,7 +87,7 @@ export const products: Product[] = [
     id: 5,
     name: 'POSTULACIÓN STAFF (SOPORTE)',
     category: 'Postulaciones',
-    imageId: 'product-city',
+    imageId: 'img-city',
     price: 0.00,
     features: ['Formación incluida', 'Comunidad activa', 'Ascensos'],
     description: 'Buscamos personas comprometidas para ayudar a nuestra comunidad en el día a día.',
@@ -135,7 +96,7 @@ export const products: Product[] = [
     id: 6,
     name: 'LIDERAZGO FACCION (LSPD)',
     category: 'Postulaciones',
-    imageId: 'product-city',
+    imageId: 'img-city',
     price: 0.00,
     features: ['Gestión de equipo', 'Rol serio', 'Responsabilidad'],
     description: '¿Tienes experiencia liderando cuerpos policiales? Esta es tu oportunidad.',
@@ -144,7 +105,7 @@ export const products: Product[] = [
     id: 7,
     name: 'VIP BRONCE',
     category: 'VIP',
-    imageId: 'product-city',
+    imageId: 'img-city',
     price: 15.00,
     features: ['Acceso prioritario', 'Ropa exclusiva', 'Discord Role'],
     description: 'Nivel básico de membresía VIP con beneficios esenciales.',
