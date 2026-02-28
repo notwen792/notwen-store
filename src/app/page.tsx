@@ -11,7 +11,7 @@ import React, { useState, useEffect } from 'react';
 
 export default function Home() {
   const featuredProduct = products[0];
-  const image = PlaceHolderImages.find((img) => img.id === featuredProduct.imageId);
+  const image = PlaceHolderImages.find((img) => img.id === 'product1');
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -24,7 +24,15 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent z-10" />
         {image && 
             <div className="absolute inset-0">
-                <Image src={'https://media.discordapp.net/attachments/1269644412875440128/1464997525227569317/dawndjawnd2.png?ex=697780c4&is=69762f44&hm=930eb81b8f580627cb68e24c19ec447c4dce99a2bcbadab70abfec6df2930c09&=&format=webp&quality=lossless'} alt="Hero background" fill style={{ objectFit: 'cover', objectPosition: 'right' }} className="opacity-20" data-ai-hint={'logo right'} />
+                <Image 
+                  src={image.imageUrl} 
+                  alt="Hero background" 
+                  fill 
+                  priority
+                  style={{ objectFit: 'cover', objectPosition: 'right' }} 
+                  className="opacity-25" 
+                  data-ai-hint={image.imageHint} 
+                />
             </div>
         }
         <div className="relative z-20 flex flex-col items-center">
