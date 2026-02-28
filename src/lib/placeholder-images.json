@@ -32,9 +32,9 @@
     },
     {
       "id": "product3",
-      "description": "Notwen Clothing Specific Image",
-      "imageUrl": "https://media.discordapp.net/attachments/1110302343133663323/1477390984093630535/image.png?ex=69a49713&is=69a34593&hm=0db7e9898ade96a7cc124726894f7e7d22f6c210504971a1daa3dae13d224e13&=&format=webp&quality=lossless",
-      "imageHint": "clothing store"
+      "description": "Benny's Car Image",
+      "imageUrl": "https://cdn.discordapp.com/attachments/1110302343133663323/1477393948589822042/image.png?ex=69a499d5&is=69a34855&hm=e57d0531a018a056e95bfe1253e0e245962cf22a174ec11ea0c5ba01fe5ec4ab&",
+      "imageHint": "mechanical car"
     },
     {
       "id": "product4",
@@ -45,7 +45,7 @@
     {
       "id": "bennys",
       "description": "Mechanical workshop",
-      "imageUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1080",
+      "imageUrl": "https://cdn.discordapp.com/attachments/1110302343133663323/1477393948589822042/image.png?ex=69a499d5&is=69a34855&hm=e57d0531a018a056e95bfe1253e0e245962cf22a174ec11ea0c5ba01fe5ec4ab&",
       "imageHint": "car workshop"
     },
     {
