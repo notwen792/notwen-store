@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -10,7 +9,6 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import React, { useState, useEffect } from 'react';
 
 export default function Home() {
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'home-hero');
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -21,18 +19,6 @@ export default function Home() {
     <main className="flex-grow bg-background text-white">
       <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center text-center p-8">
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent z-10" />
-        {heroImage && 
-            <div className="absolute inset-0">
-                <Image 
-                  src={heroImage.imageUrl} 
-                  alt="Hero background" 
-                  fill 
-                  priority
-                  className="opacity-25 object-cover object-center" 
-                  data-ai-hint={heroImage.imageHint} 
-                />
-            </div>
-        }
         <div className="relative z-20 flex flex-col items-center">
             <h1 className="font-headline text-6xl md:text-8xl uppercase tracking-widest">
                 notwen
@@ -98,7 +84,7 @@ export default function Home() {
                         </li>
                         <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
                             <Avatar className="transition-transform duration-300 group-hover:rotate-12 border border-border/50">
-                                <AvatarImage src="https://cdn.discordapp.com/avatars/276744327198277633/8e80e75a28f7c311e7d4203d74873d37.webp?size=1024" alt="liitze" />
+                                <AvatarImage src="https://cdn.discordapp.com/avatars/185887622223233024/e75a2fb4f137ea2af97ba697755ec674.webp?size=1024" alt="liitze" />
                                 <AvatarFallback>L</AvatarFallback>
                             </Avatar>
                             <span className="font-semibold text-white transition-colors group-hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] group-hover:bg-clip-text group-hover:text-transparent">liitze</span>
