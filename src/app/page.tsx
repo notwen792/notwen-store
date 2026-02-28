@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { products } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -5,10 +7,16 @@ import { ArrowRight, Terminal, Gamepad2, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import React, { useState, useEffect } from 'react';
 
 export default function Home() {
   const featuredProduct = products[0];
   const image = PlaceHolderImages.find((img) => img.id === featuredProduct.imageId);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <main className="flex-grow bg-background text-white">
