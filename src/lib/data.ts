@@ -44,7 +44,7 @@ export const products: Product[] = [
     imageId: 'img-upnatom',
     price: 120.00,
     features: ['Exclusividad', 'Eventos VIP', 'Plug & Play'],
-    description: "Establecimiento de lujo ideal para reuniones sociales y eventos corporativos.\n\n📍 Ubicación: Puerto de Los Santos\n👥 Trabajadores: Min 5 / Max 15\n🥐 Servicios y productos: Servicio de bar, zona lounge y gestión de eventos.",
+    description: "Restaurante de comida rápida con temática atómica, el lugar ideal para una hamburguesa rápida y deliciosa.\n\n📍 Ubicación: Del Perro Pier\n👥 Trabajadores: Min 3 / Max 10\n🥐 Servicios y productos: Hamburguesas, batidos, patatas fritas y servicio rápido.",
   },
   {
     id: 9,
