@@ -42,7 +42,7 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
             <div className="lg:col-span-2">
                 <div className="text-center md:text-left mb-12">
-                    <h2 className="font-headline text-4xl text-white tracking-wider">Why notwen?</h2>
+                    <h2 className="font-headline text-4xl text-white tracking-wider">¿Qué es notwen?</h2>
                     <p className="text-muted-foreground mt-2 max-w-2xl mx-auto md:mx-0">We are committed to providing the best for our community.</p>
                 </div>
 
