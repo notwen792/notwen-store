@@ -1,13 +1,13 @@
 'use client';
 
 import React from 'react';
-import { Shield, AlertCircle, Scale, Users, FileText } from 'lucide-react';
+import { Shield, AlertCircle, Scale, Users, FileText, ExternalLink } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 export default function NormativasPage() {
   const normativas = [
     {
-      title: 'Reglas Generales',
+      title: 'Normativa General',
       icon: Shield,
       content: 'Respeto absoluto hacia todos los miembros de la comunidad. No se tolerará toxicidad, acoso ni discriminación de ningún tipo.'
     },
@@ -68,15 +68,16 @@ export default function NormativasPage() {
 
         <div className="text-center mt-12 p-8 bg-card rounded-lg border border-border/10">
           <p className="text-muted-foreground mb-4">
-            Para leer la normativa completa con todos los detalles técnicos, únete a nuestro Discord oficial.
+            Haz clic en el botón de abajo para leer la normativa completa y detallada de nuestro servidor.
           </p>
           <a 
-            href="https://discord.gg/Z6KvkfFVts" 
+            href="https://online.pubhtml5.com/krmgz/tzwo/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-destructive text-white rounded-md font-bold hover:brightness-110 transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] text-white rounded-md font-bold hover:brightness-110 transition-all shadow-lg shadow-destructive/20"
           >
-            VER NORMATIVA COMPLETA EN DISCORD
+            VER NORMATIVA COMPLETA
+            <ExternalLink className="h-5 w-5" />
           </a>
         </div>
       </div>
