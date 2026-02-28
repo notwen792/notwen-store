@@ -49,6 +49,12 @@
       "imageHint": "staff team"
     },
     {
+      "id": "img-lspd",
+      "description": "LSPD Logo",
+      "imageUrl": "https://media.discordapp.net/attachments/1465487706850066545/1477425065309114379/logo_lspd.png?ex=69a4b6d0&is=69a36550&hm=e4c4198f02e7b6e876b7480f488c5fb1fdcf21bd2c02db50593dc9a382fd3d92&=&format=webp&quality=lossless&width=968&height=968",
+      "imageHint": "police department logo"
+    },
+    {
       "id": "img-city",
       "description": "GTA City View",
       "imageUrl": "https://media.discordapp.net/attachments/1110302343133663323/1477390984093630535/image.png?ex=69a49713&is=69a34593&hm=0db7e9898ade96a7cc124726894f7e7d22f6c210504971a1daa3dae13d224e13&=&format=webp&quality=lossless",

@@ -1,3 +1,4 @@
+
 export type Product = {
   id: number;
   name: string;
@@ -96,7 +97,7 @@ export const products: Product[] = [
     id: 6,
     name: 'LSPD',
     category: 'Postulaciones',
-    imageId: 'img-city',
+    imageId: 'img-lspd',
     price: 0.00,
     features: ['Gestión de equipo', 'Rol serio', 'Responsabilidad'],
     description: '¿Tienes experiencia liderando cuerpos policiales? Esta es tu oportunidad.',
