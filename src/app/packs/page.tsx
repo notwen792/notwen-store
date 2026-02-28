@@ -14,13 +14,13 @@ export default function PacksPage() {
           Ahorra con nuestros paquetes exclusivos. La mejor combinación de activos para configurar tu servidor de forma rápida, eficiente y económica.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
         {packProducts.length > 0 ? (
           packProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))
         ) : (
-          <p className="col-span-full text-center text-muted-foreground">No hay packs disponibles en este momento.</p>
+          <p className="col-span-full text-center text-muted-foreground text-lg">No hay packs disponibles en este momento.</p>
         )}
       </div>
     </main>

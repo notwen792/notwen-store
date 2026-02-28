@@ -14,13 +14,13 @@ export default function VipPage() {
           Acceso exclusivo y ventajas premium para los miembros más destacados de nuestra comunidad. Eleva tu experiencia al siguiente nivel.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
         {vipProducts.length > 0 ? (
           vipProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))
         ) : (
-          <p className="col-span-full text-center text-muted-foreground italic">No hay suscripciones VIP disponibles en este momento.</p>
+          <p className="col-span-full text-center text-muted-foreground italic text-lg">No hay suscripciones VIP disponibles en este momento.</p>
         )}
       </div>
     </main>

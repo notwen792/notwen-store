@@ -30,9 +30,9 @@ const scriptDescription = `🌟 Exclusive Mapping for FiveM: Transform the LTD C
 
 const marieBlachereDescription = `Panaderia pequeña, donde pararte a comprar un buen bocadillo o una barra de pan.
 
-📍 **Ubicación:** Grove Street
-👥 **Trabajadores:** Min 3 / Max 8
-🥐 **Servicios y productos:** Bollería, bocadillos fríos y calientes, comida para llevar.`;
+📍 Ubicación: Grove Street
+👥 Trabajadores: Min 3 / Max 8
+🥐 Servicios y productos: Bollería, bocadillos fríos y calientes, comida para llevar.`;
 
 export const products: Product[] = [
   {

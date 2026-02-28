@@ -16,7 +16,7 @@ export default function ScriptsPage() {
             Explora nuestra selección exclusiva de negocios y mapeos diseñados para llevar el roleplay de tu servidor a otro nivel de realismo y profesionalidad.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
           {negociosProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
@@ -32,13 +32,13 @@ export default function ScriptsPage() {
             ¿Quieres formar parte de nuestro equipo o liderar una facción? Presenta tu candidatura para las vacantes disponibles en la ciudad.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
           {postulacionesProducts.length > 0 ? (
             postulacionesProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))
           ) : (
-            <p className="col-span-full text-center text-muted-foreground italic">No hay postulaciones abiertas en este momento.</p>
+            <p className="col-span-full text-center text-muted-foreground italic text-lg">No hay postulaciones abiertas en este momento.</p>
           )}
         </div>
       </div>
