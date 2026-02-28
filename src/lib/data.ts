@@ -1,3 +1,4 @@
+
 export type Product = {
   id: number;
   name: string;
@@ -22,18 +23,6 @@ const marieBlachereDescription = `Panaderia pequeña, donde pararte a comprar un
 👥 Trabajadores: Min 3 / Max 8
 🥐 Servicios y productos: Bollería, bocadillos fríos y calientes, comida para llevar.`;
 
-const clothingDescription = `Tienda de ropa de lujo con probadores y catálogo avanzado.
-
-📍 Ubicación: Legion Square
-👥 Trabajadores: Min 2 / Max 5
-👕 Servicios: Customización de personajes y guardado de outfits.`;
-
-const housingDescription = `Sistema de casas de última generación con inmobiliaria.
-
-📍 Ubicación: Toda la ciudad
-👥 Trabajadores: Gestión por inmobiliaria
-🏠 Servicios: Alquiler, venta y sistema de mobiliario.`;
-
 export const products: Product[] = [
   {
     id: 1,
@@ -51,7 +40,11 @@ export const products: Product[] = [
     imageId: 'product3',
     price: 60.50,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
-    description: clothingDescription,
+    description: `Tienda de ropa de lujo con probadores y catálogo avanzado.
+
+📍 Ubicación: Legion Square
+👥 Trabajadores: Min 2 / Max 5
+👕 Servicios: Customización de personajes y guardado de outfits.`,
   },
   {
     id: 4,
@@ -60,13 +53,17 @@ export const products: Product[] = [
     imageId: 'product4',
     price: 80.00,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
-    description: housingDescription,
+    description: `Sistema de casas de última generación con inmobiliaria.
+
+📍 Ubicación: Toda la ciudad
+👥 Trabajadores: Gestión por inmobiliaria
+🏠 Servicios: Alquiler, venta y sistema de mobiliario.`,
   },
   {
     id: 8,
     name: 'BENNY\'S CUSTOMS',
     category: 'Negocios',
-    imageId: 'product2',
+    imageId: 'product-city',
     price: 120.00,
     features: ['Tuning avanzado', 'Pinturas únicas', 'Plug & Play'],
     description: `Taller mecánico especializado en modificaciones de alto rendimiento.
@@ -79,7 +76,7 @@ export const products: Product[] = [
     id: 9,
     name: 'BAHAMAS DISCO',
     category: 'Negocios',
-    imageId: 'product2',
+    imageId: 'product-city',
     price: 150.00,
     features: ['Sistema de DJ', 'Luces LED', 'Bebidas'],
     description: `La mejor discoteca de la ciudad para el ocio nocturno.
@@ -92,7 +89,7 @@ export const products: Product[] = [
     id: 10,
     name: 'LTD GAS STATION',
     category: 'Negocios',
-    imageId: 'product2',
+    imageId: 'product-city',
     price: 45.00,
     features: ['Gasolina', 'Tienda 24/7', 'Robos configurados'],
     description: `Gasolinera estratégica con tienda de conveniencia incorporada.
@@ -105,7 +102,7 @@ export const products: Product[] = [
     id: 11,
     name: 'VANILLA UNICORN',
     category: 'Negocios',
-    imageId: 'product2',
+    imageId: 'product-city',
     price: 180.00,
     features: ['Rol adulto', 'Gestión de club', 'Barra'],
     description: `Club nocturno icónico con gestión empresarial completa.
@@ -118,7 +115,7 @@ export const products: Product[] = [
     id: 12,
     name: 'PILLBOX HOSPITAL',
     category: 'Negocios',
-    imageId: 'product2',
+    imageId: 'product-city',
     price: 200.00,
     features: ['Sistema médico', 'Farmacia', 'Ambulancias'],
     description: `Centro hospitalario avanzado con sistemas de tratamiento médico.
@@ -144,7 +141,7 @@ export const products: Product[] = [
     id: 2,
     name: 'NOTWEN ALL SCRIPTS (40% OFF)',
     category: 'Packs',
-    imageId: 'unique-scripts',
+    imageId: 'product-city',
     price: 747.78,
     originalPrice: 1246.30,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
@@ -154,7 +151,7 @@ export const products: Product[] = [
     id: 5,
     name: 'POSTULACIÓN STAFF (SOPORTE)',
     category: 'Postulaciones',
-    imageId: 'new-game-modes',
+    imageId: 'product-city',
     price: 0.00,
     features: ['Formación incluida', 'Comunidad activa', 'Ascensos'],
     description: 'Buscamos personas comprometidas para ayudar a nuestra comunidad en el día a día.',
@@ -163,7 +160,7 @@ export const products: Product[] = [
     id: 6,
     name: 'LIDERAZGO FACCION (LSPD)',
     category: 'Postulaciones',
-    imageId: 'product2',
+    imageId: 'product-city',
     price: 0.00,
     features: ['Gestión de equipo', 'Rol serio', 'Responsabilidad'],
     description: '¿Tienes experiencia liderando cuerpos policiales? Esta es tu oportunidad.',
@@ -172,7 +169,7 @@ export const products: Product[] = [
     id: 7,
     name: 'VIP BRONCE',
     category: 'VIP',
-    imageId: 'product2',
+    imageId: 'product-city',
     price: 15.00,
     features: ['Acceso prioritario', 'Ropa exclusiva', 'Discord Role'],
     description: 'Nivel básico de membresía VIP con beneficios esenciales.',

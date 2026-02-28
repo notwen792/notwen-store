@@ -1,7 +1,7 @@
+
 'use client';
 
 import Image from 'next/image';
-import { products } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight, Terminal, Gamepad2, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
@@ -10,7 +10,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import React, { useState, useEffect } from 'react';
 
 export default function Home() {
-  const image = PlaceHolderImages.find((img) => img.id === 'product2');
+  const heroImage = PlaceHolderImages.find((img) => img.id === 'home-hero');
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -21,15 +21,15 @@ export default function Home() {
     <main className="flex-grow bg-background text-white">
       <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center text-center p-8">
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent z-10" />
-        {image && 
+        {heroImage && 
             <div className="absolute inset-0">
                 <Image 
-                  src="https://media.discordapp.net/attachments/1269644412875440128/1477391344900247692/e75a2fb4f137ea2af97ba697755ec674.webp?ex=69a49769&is=69a345e9&hm=2ca5c0f73f6f04a19690151b44f2c5495a85f173572f4392b586e470bd2eeee2" 
+                  src={heroImage.imageUrl} 
                   alt="Hero background" 
                   fill 
                   priority
                   className="opacity-25 object-cover object-center" 
-                  data-ai-hint="city night" 
+                  data-ai-hint={heroImage.imageHint} 
                 />
             </div>
         }
@@ -90,15 +90,15 @@ export default function Home() {
                             <span className="font-semibold text-white transition-colors group-hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] group-hover:bg-clip-text group-hover:text-transparent">stewiexox</span>
                         </li>
                         <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
-                            <Avatar className="transition-transform duration-300 group-hover:rotate-12">
+                            <Avatar className="transition-transform duration-300 group-hover:rotate-12 border border-border/50">
                                 <AvatarImage src="https://cdn.discordapp.com/avatars/793861769604759594/ddcfe57cbf4e1f696ab90c469dbabf45.webp?size=1024" alt="1015040" />
                                 <AvatarFallback>1</AvatarFallback>
                             </Avatar>
                             <span className="font-semibold text-white transition-colors group-hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] group-hover:bg-clip-text group-hover:text-transparent">1015040</span>
                         </li>
                         <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
-                            <Avatar className="transition-transform duration-300 group-hover:rotate-12">
-                                <AvatarImage src="https://cdn.discordapp.com/attachments/1269644412875440128/1477391344900247692/e75a2fb4f137ea2af97ba697755ec674.webp?ex=69a49769&is=69a345e9&hm=2ca5c0f73f6f04a19690151b44f2c5495a85f173572f4392b586e470bd2eeee2&" alt="liitze" />
+                            <Avatar className="transition-transform duration-300 group-hover:rotate-12 border border-border/50">
+                                <AvatarImage src="https://cdn.discordapp.com/avatars/276744327198277633/8e80e75a28f7c311e7d4203d74873d37.webp?size=1024" alt="liitze" />
                                 <AvatarFallback>L</AvatarFallback>
                             </Avatar>
                             <span className="font-semibold text-white transition-colors group-hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] group-hover:bg-clip-text group-hover:text-transparent">liitze</span>

@@ -1,3 +1,6 @@
+
+'use client';
+
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight, MessageSquare, BookOpen, CheckCircle, Play, Instagram, Share2, ShieldCheck } from 'lucide-react';
@@ -6,15 +9,15 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export default function NotwenRpPage() {
-  const image = PlaceHolderImages.find((img) => img.id === 'product2');
+  const heroImage = PlaceHolderImages.find((img) => img.id === 'rp-hero');
 
   return (
     <main className="flex-grow bg-background text-white">
       <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center text-center p-8">
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent z-10" />
-        {image &&
+        {heroImage &&
             <div className="absolute inset-0">
-                <Image src={image.imageUrl} alt="notwen rp background" fill className="opacity-20 object-cover" data-ai-hint={image.imageHint} />
+                <Image src={heroImage.imageUrl} alt="notwen rp background" fill className="opacity-20 object-cover" data-ai-hint={heroImage.imageHint} />
             </div>
         }
         <div className="relative z-20 flex flex-col items-center">
@@ -47,13 +50,13 @@ export default function NotwenRpPage() {
                     <h3 className="font-headline text-3xl tracking-wider mb-6 text-destructive">¿Quiénes somos?</h3>
                     <div className="space-y-4 text-muted-foreground leading-relaxed">
                         <p>
-                            notwen rp es un servidor de roleplay de Grand Theft Auto V donde puedes vivir una nueva vida. Ya sea que quieras ser un ciudadano respetuoso de la ley, un criminal astuto o cualquier cosa intermedia, nuestro servidor te proporciona la plataforma para crear tu propia historia.
+                            notwen rp is a Grand Theft Auto V roleplay server where you can live a new life. Whether you want to be a law-abiding citizen, a cunning criminal, or anything in between, our server provides you with the platform to create your own story.
                         </p>
                         <p>
-                            Nuestro servidor está construido sobre un marco personalizado con scripts y características únicas para garantizar una experiencia inmersiva y atractiva. Tenemos un equipo de desarrollo activo que trabaja constantemente en nuevas actualizaciones y escucha los comentarios de la comunidad.
+                            Our server is built on a custom framework with unique scripts and features to ensure an immersive and engaging experience. We have an active development team that is constantly working on new updates and listening to community feedback.
                         </p>
                         <p>
-                            Únete a nuestra comunidad en Discord para comenzar, leer las reglas de nuestro servidor y conectarte con otros jugadores. ¡Esperamos verte en Los Santos!
+                            Join our Discord community to get started, read our server rules, and connect with other players. We look forward to seeing you in Los Santos!
                         </p>
                     </div>
                 </div>
@@ -80,7 +83,7 @@ export default function NotwenRpPage() {
                         </li>
                         <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
                             <Avatar className="transition-transform duration-300 group-hover:rotate-12 border border-border/50">
-                                <AvatarImage src="https://cdn.discordapp.com/attachments/1269644412875440128/1477391344900247692/e75a2fb4f137ea2af97ba697755ec674.webp?ex=69a49769&is=69a345e9&hm=2ca5c0f73f6f04a19690151b44f2c5495a85f173572f4392b586e470bd2eeee2&" alt="liitze" />
+                                <AvatarImage src="https://cdn.discordapp.com/avatars/276744327198277633/8e80e75a28f7c311e7d4203d74873d37.webp?size=1024" alt="liitze" />
                                 <AvatarFallback>L</AvatarFallback>
                             </Avatar>
                             <span className="font-semibold text-white">liitze</span>

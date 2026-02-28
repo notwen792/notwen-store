@@ -8,9 +8,27 @@
       "imageHint": "bakery shop"
     },
     {
-      "id": "product2",
+      "id": "product-city",
       "description": "GTA Style City Night",
-      "imageUrl": "https://images.unsplash.com/photo-1588312744377-2adfb7b8578a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaXR5JTIwbmlnaHR8ZW58MHx8fHwxNzcyMjA2ODgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=1080",
+      "imageHint": "city night"
+    },
+    {
+      "id": "home-hero",
+      "description": "Main City Background",
+      "imageUrl": "https://images.unsplash.com/photo-1588312744377-2adfb7b8578a?q=80&w=1920",
+      "imageHint": "city night"
+    },
+    {
+      "id": "rp-hero",
+      "description": "Notwen RP Hero Background",
+      "imageUrl": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1920",
+      "imageHint": "city skyline"
+    },
+    {
+      "id": "negocios-hero",
+      "description": "Negocios Header Background",
+      "imageUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=1200&h=400&fit=crop",
       "imageHint": "city night"
     },
     {
@@ -24,24 +42,6 @@
       "description": "Modern house",
       "imageUrl": "https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?q=80&w=1080",
       "imageHint": "modern house"
-    },
-    {
-      "id": "unique-scripts",
-      "description": "Gaming Character Replacement",
-      "imageUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=1080",
-      "imageHint": "city night"
-    },
-    {
-      "id": "new-game-modes",
-      "description": "Action Scene Replacement",
-      "imageUrl": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1080",
-      "imageHint": "city skyline"
-    },
-    {
-      "id": "negocios-hero",
-      "description": "City night skyline",
-      "imageUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=1200&h=400&fit=crop",
-      "imageHint": "city night"
     }
   ]
 }
