@@ -85,7 +85,7 @@ export default function NormativasPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 w-full px-4 py-2 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] text-white rounded-md text-sm font-bold hover:brightness-110 transition-all shadow-lg shadow-destructive/20"
                 >
-                  VER NORMATIVA COMPLETA
+                  VER NORMATIVA
                   <ExternalLink className="h-4 w-4" />
                 </a>
               </div>
