@@ -31,7 +31,7 @@ export default function Home() {
             <h1 className="font-headline text-6xl md:text-8xl uppercase tracking-widest">
                 notwen
             </h1>
-            <p className="text-xl md:text-2xl font-light tracking-[0.3em] uppercase bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] bg-clip-text text-transparent">
+            <p className="text-3xl md:text-5xl font-headline tracking-[0.5em] uppercase bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] bg-clip-text text-transparent -mt-2">
                 rp
             </p>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
