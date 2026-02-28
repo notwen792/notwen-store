@@ -31,16 +31,16 @@
       "imageHint": "burger shop"
     },
     {
-      "id": "img-vanilla",
+      "id": "img-fruit",
       "description": "Fruit Machine Shop",
       "imageUrl": "https://media.discordapp.net/attachments/1465487706850066545/1477418427097420047/image.png?ex=69a4b0a2&is=69a35f22&hm=a8f1585cc4fe6ce61ddedc6483b12d970e66c7037d2b2760114368cda5c04ef7&=&format=webp&quality=lossless&width=1815&height=864",
       "imageHint": "fruit shop juice"
     },
     {
-      "id": "img-pillbox",
-      "description": "Pillbox Medical Center",
-      "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1080",
-      "imageHint": "hospital hallway"
+      "id": "img-fitness",
+      "description": "Power Fitness Center",
+      "imageUrl": "https://media.discordapp.net/attachments/1465487706850066545/1477419011959689499/Screenshot_1.png?ex=69a4b12d&is=69a35fad&hm=71d958bcdca8eb37541f7c891de316cdbce2095b57d3433eab68e9db6877136a&=&format=webp&quality=lossless&width=550&height=271",
+      "imageHint": "gym fitness center"
     },
     {
       "id": "img-city",
