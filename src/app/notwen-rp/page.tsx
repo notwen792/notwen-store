@@ -42,7 +42,7 @@ export default function NotwenRpPage() {
             </div>
 
             <div className="bg-card p-8 rounded-lg border border-border/20 text-white">
-                <h3 className="font-headline text-3xl tracking-wider mb-6 text-destructive">Bienvenidos a Los Santos</h3>
+                <h3 className="font-headline text-3xl tracking-wider mb-6 text-destructive">¿Quiénes somos?</h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                     <p>
                         notwen rp es un servidor de roleplay de Grand Theft Auto V donde puedes vivir una nueva vida. Ya sea que quieras ser un ciudadano respetuoso de la ley, un criminal astuto o cualquier cosa intermedia, nuestro servidor te proporciona la plataforma para crear tu propia historia.
