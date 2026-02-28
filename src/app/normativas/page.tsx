@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Shield, BadgeCheck, Video, Building2, FileText, ExternalLink } from 'lucide-react';
+import { Shield, BadgeCheck, Video, Building2, FileText, ExternalLink, HeartPulse } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 export default function NormativasPage() {
@@ -25,6 +25,11 @@ export default function NormativasPage() {
       title: 'Normativa LSPD',
       icon: BadgeCheck,
       content: 'Regulación, procedimientos y códigos de conducta para los miembros del departamento de policía de Los Santos.'
+    },
+    {
+      title: 'Normativa EMS',
+      icon: HeartPulse,
+      content: 'Protocolos de actuación, prioridades de atención y código de conducta para el personal médico de emergencias de Los Santos.'
     }
   ];
 
