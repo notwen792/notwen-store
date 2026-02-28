@@ -57,12 +57,12 @@ export const products: Product[] = [
   },
   {
     id: 11,
-    name: 'VANILLA UNICORN',
+    name: 'FRUIT MACHINE',
     category: 'Negocios',
     imageId: 'img-vanilla',
     price: 180.00,
-    features: ['Rol adulto', 'Gestión de club', 'Barra'],
-    description: "Club nocturno icónico con gestión empresarial completa.\n\n📍 Ubicación: Strawberry\n👥 Trabajadores: Min 5 / Max 25\n🥐 Servicios y productos: Bailes, bebidas premium y control de seguridad.",
+    features: ['Zumos naturales', 'Batidos', 'Vida sana'],
+    description: "Tu parada ideal para disfrutar de los mejores zumos y batidos naturales de Los Santos.\n\n📍 Ubicación: Vespucci Beach\n👥 Trabajadores: Min 2 / Max 6\n🥐 Servicios y productos: Batidos de frutas, bowls de açai y snacks saludables.",
   },
   {
     id: 12,
