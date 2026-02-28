@@ -42,6 +42,42 @@
       "description": "Modern house",
       "imageUrl": "https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?q=80&w=1080",
       "imageHint": "modern house"
+    },
+    {
+      "id": "bennys",
+      "description": "Mechanical workshop",
+      "imageUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1080",
+      "imageHint": "car workshop"
+    },
+    {
+      "id": "bahamas",
+      "description": "Nightclub interior",
+      "imageUrl": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1080",
+      "imageHint": "nightclub party"
+    },
+    {
+      "id": "ltd",
+      "description": "Gas station",
+      "imageUrl": "https://images.unsplash.com/photo-1563906267088-b02d4471f1f9?q=80&w=1080",
+      "imageHint": "gas station"
+    },
+    {
+      "id": "vanilla",
+      "description": "Bar club",
+      "imageUrl": "https://images.unsplash.com/photo-1514525253361-b83f859b73c0?q=80&w=1080",
+      "imageHint": "bar neon"
+    },
+    {
+      "id": "pillbox",
+      "description": "Hospital hallway",
+      "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1080",
+      "imageHint": "hospital"
+    },
+    {
+      "id": "burgershot",
+      "description": "Fast food burger",
+      "imageUrl": "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1080",
+      "imageHint": "burger"
     }
   ]
 }

@@ -10,13 +10,6 @@ export type Product = {
   description?: string;
 };
 
-const genericDescription = `Negocio de alta calidad para tu servidor FiveM.
-Optimizado y listo para usar (Plug & Play).
-
-📍 Ubicación: Consultar mapa
-👥 Trabajadores: Min 2 / Max 10
-🥐 Servicios: Gestión completa y sistema de facturación.`;
-
 const marieBlachereDescription = `Panaderia pequeña, donde pararte a comprar un buen bocadillo o una barra de pan.
 
 📍 Ubicación: Grove Street
@@ -63,7 +56,7 @@ export const products: Product[] = [
     id: 8,
     name: 'BENNY\'S CUSTOMS',
     category: 'Negocios',
-    imageId: 'product-city',
+    imageId: 'bennys',
     price: 120.00,
     features: ['Tuning avanzado', 'Pinturas únicas', 'Plug & Play'],
     description: `Taller mecánico especializado en modificaciones de alto rendimiento.
@@ -76,7 +69,7 @@ export const products: Product[] = [
     id: 9,
     name: 'BAHAMAS DISCO',
     category: 'Negocios',
-    imageId: 'product-city',
+    imageId: 'bahamas',
     price: 150.00,
     features: ['Sistema de DJ', 'Luces LED', 'Bebidas'],
     description: `La mejor discoteca de la ciudad para el ocio nocturno.
@@ -89,7 +82,7 @@ export const products: Product[] = [
     id: 10,
     name: 'LTD GAS STATION',
     category: 'Negocios',
-    imageId: 'product-city',
+    imageId: 'ltd',
     price: 45.00,
     features: ['Gasolina', 'Tienda 24/7', 'Robos configurados'],
     description: `Gasolinera estratégica con tienda de conveniencia incorporada.
@@ -102,7 +95,7 @@ export const products: Product[] = [
     id: 11,
     name: 'VANILLA UNICORN',
     category: 'Negocios',
-    imageId: 'product-city',
+    imageId: 'vanilla',
     price: 180.00,
     features: ['Rol adulto', 'Gestión de club', 'Barra'],
     description: `Club nocturno icónico con gestión empresarial completa.
@@ -115,7 +108,7 @@ export const products: Product[] = [
     id: 12,
     name: 'PILLBOX HOSPITAL',
     category: 'Negocios',
-    imageId: 'product-city',
+    imageId: 'pillbox',
     price: 200.00,
     features: ['Sistema médico', 'Farmacia', 'Ambulancias'],
     description: `Centro hospitalario avanzado con sistemas de tratamiento médico.
@@ -128,7 +121,7 @@ export const products: Product[] = [
     id: 13,
     name: 'BURGERSHOT',
     category: 'Negocios',
-    imageId: 'product1',
+    imageId: 'burgershot',
     price: 75.00,
     features: ['Cocina interactiva', 'Delivery', 'Drive Thru'],
     description: `Restaurante de comida rápida con sistema de cocina dinámica.
