@@ -68,7 +68,7 @@ export default function Home() {
                     <ul className="space-y-4">
                         <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
                             <Avatar className="transition-transform duration-300 group-hover:rotate-12">
-                                <AvatarImage src="https://storage.googleapis.com/databeat-vocal-files/7d23f374-1237-4d64-8975-5853f0985c49.png" alt="stewiexox" />
+                                <AvatarImage src="https://picsum.photos/seed/stewie-dev/100/100" alt="stewiexox" />
                                 <AvatarFallback>S</AvatarFallback>
                             </Avatar>
                             <span className="font-semibold text-white transition-colors group-hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] group-hover:bg-clip-text group-hover:text-transparent">stewiexox</span>
