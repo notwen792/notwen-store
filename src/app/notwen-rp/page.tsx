@@ -1,25 +1,15 @@
-
 'use client';
 
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight, MessageSquare, BookOpen, CheckCircle, Play, Instagram, Share2, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export default function NotwenRpPage() {
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'rp-hero');
-
   return (
     <main className="flex-grow bg-background text-white">
-      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center text-center p-8">
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent z-10" />
-        {heroImage &&
-            <div className="absolute inset-0">
-                <Image src={heroImage.imageUrl} alt="notwen rp background" fill className="opacity-20 object-cover" data-ai-hint={heroImage.imageHint} />
-            </div>
-        }
+      <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center text-center p-8 bg-card/30 border-b border-white/5">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/80" />
         <div className="relative z-20 flex flex-col items-center">
             <h1 className="font-headline text-6xl md:text-8xl uppercase tracking-widest text-white">
                 notwen rp
@@ -50,13 +40,13 @@ export default function NotwenRpPage() {
                     <h3 className="font-headline text-3xl tracking-wider mb-6 text-destructive">¿Quiénes somos?</h3>
                     <div className="space-y-4 text-muted-foreground leading-relaxed">
                         <p>
-                            notwen rp is a Grand Theft Auto V roleplay server where you can live a new life. Whether you want to be a law-abiding citizen, a cunning criminal, or anything in between, our server provides you with the platform to create your own story.
+                            notwen rp es un servidor de Grand Theft Auto V roleplay donde puedes vivir una nueva vida. Ya sea que quieras ser un ciudadano respetuoso de la ley, un criminal astuto o cualquier cosa intermedia, nuestro servidor te brinda la plataforma para crear tu propia historia.
                         </p>
                         <p>
-                            Our server is built on a custom framework with unique scripts and features to ensure an immersive and engaging experience. We have an active development team that is constantly working on new updates and listening to community feedback.
+                            Nuestro servidor está construido sobre un framework personalizado con scripts y características únicas para asegurar una experiencia inmersiva y atractiva. Contamos con un equipo de desarrollo activo que trabaja constantemente en nuevas actualizaciones y escucha los comentarios de la comunidad.
                         </p>
                         <p>
-                            Join our Discord community to get started, read our server rules, and connect with other players. We look forward to seeing you in Los Santos!
+                            Únete a nuestra comunidad de Discord para comenzar, lee las reglas del servidor y conéctate con otros jugadores. ¡Esperamos verte pronto en Los Santos!
                         </p>
                     </div>
                 </div>
