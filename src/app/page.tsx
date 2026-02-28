@@ -24,7 +24,7 @@ export default function Home() {
         {image && 
             <div className="absolute inset-0">
                 <Image 
-                  src="https://media.discordapp.net/attachments/1269644412875440128/1477391344900247692/e75a2fb4f137ea2af97ba697755ec674.webp?ex=69a49769&is=69a345e9&hm=2ca5c0f73f6f04a19690151b44f2c5495a85f173572f4392b586e470bd2eeee2&=&format=webp" 
+                  src="https://media.discordapp.net/attachments/1269644412875440128/1477391344900247692/e75a2fb4f137ea2af97ba697755ec674.webp?ex=69a49769&is=69a345e9&hm=2ca5c0f73f6f04a19690151b44f2c5495a85f173572f4392b586e470bd2eeee2" 
                   alt="Hero background" 
                   fill 
                   priority
@@ -84,7 +84,7 @@ export default function Home() {
                     <ul className="space-y-4">
                         <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
                             <Avatar className="transition-transform duration-300 group-hover:rotate-12 border border-border/50">
-                                <AvatarImage src="https://picsum.photos/seed/stewie/100/100" alt="stewiexox" />
+                                <AvatarImage src="https://cdn.discordapp.com/avatars/276744327198277633/8e80e75a28f7c311e7d4203d74873d37.webp?size=1024" alt="stewiexox" />
                                 <AvatarFallback>S</AvatarFallback>
                             </Avatar>
                             <span className="font-semibold text-white transition-colors group-hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] group-hover:bg-clip-text group-hover:text-transparent">stewiexox</span>
