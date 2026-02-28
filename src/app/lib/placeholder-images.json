@@ -1,0 +1,41 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "product1",
+      "description": "Boulangerie Marie Blachere Style Interior",
+      "imageUrl": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1080",
+      "imageHint": "bakery boulangerie"
+    },
+    {
+      "id": "product2",
+      "description": "GTA Style City Night",
+      "imageUrl": "https://images.unsplash.com/photo-1529619768328-e37af76c6fe5?q=80&w=2000",
+      "imageHint": "city night"
+    },
+    {
+      "id": "product3",
+      "description": "Clothing store interior",
+      "imageUrl": "https://images.unsplash.com/photo-1595665593673-bf1ad72905c0?q=80&w=1080",
+      "imageHint": "clothing store"
+    },
+    {
+      "id": "product4",
+      "description": "Modern house",
+      "imageUrl": "https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?q=80&w=1080",
+      "imageHint": "modern house"
+    },
+    {
+      "id": "unique-scripts",
+      "description": "Gaming Character",
+      "imageUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1080",
+      "imageHint": "gaming character"
+    },
+    {
+      "id": "new-game-modes",
+      "description": "Action Scene",
+      "imageUrl": "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1080",
+      "imageHint": "action game"
+    }
+  ]
+}
