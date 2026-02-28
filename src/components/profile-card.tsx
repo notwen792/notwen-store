@@ -23,7 +23,7 @@ export function ProductCard({ product }: { product: Product }) {
           <p className="text-sm text-muted-foreground">{product.category}</p>
           
           {product.description && (
-            <div className="mt-3 text-xs text-muted-foreground/80 line-clamp-4 whitespace-pre-line leading-relaxed italic border-l-2 border-destructive/30 pl-3">
+            <div className="mt-3 text-xs text-muted-foreground/80 whitespace-pre-line leading-relaxed italic border-l-2 border-destructive/30 pl-3">
               {product.description}
             </div>
           )}
