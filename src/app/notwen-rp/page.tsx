@@ -8,7 +8,8 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 export default function NotwenRpPage() {
   return (
     <main className="flex-grow bg-background text-white">
-      <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center text-center p-8 bg-card/30 border-b border-white/5">
+      {/* Hero Section - Fondo sólido */}
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center text-center p-8 bg-card/20 border-b border-white/5">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/80" />
         <div className="relative z-20 flex flex-col items-center">
             <h1 className="font-headline text-6xl md:text-8xl uppercase tracking-widest text-white">
@@ -113,35 +114,6 @@ export default function NotwenRpPage() {
                             <p className="text-sm text-muted-foreground">Una vez aprobado, solo tienes que conectarte a la IP del servidor y empezar tu historia.</p>
                         </div>
                     </div>
-                </div>
-                <div className="mt-8 pt-6 border-t border-border/20 text-center">
-                    <p className="text-muted-foreground italic">
-                        ¿Tienes dudas? Nuestro equipo de soporte está disponible 24/7 en Discord para ayudarte en cada paso.
-                    </p>
-                </div>
-            </div>
-
-            <div className="bg-card p-8 rounded-lg border border-border/20 text-white">
-                <h3 className="font-headline text-3xl tracking-wider mb-6 text-destructive">Nuestras Redes</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <Link href="#" className="flex items-center gap-4 p-4 rounded-lg bg-background/40 border border-border/10 hover:bg-background/60 transition-all duration-300 group">
-                        <div className="p-3 rounded-full bg-destructive/10 group-hover:bg-destructive/20 transition-colors">
-                            <Instagram className="h-6 w-6 text-destructive" />
-                        </div>
-                        <div>
-                            <h4 className="font-bold text-white mb-1">Instagram</h4>
-                            <p className="text-sm text-muted-foreground">Siguenos para no perderte ninguna foto o novedad.</p>
-                        </div>
-                    </Link>
-                    <Link href="#" className="flex items-center gap-4 p-4 rounded-lg bg-background/40 border border-border/10 hover:bg-background/60 transition-all duration-300 group">
-                        <div className="p-3 rounded-full bg-destructive/10 group-hover:bg-destructive/20 transition-colors">
-                            <Share2 className="h-6 w-6 text-destructive" />
-                        </div>
-                        <div>
-                            <h4 className="font-bold text-white mb-1">TikTok</h4>
-                            <p className="text-sm text-muted-foreground">Mira los mejores clips y momentos del servidor.</p>
-                        </div>
-                    </Link>
                 </div>
             </div>
         </div>

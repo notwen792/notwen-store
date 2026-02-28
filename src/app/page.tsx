@@ -1,24 +1,17 @@
 'use client';
 
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight, Terminal, Gamepad2, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 export default function Home() {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
   return (
     <main className="flex-grow bg-background text-white">
-      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center text-center p-8">
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent z-10" />
+      {/* Hero Section - Sin imagen de fondo para evitar parpadeos */}
+      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center text-center p-8 bg-card/10">
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent z-10" />
         <div className="relative z-20 flex flex-col items-center">
             <h1 className="font-headline text-6xl md:text-8xl uppercase tracking-widest">
                 notwen
