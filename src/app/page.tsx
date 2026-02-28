@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -10,7 +11,6 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import React, { useState, useEffect } from 'react';
 
 export default function Home() {
-  const featuredProduct = products[0];
   const image = PlaceHolderImages.find((img) => img.id === 'product1');
   const [isMounted, setIsMounted] = useState(false);
 
@@ -29,8 +29,7 @@ export default function Home() {
                   alt="Hero background" 
                   fill 
                   priority
-                  style={{ objectFit: 'cover', objectPosition: 'right' }} 
-                  className="opacity-25" 
+                  className="opacity-25 object-cover object-center" 
                   data-ai-hint={image.imageHint} 
                 />
             </div>
@@ -59,7 +58,9 @@ export default function Home() {
             <div className="lg:col-span-2">
                 <div className="text-center md:text-left mb-12">
                     <h2 className="font-headline text-4xl text-white tracking-wider">¿Qué es notwen?</h2>
-                    <p className="text-muted-foreground mt-2 max-w-2xl mx-auto md:mx-0">Somos tu destino especializado en scripts de alta calidad y una comunidad de roleplay única actualmente en pleno desarrollo.</p>
+                    <p className="text-muted-foreground mt-2 max-w-2xl mx-auto md:mx-0">
+                      Somos tu destino especializado en scripts de alta calidad y una comunidad de roleplay única actualmente en pleno desarrollo. Ofrecemos soluciones profesionales para elevar tu servidor al siguiente nivel.
+                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -84,21 +85,21 @@ export default function Home() {
                     <ul className="space-y-4">
                         <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
                             <Avatar className="transition-transform duration-300 group-hover:rotate-12 border border-border/50">
-                                <AvatarImage src="https://media.discordapp.net/attachments/1269644412875440128/1477370633049604136/b066cf1f-88e3-4f72-bf81-7320b7c94428-profile_image-70x70.png?ex=69a4841f&is=69a3329f&hm=7cb08343cf5f2b35f12486820eb46bd7a9de793319b3b6346cf4e6102e0c3d99&=&format=webp&quality=lossless" alt="stewiexox" />
+                                <AvatarImage src="https://picsum.photos/seed/stewie/100/100" alt="stewiexox" />
                                 <AvatarFallback>S</AvatarFallback>
                             </Avatar>
                             <span className="font-semibold text-white transition-colors group-hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] group-hover:bg-clip-text group-hover:text-transparent">stewiexox</span>
                         </li>
                         <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
                             <Avatar className="transition-transform duration-300 group-hover:rotate-12">
-                                <AvatarImage src="https://media.discordapp.net/attachments/1269644412875440128/1464991511300149404/WgAd3pVL_400x400.jpg?ex=69777b2a&is=697629aa&hm=44ccff30d3444d31d0bb3c9029b2b007cec3a4143fec8a655f385b33cb762f97&=&format=webp" alt="1015040" />
+                                <AvatarImage src="https://picsum.photos/seed/1015040/100/100" alt="1015040" />
                                 <AvatarFallback>1</AvatarFallback>
                             </Avatar>
                             <span className="font-semibold text-white transition-colors group-hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] group-hover:bg-clip-text group-hover:text-transparent">1015040</span>
                         </li>
                         <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
                             <Avatar className="transition-transform duration-300 group-hover:rotate-12">
-                                <AvatarImage src="https://picsum.photos/seed/liitze/48/48" alt="liitze" />
+                                <AvatarImage src="https://picsum.photos/seed/liitze/100/100" alt="liitze" />
                                 <AvatarFallback>L</AvatarFallback>
                             </Avatar>
                             <span className="font-semibold text-white transition-colors group-hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] group-hover:bg-clip-text group-hover:text-transparent">liitze</span>
