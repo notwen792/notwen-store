@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -42,11 +41,11 @@ export default function Home() {
                 rp
             </p>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                High-quality scripts and maps to enhance your Grand Theft Auto V experience.
+                High-quality businesses and maps to enhance your Grand Theft Auto V experience.
             </p>
             <Button asChild size="lg" className="mt-8 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] hover:brightness-110 transition-all duration-300">
                 <Link href="/scripts">
-                    Explore Scripts
+                    Explore Negocios
                     <ArrowRight className="ml-2" />
                 </Link>
             </Button>
@@ -59,15 +58,15 @@ export default function Home() {
                 <div className="text-center md:text-left mb-12">
                     <h2 className="font-headline text-4xl text-white tracking-wider">¿Qué es notwen?</h2>
                     <p className="text-muted-foreground mt-2 max-w-2xl mx-auto md:mx-0">
-                      Somos tu destino especializado en scripts de alta calidad y una comunidad de roleplay única actualmente en pleno desarrollo. Ofrecemos soluciones profesionales para elevar tu servidor al siguiente nivel.
+                      Somos tu destino especializado en activos de alta calidad y una comunidad de roleplay única actualmente en pleno desarrollo. Ofrecemos soluciones profesionales para elevar tu servidor al siguiente nivel.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="bg-card p-8 rounded-lg border border-border/20">
                         <Terminal className="h-10 w-10 text-destructive mb-4" />
-                        <h3 className="font-headline text-2xl tracking-wider mb-2">SCRIPTS UNICOS</h3>
-                        <p className="text-muted-foreground text-sm">aqui veras nuestros scripts echos y rediseños por el programador stewiexox</p>
+                        <h3 className="font-headline text-2xl tracking-wider mb-2">NEGOCIOS UNICOS</h3>
+                        <p className="text-muted-foreground text-sm">aqui veras nuestros activos echos y rediseños por el programador stewiexox</p>
                     </div>
                     <div className="bg-card p-8 rounded-lg border border-border/20">
                         <Gamepad2 className="h-10 w-10 text-destructive mb-4" />

@@ -34,7 +34,7 @@ export const products: Product[] = [
   {
     id: 1,
     name: 'NOTWEN POLICE + EMS',
-    category: 'Scripts',
+    category: 'Negocios',
     imageId: 'product1',
     price: 99.83,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
@@ -52,7 +52,7 @@ export const products: Product[] = [
   {
     id: 3,
     name: 'NOTWEN CLOTHING + CHARACTER CREATOR + PEDMENU',
-    category: 'Scripts',
+    category: 'Negocios',
     imageId: 'product3',
     price: 60.50,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
@@ -61,7 +61,7 @@ export const products: Product[] = [
   {
     id: 4,
     name: 'NOTWEN HOUSING',
-    category: 'Scripts',
+    category: 'Negocios',
     imageId: 'product4',
     price: 80.00,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],

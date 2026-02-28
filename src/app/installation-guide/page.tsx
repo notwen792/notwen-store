@@ -35,11 +35,11 @@ const genericSteps = [
 ];
 
 export default function InstallationGuidePage() {
-  const scriptProducts = products.filter(p => p.category === 'Scripts');
+  const negociosProducts = products.filter(p => p.category === 'Negocios');
   const [selectedTopic, setSelectedTopic] = useState<{ scriptId: number | string, sectionId: string }>({ scriptId: 'welcome', sectionId: 'welcome' });
   const [openScripts, setOpenScripts] = useState<Record<string, boolean>>({});
 
-  const selectedScript = scriptProducts.find(p => p.id === selectedTopic.scriptId);
+  const selectedScript = negociosProducts.find(p => p.id === selectedTopic.scriptId);
 
   const toggleScript = (scriptId: number | string) => {
     const scriptIdStr = scriptId.toString();
@@ -68,7 +68,7 @@ export default function InstallationGuidePage() {
             <BookOpen className="h-5 w-5 mr-3" />
             <span>Welcome</span>
           </a>
-          {scriptProducts.map(script => (
+          {negociosProducts.map(script => (
             <div key={script.id}>
               <button
                 onClick={() => toggleScript(script.id)}
@@ -114,7 +114,7 @@ export default function InstallationGuidePage() {
               Welcome to the Documentation
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              An introduction to our scripts and the installation process.
+              An introduction to our assets and the installation process.
             </p>
             <div className="bg-card p-8 rounded-lg border border-border/20">
                 <h2 className="font-headline text-3xl tracking-wider mb-6 text-destructive flex items-center gap-3">
@@ -122,10 +122,10 @@ export default function InstallationGuidePage() {
                   Introduction
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
-                    <p>Welcome to the notwen Store documentation. Here you will find all the necessary information to install and configure our scripts on your FiveM server.</p>
-                    <p>Our scripts are designed to be "Plug & Play," which means they are easy to install. However, it's important to follow the steps correctly to avoid any issues.</p>
+                    <p>Welcome to the notwen Store documentation. Here you will find all the necessary information to install and configure our assets on your FiveM server.</p>
+                    <p>Our assets are designed to be "Plug & Play," which means they are easy to install. However, it's important to follow the steps correctly to avoid any issues.</p>
                     <h3 className="font-headline text-xl tracking-wider pt-4 text-white">General Installation</h3>
-                    <p>Each script has its own specific installation guide, but most follow these general steps:</p>
+                    <p>Each asset has its own specific installation guide, but most follow these general steps:</p>
                     <div className="space-y-3 text-muted-foreground pl-4 border-l-2 border-destructive ml-2">
                       {genericSteps.map((step, stepIndex) => (
                       <p key={stepIndex}>
@@ -134,7 +134,7 @@ export default function InstallationGuidePage() {
                       </p>
                       ))}
                     </div>
-                    <p className="pt-4">For specific details for each script, please select the script from the menu on the left.</p>
+                    <p className="pt-4">For specific details for each asset, please select it from the menu on the left.</p>
                 </div>
             </div>
           </div>
