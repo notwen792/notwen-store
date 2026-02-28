@@ -42,7 +42,7 @@ export function Sidebar() {
       >
         <h1 className="font-headline text-5xl text-white">notwen</h1>
         <p className="font-headline text-2xl uppercase tracking-widest -mt-2 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] bg-clip-text text-transparent">
-          Store
+          rp
         </p>
       </Link>
 

@@ -32,7 +32,7 @@ export default function Home() {
                 notwen
             </h1>
             <p className="text-xl md:text-2xl font-light tracking-[0.3em] uppercase bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] bg-clip-text text-transparent">
-                Store
+                rp
             </p>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
                 High-quality scripts and maps to enhance your Grand Theft Auto V experience.
