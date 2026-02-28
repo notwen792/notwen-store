@@ -10,7 +10,9 @@ export default function ScriptsPage() {
         <h1 className="font-headline text-5xl uppercase tracking-wider text-white">
           NEGOCIOS-NOTWEN
         </h1>
-        <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">Explore our collection of high-quality business assets, designed to enhance your gaming experience.</p>
+        <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
+          Explora nuestra selección exclusiva de negocios y mapeos diseñados para llevar el roleplay de tu servidor a otro nivel de realismo y profesionalidad.
+        </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {negociosProducts.map((product) => (
