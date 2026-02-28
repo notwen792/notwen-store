@@ -1,6 +1,6 @@
 'use client';
 
-import { Home, Package, ShoppingCart, BookText, Server } from 'lucide-react';
+import { Home, Package, ShoppingCart, BookText, Server, Shield } from 'lucide-react';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -13,6 +13,7 @@ const iconMap: { [key: string]: React.ElementType } = {
   Package,
   Server,
   BookText,
+  Shield,
 };
 
 export function Sidebar() {
@@ -28,6 +29,7 @@ export function Sidebar() {
     { href: '/scripts', icon: 'ShoppingCart', label: 'Scripts' },
     { href: '/packs', icon: 'Package', label: 'Packs' },
     { href: '/notwen-rp', icon: 'Server', label: 'notwen rp' },
+    { href: '/normativas', icon: 'Shield', label: 'Normativas' },
     { href: '/installation-guide', icon: 'BookText', label: 'Guía de instalación' },
   ];
 
