@@ -7,22 +7,12 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 export default function ScriptsPage() {
   const negociosProducts = products.filter(p => p.category === 'Negocios');
   const postulacionesProducts = products.filter(p => p.category === 'Postulaciones');
-  const heroImage = PlaceHolderImages.find(img => img.id === 'negocios-hero');
 
   return (
     <main className="flex-grow bg-background">
-      {/* Hero Section for Negocios */}
-      <section className="relative h-64 w-full flex items-center justify-center overflow-hidden">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt="Negocios Hero"
-            fill
-            className="object-cover opacity-30"
-            data-ai-hint={heroImage.imageHint}
-          />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
+      {/* Hero Section for Negocios - Simple background color */}
+      <section className="relative h-64 w-full flex items-center justify-center overflow-hidden bg-card/50 border-b border-white/5">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/80" />
         <div className="relative z-10 text-center px-4">
           <h1 className="font-headline text-5xl md:text-7xl uppercase tracking-widest text-white">
             NEGOCIOS-NOTWEN
