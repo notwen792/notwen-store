@@ -26,15 +26,15 @@
     },
     {
       "id": "unique-scripts",
-      "description": "Gaming Character",
-      "imageUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1080",
-      "imageHint": "gaming character"
+      "description": "Gaming Character Replacement",
+      "imageUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=1080",
+      "imageHint": "city night"
     },
     {
       "id": "new-game-modes",
-      "description": "Action Scene",
-      "imageUrl": "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1080",
-      "imageHint": "action game"
+      "description": "Action Scene Replacement",
+      "imageUrl": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1080",
+      "imageHint": "city skyline"
     }
   ]
 }
