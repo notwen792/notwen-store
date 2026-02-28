@@ -1,4 +1,3 @@
-
 export type Product = {
   id: number;
   name: string;
@@ -33,7 +32,7 @@ export const products: Product[] = [
     id: 3,
     name: "BENNY'S",
     category: 'Negocios',
-    imageId: 'product3',
+    imageId: 'bennys',
     price: 60.50,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
     description: formatDescription(
@@ -47,7 +46,7 @@ export const products: Product[] = [
     id: 4,
     name: 'BEAN MACHINE',
     category: 'Negocios',
-    imageId: 'product4',
+    imageId: 'bean-machine',
     price: 80.00,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
     description: formatDescription(
@@ -65,10 +64,10 @@ export const products: Product[] = [
     price: 120.00,
     features: ['Tuning avanzado', 'Pinturas únicas', 'Plug & Play'],
     description: formatDescription(
-      "Taller mecánico especializado en modificaciones de alto rendimiento.",
-      "Strawberry",
+      "El club nocturno más exclusivo frente al mar, ideal para eventos y ocio.",
+      "Puerto de Los Santos",
       "Min 5 / Max 15",
-      "Tuning motor, estética avanzada y reparaciones."
+      "Venta de alcohol, música en vivo y zona de baile."
     ),
   },
   {

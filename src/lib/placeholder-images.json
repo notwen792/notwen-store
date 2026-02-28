@@ -13,40 +13,16 @@
       "imageHint": "city night"
     },
     {
-      "id": "home-hero",
-      "description": "Main City Background",
-      "imageUrl": "https://images.unsplash.com/photo-1588312744377-2adfb7b8578a?q=80&w=1920",
-      "imageHint": "city night"
-    },
-    {
-      "id": "rp-hero",
-      "description": "Notwen RP Hero Background",
-      "imageUrl": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1920",
-      "imageHint": "city skyline"
-    },
-    {
-      "id": "negocios-hero",
-      "description": "Negocios Header Background",
-      "imageUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=1200&h=400&fit=crop",
-      "imageHint": "city night"
-    },
-    {
-      "id": "product3",
+      "id": "bennys",
       "description": "Benny's Car Image",
       "imageUrl": "https://cdn.discordapp.com/attachments/1110302343133663323/1477393948589822042/image.png?ex=69a499d5&is=69a34855&hm=e57d0531a018a056e95bfe1253e0e245962cf22a174ec11ea0c5ba01fe5ec4ab&",
       "imageHint": "mechanical car"
     },
     {
-      "id": "product4",
-      "description": "Modern house",
+      "id": "bean-machine",
+      "description": "Bean Machine House",
       "imageUrl": "https://cdn.discordapp.com/attachments/1110302343133663323/1477392002160132278/image.png?ex=69a49805&is=69a34685&hm=95ae40f9f77572502cabd80efbe4032897323e24cf06b59cb25c214dee7202c6&",
       "imageHint": "modern house"
-    },
-    {
-      "id": "bennys",
-      "description": "Mechanical workshop",
-      "imageUrl": "https://cdn.discordapp.com/attachments/1110302343133663323/1477393948589822042/image.png?ex=69a499d5&is=69a34855&hm=e57d0531a018a056e95bfe1253e0e245962cf22a174ec11ea0c5ba01fe5ec4ab&",
-      "imageHint": "car workshop"
     },
     {
       "id": "pearls",
