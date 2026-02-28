@@ -36,10 +36,10 @@ export const products: Product[] = [
     price: 60.50,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
     description: formatDescription(
-      "Tienda de ropa de lujo con probadores y catálogo avanzado.",
-      "Legion Square",
-      "Min 2 / Max 5",
-      "Customización de personajes y guardado de outfits."
+      "Taller mecánico especializado en modificaciones de alto rendimiento.",
+      "Strawberry",
+      "Min 5 / Max 15",
+      "Tuning motor, estética avanzada y reparaciones."
     ),
   },
   {
