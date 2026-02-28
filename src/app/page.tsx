@@ -75,8 +75,8 @@ export default function Home() {
                     </h3>
                     <ul className="space-y-4">
                         <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
-                            <Avatar className="transition-transform duration-300 group-hover:rotate-12">
-                                <AvatarImage src="https://media.discordapp.net/attachments/1269644412875440128/1465017559987257354/stewiexox.png?ex=6977936d&is=697641ed&hm=875925cec50db2d12691ecd0d1087dda3c31f6c94c7819279db624390850e525&" alt="stewiexox" />
+                            <Avatar className="transition-transform duration-300 group-hover:rotate-12 border border-border/50">
+                                <AvatarImage src="https://picsum.photos/seed/stewiexox/128/128" alt="stewiexox" />
                                 <AvatarFallback>S</AvatarFallback>
                             </Avatar>
                             <span className="font-semibold text-white transition-colors group-hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] group-hover:bg-clip-text group-hover:text-transparent">stewiexox</span>

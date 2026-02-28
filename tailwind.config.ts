@@ -93,8 +93,9 @@ export default {
           '50%': { transform: 'scale(1.05)', opacity: '0.95' },
         },
         'button-bob': {
-          '0%, 50%, 100%': { transform: 'translateY(0)' },
-          '25%': { transform: 'translateY(-2px)' },
+          '0%, 50%': { transform: 'translateY(0)' },
+          '25%': { transform: 'translateY(-4px)' },
+          '51%, 100%': { transform: 'translateY(0)' },
         },
       },
       animation: {

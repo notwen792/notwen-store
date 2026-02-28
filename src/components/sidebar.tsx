@@ -31,13 +31,15 @@ export function Sidebar() {
     { href: '/installation-guide', icon: 'BookText', label: 'Guía de instalación' },
   ];
 
-  const footerIcon = 'BookText';
-  const FooterIcon = iconMap[footerIcon];
-
-
   return (
     <aside className="w-72 min-h-screen bg-card flex-col p-6 border-r border-border hidden md:flex">
-      <Link href="/" className={cn("mb-12 flex flex-col items-center", isMounted && "animate-logo-pulse")}>
+      <Link 
+        href="/" 
+        className={cn(
+          "mb-12 flex flex-col items-center", 
+          isMounted && "animate-logo-pulse"
+        )}
+      >
         <h1 className="font-headline text-5xl text-white">notwen</h1>
         <p className="font-headline text-2xl uppercase tracking-widest -mt-2 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] bg-clip-text text-transparent">
           Store
