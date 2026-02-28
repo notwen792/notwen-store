@@ -51,7 +51,7 @@ export default function Home() {
             <div className="lg:col-span-2">
                 <div className="text-center md:text-left mb-12">
                     <h2 className="font-headline text-4xl text-white tracking-wider">¿Qué es notwen?</h2>
-                    <p className="text-muted-foreground mt-2 max-w-2xl mx-auto md:mx-0">We are committed to providing the best for our community.</p>
+                    <p className="text-muted-foreground mt-2 max-w-2xl mx-auto md:mx-0">Somos tu destino especializado en scripts de alta calidad y una comunidad de roleplay única actualmente en pleno desarrollo.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
