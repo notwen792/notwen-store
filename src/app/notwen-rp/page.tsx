@@ -37,17 +37,17 @@ export default function NotwenRpPage() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div className="lg:col-span-2 bg-card p-8 rounded-lg border border-border/20 text-white">
+                <div className="lg:col-span-2 bg-card p-8 rounded-lg border border-border/20 text-white transition-all duration-700 ease-in-out hover:rotate-[0.3deg] hover:scale-[1.005] hover:border-destructive/30 shadow-sm hover:shadow-destructive/5 cursor-default">
                     <h3 className="font-headline text-3xl tracking-wider mb-6 text-destructive">¿Quiénes somos?</h3>
                     <div className="space-y-4 text-muted-foreground leading-relaxed">
                         <p>
-                            notwen rp es un servidor de Grand Theft Auto V roleplay donde puedes vivir una nueva vida. Ya sea que quieras ser un ciudadano respetuoso de la ley, un criminal astuto o cualquier cosa intermedia, nuestro servidor te brinda la plataforma para crear tu propia historia.
+                            notwen rp is a Grand Theft Auto V roleplay server where you can live a new life. Whether you want to be a law-abiding citizen, a cunning criminal, or anything in between, our server provides the platform to create your own story.
                         </p>
                         <p>
-                            Nuestro servidor está construido sobre un framework personalizado con scripts y características únicas para asegurar una experiencia inmersiva y atractiva. Contamos con un equipo de desarrollo activo que trabaja constantemente en nuevas actualizaciones y escucha los comentarios de la comunidad.
+                            Our server is built on a custom framework with unique scripts and features to ensure an immersive and engaging experience. We have an active development team constantly working on new updates and listening to community feedback.
                         </p>
                         <p>
-                            Únete a nuestra comunidad de Discord para comenzar, lee las reglas del servidor y conéctate con otros jugadores. ¡Esperamos verte pronto en Los Santos!
+                            Join our Discord community to get started, read the server rules, and connect with other players. We look forward to seeing you in Los Santos!
                         </p>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ export default function NotwenRpPage() {
                 </div>
             </div>
 
-            <div className="bg-card p-8 rounded-lg border border-border/20 text-white">
+            <div className="bg-card p-8 rounded-lg border border-border/20 text-white transition-all duration-700 ease-in-out hover:rotate-[-0.3deg] hover:scale-[1.005] hover:border-destructive/30 shadow-sm hover:shadow-destructive/5 cursor-default">
                 <h3 className="font-headline text-3xl tracking-wider mb-6 text-destructive">¿Cómo entrar?</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="flex gap-4 p-4 rounded-lg bg-background/40 border border-border/10">
