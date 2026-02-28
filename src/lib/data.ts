@@ -58,7 +58,7 @@ export const products: Product[] = [
   },
   {
     id: 8,
-    name: 'BENNY\'S CUSTOMS',
+    name: 'PEARLS',
     category: 'Negocios',
     imageId: 'bennys',
     price: 120.00,
