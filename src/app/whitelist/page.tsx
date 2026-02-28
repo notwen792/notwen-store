@@ -20,7 +20,7 @@ export default function WhitelistPage() {
       <div className="max-w-4xl mx-auto space-y-8">
         {/* Pasos principales */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-card p-8 rounded-lg border border-border/20 flex flex-col items-center text-center group hover:border-destructive/50 transition-all duration-300">
+          <div className="bg-card p-8 rounded-lg border border-border/20 flex flex-col items-center text-center group">
             <div className="p-4 rounded-full bg-destructive/10 mb-4 group-hover:bg-destructive/20 transition-colors">
               <ShieldCheck className="h-10 w-10 text-destructive" />
             </div>
@@ -33,7 +33,7 @@ export default function WhitelistPage() {
             </Button>
           </div>
 
-          <div className="bg-card p-8 rounded-lg border border-border/20 flex flex-col items-center text-center group hover:border-destructive/50 transition-all duration-300">
+          <div className="bg-card p-8 rounded-lg border border-border/20 flex flex-col items-center text-center group">
             <div className="p-4 rounded-full bg-destructive/10 mb-4 group-hover:bg-destructive/20 transition-colors">
               <FileText className="h-10 w-10 text-destructive" />
             </div>
@@ -50,7 +50,7 @@ export default function WhitelistPage() {
         </div>
 
         {/* Nueva sección: Whitelist por Invitación */}
-        <div className="bg-card p-8 rounded-lg border border-destructive/20 relative overflow-hidden group">
+        <div className="bg-card p-8 rounded-lg border border-border/20 relative overflow-hidden group">
           <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
             <UserPlus className="h-32 w-32 text-destructive" />
           </div>
