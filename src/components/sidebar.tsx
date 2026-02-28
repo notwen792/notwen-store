@@ -28,12 +28,12 @@ export function Sidebar() {
 
   const navItems = [
     { href: '/', icon: 'Home', label: 'Home' },
+    { href: '/notwen-rp', icon: 'Server', label: 'notwen rp' },
     { href: '/whitelist', icon: 'UserCheck', label: 'Whitelist' },
     { href: '/normativas', icon: 'Shield', label: 'Normativas' },
     { href: '/scripts', icon: 'ShoppingCart', label: 'Negocios/Postulaciones' },
     { href: '/packs', icon: 'Package', label: 'Packs' },
     { href: '/vip', icon: 'Gem', label: 'VIP' },
-    { href: '/notwen-rp', icon: 'Server', label: 'notwen rp' },
     { href: '/installation-guide', icon: 'BookText', label: 'Guía de instalación' },
   ];
 
