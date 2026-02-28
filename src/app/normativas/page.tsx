@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Shield, AlertCircle, Scale, Building2, FileText, ExternalLink } from 'lucide-react';
+import { Shield, AlertCircle, Video, Building2, FileText, ExternalLink } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 export default function NormativasPage() {
@@ -17,9 +17,9 @@ export default function NormativasPage() {
       content: 'Regulación sobre la gestión de locales, precios, eventos públicos y comportamiento dentro de los establecimientos comerciales.'
     },
     {
-      title: 'Normativa de Crímenes',
-      icon: Scale,
-      content: 'Los robos y actos delictivos deben seguir las limitaciones de unidades policiales disponibles y los tiempos de espera reglamentarios.'
+      title: 'Normativa Streamers',
+      icon: Video,
+      content: 'Regulación para la creación de contenido, respeto a la privacidad de otros jugadores y directrices para transmisiones en vivo.'
     },
     {
       title: 'Sanciones',
