@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ArrowRight, MessageSquare, BookOpen, CheckCircle, Play, Instagram, Share2 } from 'lucide-react';
+import { ArrowRight, MessageSquare, BookOpen, CheckCircle, Play, Instagram, Share2, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export default function NotwenRpPage() {
   const image = PlaceHolderImages.find((img) => img.id === 'product2');
@@ -33,7 +34,7 @@ export default function NotwenRpPage() {
       </section>
 
       <section className="p-8 md:p-12">
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-7xl mx-auto space-y-8">
             <div className="text-center mb-12">
                 <h2 className="font-headline text-4xl text-white tracking-wider uppercase">Sobre Nuestro Servidor</h2>
                 <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
@@ -41,18 +42,50 @@ export default function NotwenRpPage() {
                 </p>
             </div>
 
-            <div className="bg-card p-8 rounded-lg border border-border/20 text-white">
-                <h3 className="font-headline text-3xl tracking-wider mb-6 text-destructive">¿Quiénes somos?</h3>
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
-                    <p>
-                        notwen rp es un servidor de roleplay de Grand Theft Auto V donde puedes vivir una nueva vida. Ya sea que quieras ser un ciudadano respetuoso de la ley, un criminal astuto o cualquier cosa intermedia, nuestro servidor te proporciona la plataforma para crear tu propia historia.
-                    </p>
-                    <p>
-                        Nuestro servidor está construido sobre un marco personalizado con scripts y características únicas para garantizar una experiencia inmersiva y atractiva. Tenemos un equipo de desarrollo activo que trabaja constantemente en nuevas actualizaciones y escucha los comentarios de la comunidad.
-                    </p>
-                    <p>
-                        Únete a nuestra comunidad en Discord para comenzar, leer las reglas de nuestro servidor y conectarte con otros jugadores. ¡Esperamos verte en Los Santos!
-                    </p>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="lg:col-span-2 bg-card p-8 rounded-lg border border-border/20 text-white">
+                    <h3 className="font-headline text-3xl tracking-wider mb-6 text-destructive">¿Quiénes somos?</h3>
+                    <div className="space-y-4 text-muted-foreground leading-relaxed">
+                        <p>
+                            notwen rp es un servidor de roleplay de Grand Theft Auto V donde puedes vivir una nueva vida. Ya sea que quieras ser un ciudadano respetuoso de la ley, un criminal astuto o cualquier cosa intermedia, nuestro servidor te proporciona la plataforma para crear tu propia historia.
+                        </p>
+                        <p>
+                            Nuestro servidor está construido sobre un marco personalizado con scripts y características únicas para garantizar una experiencia inmersiva y atractiva. Tenemos un equipo de desarrollo activo que trabaja constantemente en nuevas actualizaciones y escucha los comentarios de la comunidad.
+                        </p>
+                        <p>
+                            Únete a nuestra comunidad en Discord para comenzar, leer las reglas de nuestro servidor y conectarte con otros jugadores. ¡Esperamos verte en Los Santos!
+                        </p>
+                    </div>
+                </div>
+                
+                <div className="lg:col-span-1 bg-card p-8 rounded-lg border border-border/20 text-white">
+                    <h3 className="font-headline text-3xl tracking-wider mb-6 text-destructive flex items-center gap-2">
+                        <ShieldCheck className="h-7 w-7" />
+                        Administradores
+                    </h3>
+                    <ul className="space-y-4">
+                        <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
+                            <Avatar className="transition-transform duration-300 group-hover:rotate-12 border border-border/50">
+                                <AvatarImage src="https://picsum.photos/seed/stewie/100/100" alt="stewiexox" />
+                                <AvatarFallback>S</AvatarFallback>
+                            </Avatar>
+                            <span className="font-semibold text-white">stewiexox</span>
+                        </li>
+                        <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
+                            <Avatar className="transition-transform duration-300 group-hover:rotate-12 border border-border/50">
+                                <AvatarImage src="https://picsum.photos/seed/1015040/100/100" alt="1015040" />
+                                <AvatarFallback>1</AvatarFallback>
+                            </Avatar>
+                            <span className="font-semibold text-white">1015040</span>
+                        </li>
+                        <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
+                            <Avatar className="transition-transform duration-300 group-hover:rotate-12 border border-border/50">
+                                <AvatarImage src="https://picsum.photos/seed/liitze/100/100" alt="liitze" />
+                                <AvatarFallback>L</AvatarFallback>
+                            </Avatar>
+                            <span className="font-semibold text-white">liitze</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
