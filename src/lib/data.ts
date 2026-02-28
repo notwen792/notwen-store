@@ -32,7 +32,7 @@ export const products: Product[] = [
     id: 3,
     name: "BENNY'S",
     category: 'Negocios',
-    imageId: 'bennys',
+    imageId: 'bahamas',
     price: 60.50,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
     description: formatDescription(
@@ -86,7 +86,7 @@ export const products: Product[] = [
   },
   {
     id: 10,
-    name: 'LTD GAS STATION',
+    name: 'BURGERSHOT',
     category: 'Negocios',
     imageId: 'ltd',
     price: 45.00,
