@@ -59,26 +59,22 @@ export default function NormativasPage() {
                 </div>
                 <h3 className="font-headline text-xl text-white uppercase tracking-wide">{norma.title}</h3>
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
                 {norma.content}
               </p>
+              <div className="pt-4 mt-auto">
+                <a 
+                  href="https://online.pubhtml5.com/krmgz/tzwo/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 w-full px-4 py-2 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] text-white rounded-md text-sm font-bold hover:brightness-110 transition-all shadow-lg shadow-destructive/20"
+                >
+                  VER NORMATIVA COMPLETA
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
             </Card>
           ))}
-        </div>
-
-        <div className="text-center mt-12 p-8 bg-card rounded-lg border border-border/10">
-          <p className="text-muted-foreground mb-4">
-            Haz clic en el botón de abajo para leer la normativa completa y detallada de nuestro servidor.
-          </p>
-          <a 
-            href="https://online.pubhtml5.com/krmgz/tzwo/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] text-white rounded-md font-bold hover:brightness-110 transition-all shadow-lg shadow-destructive/20"
-          >
-            VER NORMATIVA COMPLETA
-            <ExternalLink className="h-5 w-5" />
-          </a>
         </div>
       </div>
     </main>
