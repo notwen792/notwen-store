@@ -72,16 +72,16 @@ export const products: Product[] = [
   },
   {
     id: 9,
-    name: 'BAHAMAS DISCO',
+    name: 'LTD',
     category: 'Negocios',
     imageId: 'bahamas',
     price: 150.00,
     features: ['Sistema de DJ', 'Luces LED', 'Bebidas'],
     description: formatDescription(
-      "La mejor discoteca de la ciudad para el ocio nocturno.",
+      "Gasolinera y tienda de conveniencia abierta las 24 horas para todos tus suministros.",
       "Del Perro Pier",
       "Min 4 / Max 20",
-      "Venta de alcohol, zona VIP y eventos musicales."
+      "Venta de alcohol, snacks y suministros básicos."
     ),
   },
   {
