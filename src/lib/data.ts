@@ -66,7 +66,7 @@ export const products: Product[] = [
   },
   {
     id: 12,
-    name: 'POWER FITNESS',
+    name: 'LA FITNESS',
     category: 'Negocios',
     imageId: 'img-fitness',
     price: 200.00,
