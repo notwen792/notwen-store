@@ -13,8 +13,6 @@ const scriptDescription = `🌟 Exclusive Mapping for FiveM: Transform the LTD C
 
 🚀 Bring your city to life with this spectacular mapping for FiveM! 🚀
 
-YOUTUBE VIDEO
-
 🌐 Main Features:
 1️⃣ 🌟 Preserve the Original Essence: The vanilla ground floor of the LTD Central is kept intact to maintain the classic format loved by players.
 2️⃣ 📦 Spacious Storage Area: A functional side space perfect for storing goods or hosting private staff meetings. Ideal for business roleplay and organization.
@@ -66,5 +64,23 @@ export const products: Product[] = [
     price: 80.00,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
     description: scriptDescription,
+  },
+  {
+    id: 5,
+    name: 'POSTULACIÓN STAFF (SOPORTE)',
+    category: 'Postulaciones',
+    imageId: 'new-game-modes',
+    price: 0.00,
+    features: ['Formación incluida', 'Comunidad activa', 'Ascensos'],
+    description: 'Buscamos personas comprometidas para ayudar a nuestra comunidad en el día a día.',
+  },
+  {
+    id: 6,
+    name: 'LIDERAZGO FACCION (LSPD)',
+    category: 'Postulaciones',
+    imageId: 'product2',
+    price: 0.00,
+    features: ['Gestión de equipo', 'Rol serio', 'Responsabilidad'],
+    description: '¿Tienes experiencia liderando cuerpos policiales? Esta es tu oportunidad.',
   },
 ];
