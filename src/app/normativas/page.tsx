@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Shield, AlertCircle, Video, Building2, FileText, ExternalLink } from 'lucide-react';
+import { Shield, BadgeCheck, Video, Building2, FileText, ExternalLink } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 export default function NormativasPage() {
@@ -22,9 +22,9 @@ export default function NormativasPage() {
       content: 'Regulación para la creación de contenido, respeto a la privacidad de otros jugadores y directrices para transmisiones en vivo.'
     },
     {
-      title: 'Sanciones',
-      icon: AlertCircle,
-      content: 'El incumplimiento de las normas resultará en advertencias, baneos temporales o permanentes dependiendo de la gravedad de la falta.'
+      title: 'Normativa LSPD',
+      icon: BadgeCheck,
+      content: 'Regulación, procedimientos y códigos de conducta para los miembros del departamento de policía de Los Santos.'
     }
   ];
 
