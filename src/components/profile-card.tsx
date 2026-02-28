@@ -2,7 +2,6 @@ import Image from 'next/image';
 import type { Product } from '@/lib/data';
 import { Card } from './ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Ban } from 'lucide-react';
 import {
   Tooltip,
   TooltipContent,
@@ -18,12 +17,6 @@ export function ProductCard({ product }: { product: Product }) {
       <div className="relative h-64 w-full">
           {image && <Image src={image.imageUrl} alt={product.name} fill style={{objectFit: 'cover'}} data-ai-hint={image?.imageHint || ''} />}
           <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors" />
-          <div className="absolute top-3 right-3">
-            <div className="bg-destructive/90 text-white text-[10px] font-bold px-2 py-1 rounded flex items-center gap-1 backdrop-blur-sm">
-              <Ban className="h-3 w-3" />
-              AGOTADO
-            </div>
-          </div>
       </div>
       <div className="p-4 flex-grow flex flex-col bg-card">
           <h3 className="font-semibold text-white text-base mb-1 transition-colors group-hover:text-destructive">{product.name}</h3>
