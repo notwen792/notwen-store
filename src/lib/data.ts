@@ -28,6 +28,16 @@ const scriptDescription = `🌟 Exclusive Mapping for FiveM: Transform the LTD C
 
 📩 Contact us now to get this incredible mapping and elevate your roleplay experience to the next level. 🌟`;
 
+const marieBlachereDescription = `Panaderia pequeña, donde pararte a comprar un buen bocadillo o una barra de pan.
+
+📍 **Ubicación:** Grove Street
+👥 **Trabajadores:** Min 3 / Max 8
+🥐 **Servicios y productos:** Bollería, bocadillos fríos y calientes, comida para llevar.
+
+---
+
+${scriptDescription}`;
+
 export const products: Product[] = [
   {
     id: 1,
@@ -36,7 +46,7 @@ export const products: Product[] = [
     imageId: 'product1',
     price: 99.83,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
-    description: scriptDescription,
+    description: marieBlachereDescription,
   },
   {
     id: 2,
