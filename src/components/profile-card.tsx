@@ -23,7 +23,9 @@ export function ProductCard({ product }: { product: Product }) {
           <p className="text-sm text-muted-foreground flex-grow">{product.category}</p>
           <div className="flex justify-between items-center mt-4">
               <div>
-                  <p className="text-lg font-bold text-white">{product.price.toFixed(2)} EUR</p>
+                  {product.price > 0 && (
+                    <p className="text-lg font-bold text-white">{product.price.toFixed(2)} EUR</p>
+                  )}
                   {product.originalPrice && (
                       <p className="text-xs text-muted-foreground line-through">
                           {product.originalPrice.toFixed(2)} EUR
