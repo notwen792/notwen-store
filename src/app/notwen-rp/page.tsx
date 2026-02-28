@@ -73,7 +73,7 @@ export default function NotwenRpPage() {
                         </li>
                         <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
                             <Avatar className="transition-transform duration-300 group-hover:rotate-12 border border-border/50">
-                                <AvatarImage src="https://picsum.photos/seed/1015040/100/100" alt="1015040" />
+                                <AvatarImage src="https://cdn.discordapp.com/avatars/793861769604759594/ddcfe57cbf4e1f696ab90c469dbabf45.webp?size=1024" alt="1015040" />
                                 <AvatarFallback>1</AvatarFallback>
                             </Avatar>
                             <span className="font-semibold text-white">1015040</span>
