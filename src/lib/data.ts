@@ -30,9 +30,9 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    name: "UpnAtom",
+    name: "BENNY'S",
     category: 'Negocios',
-    imageId: 'bennys',
+    imageId: 'pearls',
     price: 60.50,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
     description: formatDescription(
@@ -58,16 +58,16 @@ export const products: Product[] = [
   },
   {
     id: 8,
-    name: 'PEARLS',
+    name: 'UpnAtom',
     category: 'Negocios',
-    imageId: 'pearls',
+    imageId: 'bennys',
     price: 120.00,
-    features: ['Tuning avanzado', 'Pinturas únicas', 'Plug & Play'],
+    features: ['Exclusividad', 'Eventos VIP', 'Plug & Play'],
     description: formatDescription(
-      "El club nocturno más exclusivo frente al mar, ideal para eventos y ocio.",
+      "Establecimiento de lujo ideal para reuniones sociales y eventos corporativos.",
       "Puerto de Los Santos",
       "Min 5 / Max 15",
-      "Venta de alcohol, música en vivo y zona de baile."
+      "Servicio de bar, zona lounge y gestión de eventos."
     ),
   },
   {
@@ -76,23 +76,9 @@ export const products: Product[] = [
     category: 'Negocios',
     imageId: 'ltd',
     price: 150.00,
-    features: ['Sistema de DJ', 'Luces LED', 'Bebidas'],
+    features: ['Cocina rápida', 'Menú icónico', 'Gestión de stock'],
     description: formatDescription(
-      "Restaurante de comida rápida icónico especializado en las mejores hamburguesas de la ciudad.",
-      "Vespucci Canals",
-      "Min 2 / Max 8",
-      "Hamburguesas, patatas, bebidas y helados."
-    ),
-  },
-  {
-    id: 10,
-    name: 'BURGERSHOT',
-    category: 'Negocios',
-    imageId: 'burgershot',
-    price: 45.00,
-    features: ['Cocina interactiva', 'Menú variado', 'Servicio rápido'],
-    description: formatDescription(
-      "Restaurante de comida rápida icónico especializado en las mejores hamburguesas de la ciudad.",
+      "Restaurante de comida rápida especializado en las mejores hamburguesas de la ciudad.",
       "Vespucci Canals",
       "Min 2 / Max 8",
       "Hamburguesas, patatas, bebidas y helados."
@@ -124,20 +110,6 @@ export const products: Product[] = [
       "Pillbox Hill",
       "Min 10 / Max 40",
       "Revive, curación de heridas y recetas médicas."
-    ),
-  },
-  {
-    id: 13,
-    name: 'BURGERSHOT',
-    category: 'Negocios',
-    imageId: 'burgershot',
-    price: 75.00,
-    features: ['Cocina interactiva', 'Delivery', 'Drive Thru'],
-    description: formatDescription(
-      "Restaurante de comida rápida con sistema de cocina dinámica.",
-      "Legion Square",
-      "Min 3 / Max 10",
-      "Venta de hamburguesas, patatas y refrescos."
     ),
   },
   {
