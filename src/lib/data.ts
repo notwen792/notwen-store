@@ -15,7 +15,7 @@ const scriptDescription = `🌟 Exclusive Mapping for FiveM: Transform the LTD C
 
 🌐 Main Features:
 1️⃣ 🌟 Preserve the Original Essence: The vanilla ground floor of the LTD Central is kept intact to maintain the classic format loved by players.
-2️⃣ 📦 Spacious Storage Area: A functional side space perfect for storing goods or hosting private staff meetings. Ideal for business roleplay and organization.
+2️⃣ 📦 Spacious Storage area: A functional side space perfect for storing goods or hosting private staff meetings. Ideal for business roleplay and organization.
 3️⃣ 🏙️ Exclusive Upper Floor: Sky Bar Terrace: A chillout area featuring shishas, pool tables, and a relaxed vibe for maximum social interaction. 🌌 Luxury Restaurant: An enclosed area with a modern and elegant design, perfect for exclusive events, romantic dinners, or high-level meetings. 🍷🍴
 4️⃣ 💡 Redesigned Aesthetic: Vibrant LED lights and neons turn the LTD Central into the most intense and eye-catching spot in the city. Guaranteed to grab everyone’s attention! 🌈✨
 
@@ -32,11 +32,7 @@ const marieBlachereDescription = `Panaderia pequeña, donde pararte a comprar un
 
 📍 **Ubicación:** Grove Street
 👥 **Trabajadores:** Min 3 / Max 8
-🥐 **Servicios y productos:** Bollería, bocadillos fríos y calientes, comida para llevar.
-
----
-
-${scriptDescription}`;
+🥐 **Servicios y productos:** Bollería, bocadillos fríos y calientes, comida para llevar.`;
 
 export const products: Product[] = [
   {

@@ -20,8 +20,15 @@ export function ProductCard({ product }: { product: Product }) {
       </div>
       <div className="p-4 flex-grow flex flex-col bg-card">
           <h3 className="font-semibold text-white text-base mb-1 transition-colors group-hover:text-destructive">{product.name}</h3>
-          <p className="text-sm text-muted-foreground flex-grow">{product.category}</p>
-          <div className="flex justify-between items-center mt-4">
+          <p className="text-sm text-muted-foreground">{product.category}</p>
+          
+          {product.description && (
+            <div className="mt-3 text-xs text-muted-foreground/80 line-clamp-4 whitespace-pre-line leading-relaxed italic border-l-2 border-destructive/30 pl-3">
+              {product.description}
+            </div>
+          )}
+
+          <div className="flex justify-between items-center mt-auto pt-4">
               <div>
                   {product.price > 0 && (
                     <p className="text-lg font-bold text-white">{product.price.toFixed(2)} EUR</p>
