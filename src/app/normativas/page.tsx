@@ -56,7 +56,7 @@ export default function NormativasPage() {
       </div>
 
       <div className="max-w-4xl mx-auto space-y-6">
-        <div className="bg-card p-6 rounded-lg border border-destructive/20 mb-8">
+        <div className="bg-card p-6 rounded-lg border border-destructive/20 mb-8 transition-all duration-700 ease-in-out hover:rotate-[0.5deg] hover:scale-[1.01] hover:border-destructive/40 shadow-sm hover:shadow-destructive/10 cursor-default">
           <div className="flex items-center gap-3 mb-4">
             <FileText className="h-6 w-6 text-destructive" />
             <h2 className="font-headline text-2xl text-white uppercase tracking-wider">Aviso Importante</h2>
