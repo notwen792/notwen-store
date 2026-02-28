@@ -30,7 +30,7 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    name: 'NOTWEN CLOTHING',
+    name: "BENNY'S",
     category: 'Negocios',
     imageId: 'product3',
     price: 60.50,
