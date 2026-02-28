@@ -9,32 +9,38 @@ export default function NormativasPage() {
     {
       title: 'Normativa General',
       icon: Shield,
-      content: 'Respeto absoluto hacia todos los miembros de la comunidad. No se tolerará toxicidad, acoso ni discriminación de ningún tipo.'
+      content: 'Respeto absoluto hacia todos los miembros de la comunidad. No se tolerará toxicidad, acoso ni discriminación de ningún tipo.',
+      link: 'https://online.pubhtml5.com/krmgz/tzwo/'
     },
     {
       title: 'Normativa Mecánicos',
       icon: Wrench,
-      content: 'Regulación para los talleres, servicios de reparación, tunning y comportamiento del personal mecánico del servidor.'
+      content: 'Regulación para los talleres, servicios de reparación, tunning y comportamiento del personal mecánico del servidor.',
+      link: 'https://online.pubhtml5.com/krmgz/hugn/'
     },
     {
       title: 'Normativa Negocios/Establecimientos',
       icon: Building2,
-      content: 'Regulación sobre la gestión de locales, precios, eventos públicos y comportamiento dentro de los establecimientos comerciales.'
+      content: 'Regulación sobre la gestión de locales, precios, eventos públicos y comportamiento dentro de los establecimientos comerciales.',
+      link: 'https://online.pubhtml5.com/krmgz/rexi/'
     },
     {
       title: 'Normativa Streamers',
       icon: Video,
-      content: 'Regulación para la creación de contenido, respeto a la privacidad de otros jugadores y directrices para transmisiones en vivo.'
+      content: 'Regulación para la creación de contenido, respeto a la privacidad de otros jugadores y directrices para transmisiones en vivo.',
+      link: 'https://online.pubhtml5.com/krmgz/xjzw/'
     },
     {
       title: 'Normativa LSPD',
       icon: BadgeCheck,
-      content: 'Regulación, procedimientos y códigos de conducta para los miembros del departamento de policía de Los Santos.'
+      content: 'Regulación, procedimientos y códigos de conducta para los miembros del departamento de policía de Los Santos.',
+      link: 'https://online.pubhtml5.com/krmgz/gqzs/'
     },
     {
       title: 'Normativa Ilegales',
       icon: Skull,
-      content: 'Reglas, límites y protocolos específicos para bandas, mafias y la realización de actividades delictivas en la ciudad.'
+      content: 'Reglas, límites y protocolos específicos para bandas, mafias y la realización de actividades delictivas en la ciudad.',
+      link: 'https://online.pubhtml5.com/krmgz/cpuu/'
     }
   ];
 
@@ -74,7 +80,7 @@ export default function NormativasPage() {
               </p>
               <div className="pt-4 mt-auto">
                 <a 
-                  href="https://online.pubhtml5.com/krmgz/tzwo/" 
+                  href={norma.link}
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 w-full px-4 py-2 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] text-white rounded-md text-sm font-bold hover:brightness-110 transition-all shadow-lg shadow-destructive/20"
