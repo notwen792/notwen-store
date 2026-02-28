@@ -24,12 +24,12 @@ export default function Home() {
         {image && 
             <div className="absolute inset-0">
                 <Image 
-                  src={image.imageUrl} 
+                  src="https://media.discordapp.net/attachments/1269644412875440128/1477391344900247692/e75a2fb4f137ea2af97ba697755ec674.webp?ex=69a49769&is=69a345e9&hm=2ca5c0f73f6f04a19690151b44f2c5495a85f173572f4392b586e470bd2eeee2&=&format=webp" 
                   alt="Hero background" 
                   fill 
                   priority
                   className="opacity-25 object-cover object-center" 
-                  data-ai-hint={image.imageHint} 
+                  data-ai-hint="city night" 
                 />
             </div>
         }
@@ -98,7 +98,7 @@ export default function Home() {
                         </li>
                         <li className="flex items-center gap-4 bg-background/50 p-3 rounded-lg group transition-colors hover:bg-background/80">
                             <Avatar className="transition-transform duration-300 group-hover:rotate-12">
-                                <AvatarImage src="https://images-ext-1.discordapp.net/external/O6y_LZlb4FOUOtJxUh1xjokKJ6aSltj4BwpPLAjnJng/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/793861769604759594/ddcfe57cbf4e1f696ab90c469dbabf45.webp?format=webp" alt="liitze" />
+                                <AvatarImage src="https://cdn.discordapp.com/attachments/1269644412875440128/1477391344900247692/e75a2fb4f137ea2af97ba697755ec674.webp?ex=69a49769&is=69a345e9&hm=2ca5c0f73f6f04a19690151b44f2c5495a85f173572f4392b586e470bd2eeee2&" alt="liitze" />
                                 <AvatarFallback>L</AvatarFallback>
                             </Avatar>
                             <span className="font-semibold text-white transition-colors group-hover:bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] group-hover:bg-clip-text group-hover:text-transparent">liitze</span>
