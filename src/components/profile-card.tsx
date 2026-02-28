@@ -13,7 +13,7 @@ export function ProductCard({ product }: { product: Product }) {
   const image = PlaceHolderImages.find((img) => img.id === product.imageId);
 
   return (
-    <Card className="bg-card border-none shadow-none rounded-xl overflow-hidden flex flex-col group transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-destructive/20 h-full">
+    <Card className="bg-card border-none shadow-none rounded-xl overflow-hidden flex flex-col group transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-destructive/20 w-full">
       <div className="relative h-64 w-full overflow-hidden shrink-0">
           {image && (
             <Image 
@@ -27,34 +27,34 @@ export function ProductCard({ product }: { product: Product }) {
           <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60" />
       </div>
       
-      <div className="p-6 flex-grow flex flex-col bg-card">
-          <h3 className="font-headline text-3xl text-white uppercase tracking-wider mb-1 transition-colors group-hover:text-destructive">
+      <div className="p-8 flex-grow flex flex-col bg-card">
+          <h3 className="font-headline text-4xl text-white uppercase tracking-wider mb-2 transition-colors group-hover:text-destructive">
             {product.name}
           </h3>
-          <p className="text-xs font-bold text-destructive/90 mb-4 tracking-widest uppercase">
+          <p className="text-sm font-bold text-destructive/90 mb-6 tracking-widest uppercase">
             {product.category}
           </p>
           
           {product.description && (
-            <div className="mb-6 text-base text-muted-foreground/95 whitespace-pre-line leading-relaxed border-l-2 border-destructive pl-4 py-1 bg-white/5 rounded-r-lg">
+            <div className="mb-8 text-lg text-muted-foreground/95 whitespace-pre-line leading-relaxed border-l-4 border-destructive pl-6 py-2 bg-white/5 rounded-r-lg">
               {product.description}
             </div>
           )}
 
-          <div className="flex justify-between items-center mt-auto pt-4 border-t border-white/10">
+          <div className="flex justify-between items-center mt-auto pt-6 border-t border-white/10 gap-4">
               <div className="flex flex-col">
                   {product.price > 0 && (
-                    <p className="text-2xl font-headline tracking-widest text-white">
-                      {product.price.toFixed(2)} <span className="text-xs font-body text-muted-foreground">EUR</span>
+                    <p className="text-3xl font-headline tracking-widest text-white">
+                      {product.price.toFixed(2)} <span className="text-sm font-body text-muted-foreground">EUR</span>
                     </p>
                   )}
                   {product.originalPrice && (
-                      <p className="text-xs text-muted-foreground line-through decoration-destructive/50">
+                      <p className="text-sm text-muted-foreground line-through decoration-destructive/50">
                           {product.originalPrice.toFixed(2)} EUR
                       </p>
                   )}
                   {product.price === 0 && (
-                    <p className="text-xl font-headline tracking-widest text-destructive animate-pulse">
+                    <p className="text-2xl font-headline tracking-widest text-destructive animate-pulse">
                       GRATIS / POSTULACIÓN
                     </p>
                   )}
@@ -63,9 +63,9 @@ export function ProductCard({ product }: { product: Product }) {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <div className="flex items-center gap-2 bg-destructive/10 border border-destructive/20 px-4 py-2 rounded-full cursor-not-allowed group/status shadow-lg">
+                    <div className="flex items-center gap-2 bg-destructive/10 border border-destructive/20 px-4 py-2 rounded-full cursor-not-allowed group/status shadow-lg shrink-0">
                       <div className="h-2 w-2 rounded-full bg-destructive animate-pulse" />
-                      <span className="text-[10px] font-black text-destructive uppercase tracking-widest">No Disponible</span>
+                      <span className="text-[10px] font-black text-destructive uppercase tracking-widest whitespace-nowrap">No Disponible</span>
                     </div>
                   </TooltipTrigger>
                   <TooltipContent className="bg-card border-border text-white text-xs p-2">
