@@ -33,7 +33,7 @@ YOUTUBE VIDEO
 export const products: Product[] = [
   {
     id: 1,
-    name: 'NOTWEN POLICE + EMS',
+    name: "MARIE'BLACHERE",
     category: 'Negocios',
     imageId: 'product1',
     price: 99.83,
