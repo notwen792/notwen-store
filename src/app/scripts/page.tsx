@@ -1,28 +1,14 @@
-
 import { ProductCard } from '@/components/profile-card';
 import { products } from '@/lib/data';
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function ScriptsPage() {
   const negociosProducts = products.filter(p => p.category === 'Negocios');
   const postulacionesProducts = products.filter(p => p.category === 'Postulaciones');
-  const heroImage = PlaceHolderImages.find(img => img.id === 'negocios-hero');
 
   return (
     <main className="flex-grow bg-background">
-      {/* Hero Section for Negocios - Con la imagen solicitada */}
-      <section className="relative h-64 w-full flex items-center justify-center overflow-hidden border-b border-white/5">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt="Negocios Background"
-            fill
-            className="object-cover opacity-40"
-            priority
-            data-ai-hint={heroImage.imageHint}
-          />
-        )}
+      {/* Hero Section for Negocios - Sin imagen de fondo */}
+      <section className="relative h-64 w-full flex items-center justify-center overflow-hidden border-b border-white/5 bg-card/20">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/90" />
         <div className="relative z-10 text-center px-4">
           <h1 className="font-headline text-5xl md:text-7xl uppercase tracking-widest text-white">
