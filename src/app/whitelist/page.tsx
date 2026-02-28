@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { UserCheck, ShieldCheck, ClipboardCheck, MessageSquare } from 'lucide-react';
+import { UserCheck, ShieldCheck, ClipboardCheck, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -34,15 +34,15 @@ export default function WhitelistPage() {
 
           <div className="bg-card p-8 rounded-lg border border-border/20 flex flex-col items-center text-center group hover:border-destructive/50 transition-all duration-300">
             <div className="p-4 rounded-full bg-destructive/10 mb-4 group-hover:bg-destructive/20 transition-colors">
-              <MessageSquare className="h-10 w-10 text-destructive" />
+              <FileText className="h-10 w-10 text-destructive" />
             </div>
-            <h3 className="font-headline text-2xl tracking-wider mb-2 text-white">PASO 2: ENTREVISTA</h3>
+            <h3 className="font-headline text-2xl tracking-wider mb-2 text-white">PASO 2: FORMULARIO</h3>
             <p className="text-muted-foreground text-sm mb-6">
-              Únete a nuestro Discord oficial y solicita tu entrevista en el canal de soporte correspondiente.
+              Completa el formulario de acceso oficial para que nuestro equipo pueda revisar tu solicitud y perfil.
             </p>
             <Button asChild className="w-full bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] hover:brightness-110 transition-all">
-              <Link href="https://discord.gg/Z6KvkfFVts" target="_blank" rel="noopener noreferrer">
-                IR AL DISCORD
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdpm3H2lJuFcuk5sNwmjr9rGyN1icNFwtLieGlsf2GhgYw7Zw/viewform?usp=sharing&ouid=108918823333102439282" target="_blank" rel="noopener noreferrer">
+                FORMULARIO
               </Link>
             </Button>
           </div>
