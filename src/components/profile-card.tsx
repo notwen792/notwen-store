@@ -1,35 +1,32 @@
 import Image from 'next/image';
 import type { Product } from '@/lib/data';
 import { Card } from './ui/card';
-import { Button } from './ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ShoppingCart, CheckCircle2 } from 'lucide-react';
-import Link from 'next/link';
+import { Ban } from 'lucide-react';
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-  DialogFooter,
-} from '@/components/ui/dialog';
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 
 export function ProductCard({ product }: { product: Product }) {
   const image = PlaceHolderImages.find((img) => img.id === product.imageId);
 
   return (
     <Card className="bg-card border-none shadow-none rounded-lg overflow-hidden flex flex-col group transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg hover:shadow-destructive/10">
-      <Link href="#">
-        <div className="relative h-64 w-full">
-            {image && <Image src={image.imageUrl} alt={product.name} fill style={{objectFit: 'cover'}} data-ai-hint={image?.imageHint || ''} />}
-            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors" />
-        </div>
-      </Link>
+      <div className="relative h-64 w-full">
+          {image && <Image src={image.imageUrl} alt={product.name} fill style={{objectFit: 'cover'}} data-ai-hint={image?.imageHint || ''} />}
+          <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors" />
+          <div className="absolute top-3 right-3">
+            <div className="bg-destructive/90 text-white text-[10px] font-bold px-2 py-1 rounded flex items-center gap-1 backdrop-blur-sm">
+              <Ban className="h-3 w-3" />
+              AGOTADO
+            </div>
+          </div>
+      </div>
       <div className="p-4 flex-grow flex flex-col bg-card">
-          <Link href="#" className="group/text">
-            <h3 className="font-semibold text-white text-base mb-1 group-hover/text:text-destructive transition-colors">{product.name}</h3>
-          </Link>
+          <h3 className="font-semibold text-white text-base mb-1 transition-colors group-hover:text-destructive">{product.name}</h3>
           <p className="text-sm text-muted-foreground flex-grow">{product.category}</p>
           <div className="flex justify-between items-center mt-4">
               <div>
@@ -40,43 +37,20 @@ export function ProductCard({ product }: { product: Product }) {
                       </p>
                   )}
               </div>
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button variant="ghost" size="icon" className="group text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-full">
-                      <ShoppingCart className="h-5 w-5 transition-transform duration-300 group-hover:rotate-12" />
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="sm:max-w-md bg-card border-border text-white">
-                  <DialogHeader>
-                    <DialogTitle className="text-destructive font-headline tracking-wider text-2xl">{product.name}</DialogTitle>
-                    <DialogDescription>
-                      {product.description ? 'Product Description' : 'This pack includes the following features:'}
-                    </DialogDescription>
-                  </DialogHeader>
-                  <div className="py-4 max-h-[60vh] overflow-y-auto">
-                    {product.description ? (
-                      <div className="text-sm text-muted-foreground whitespace-pre-wrap">{product.description}</div>
-                    ) : (
-                      <ul className="space-y-3">
-                        {product.features.map((feature, index) => (
-                          <li key={index} className="flex items-center gap-3">
-                            <CheckCircle2 className="h-5 w-5 text-destructive flex-shrink-0" />
-                            <span className="text-muted-foreground">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                   <DialogFooter>
-                    <Button asChild className="w-full bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] hover:brightness-110 transition-all duration-300">
-                      <Link href="https://discord.gg/Z6KvkfFVts" target="_blank" rel="noopener noreferrer">
-                        Proceed to Discord Store
-                        <ShoppingCart className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </DialogFooter>
-                </DialogContent>
-              </Dialog>
+              
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <div className="flex items-center gap-2 bg-destructive/10 border border-destructive/30 px-3 py-1.5 rounded-full cursor-not-allowed group/status">
+                      <div className="h-2 w-2 rounded-full bg-destructive animate-pulse shadow-[0_0_8px_rgba(255,45,117,0.8)]" />
+                      <span className="text-[10px] font-extrabold text-destructive uppercase tracking-wider">No Disponible</span>
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent className="bg-card border-border text-white text-xs">
+                    <p>Este producto no está disponible temporalmente</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
           </div>
       </div>
     </Card>
