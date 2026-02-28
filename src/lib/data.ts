@@ -94,7 +94,7 @@ export const products: Product[] = [
   },
   {
     id: 6,
-    name: 'LIDERAZGO FACCION (LSPD)',
+    name: 'LSPD',
     category: 'Postulaciones',
     imageId: 'img-city',
     price: 0.00,
