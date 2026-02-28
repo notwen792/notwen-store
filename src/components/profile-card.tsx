@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import type { Product } from '@/lib/data';
 import { Card } from './ui/card';
@@ -8,9 +9,11 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import { cn } from '@/lib/utils';
 
 export function ProductCard({ product }: { product: Product }) {
   const image = PlaceHolderImages.find((img) => img.id === product.imageId);
+  const isAvailable = product.available;
 
   return (
     <Card className="bg-card border-none shadow-none rounded-xl overflow-hidden flex flex-col group transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-destructive/20 w-full">
@@ -58,13 +61,30 @@ export function ProductCard({ product }: { product: Product }) {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <div className="flex items-center gap-2 bg-destructive/10 border border-destructive/20 px-4 py-2 rounded-full cursor-not-allowed group/status shadow-lg shrink-0">
-                      <div className="h-2 w-2 rounded-full bg-destructive animate-pulse" />
-                      <span className="text-[10px] font-black text-destructive uppercase tracking-widest whitespace-nowrap">No Disponible</span>
+                    <div className={cn(
+                      "flex items-center gap-2 border px-4 py-2 rounded-full cursor-not-allowed group/status shadow-lg shrink-0",
+                      isAvailable 
+                        ? "bg-chart-2/10 border-chart-2/20" 
+                        : "bg-destructive/10 border-destructive/20"
+                    )}>
+                      <div className={cn(
+                        "h-2 w-2 rounded-full animate-pulse",
+                        isAvailable ? "bg-chart-2" : "bg-destructive"
+                      )} />
+                      <span className={cn(
+                        "text-[10px] font-black uppercase tracking-widest whitespace-nowrap",
+                        isAvailable ? "text-chart-2" : "text-destructive"
+                      )}>
+                        {isAvailable ? 'Disponible' : 'No Disponible'}
+                      </span>
                     </div>
                   </TooltipTrigger>
                   <TooltipContent className="bg-card border-border text-white text-xs p-2">
-                    <p>Este producto no está disponible en este momento</p>
+                    <p>
+                      {isAvailable 
+                        ? 'Este producto está disponible para su adquisición' 
+                        : 'Este producto no está disponible en este momento'}
+                    </p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
