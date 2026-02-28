@@ -53,11 +53,6 @@ export function ProductCard({ product }: { product: Product }) {
                           {product.originalPrice.toFixed(2)} EUR
                       </p>
                   )}
-                  {product.price === 0 && (
-                    <p className="text-2xl font-headline tracking-widest text-destructive animate-pulse">
-                      GRATIS / POSTULACIÓN
-                    </p>
-                  )}
               </div>
               
               <TooltipProvider>
