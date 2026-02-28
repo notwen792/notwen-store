@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ArrowRight, MessageSquare, BookOpen, CheckCircle, Play } from 'lucide-react';
+import { ArrowRight, MessageSquare, BookOpen, CheckCircle, Play, Instagram, Share2 } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -33,7 +33,7 @@ export default function NotwenRpPage() {
       </section>
 
       <section className="p-8 md:p-12">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto space-y-8">
             <div className="text-center mb-12">
                 <h2 className="font-headline text-4xl text-white tracking-wider uppercase">Sobre Nuestro Servidor</h2>
                 <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
@@ -41,7 +41,7 @@ export default function NotwenRpPage() {
                 </p>
             </div>
 
-            <div className="bg-card p-8 rounded-lg border border-border/20 text-white mb-12">
+            <div className="bg-card p-8 rounded-lg border border-border/20 text-white">
                 <h3 className="font-headline text-3xl tracking-wider mb-6 text-destructive">Bienvenidos a Los Santos</h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                     <p>
@@ -92,6 +92,30 @@ export default function NotwenRpPage() {
                     <p className="text-muted-foreground italic">
                         ¿Tienes dudas? Nuestro equipo de soporte está disponible 24/7 en Discord para ayudarte en cada paso.
                     </p>
+                </div>
+            </div>
+
+            <div className="bg-card p-8 rounded-lg border border-border/20 text-white">
+                <h3 className="font-headline text-3xl tracking-wider mb-6 text-destructive">Nuestras Redes</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <Link href="#" className="flex items-center gap-4 p-4 rounded-lg bg-background/40 border border-border/10 hover:bg-background/60 transition-all duration-300 group">
+                        <div className="p-3 rounded-full bg-destructive/10 group-hover:bg-destructive/20 transition-colors">
+                            <Instagram className="h-6 w-6 text-destructive" />
+                        </div>
+                        <div>
+                            <h4 className="font-bold text-white mb-1">Instagram</h4>
+                            <p className="text-sm text-muted-foreground">Siguenos para no perderte ninguna foto o novedad.</p>
+                        </div>
+                    </Link>
+                    <Link href="#" className="flex items-center gap-4 p-4 rounded-lg bg-background/40 border border-border/10 hover:bg-background/60 transition-all duration-300 group">
+                        <div className="p-3 rounded-full bg-destructive/10 group-hover:bg-destructive/20 transition-colors">
+                            <Share2 className="h-6 w-6 text-destructive" />
+                        </div>
+                        <div>
+                            <h4 className="font-bold text-white mb-1">TikTok</h4>
+                            <p className="text-sm text-muted-foreground">Mira los mejores clips y momentos del servidor.</p>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>
