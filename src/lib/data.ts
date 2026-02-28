@@ -86,7 +86,7 @@ export const products: Product[] = [
   },
   {
     id: 5,
-    name: 'POSTULACIÓN STAFF (SOPORTE)',
+    name: 'POSTULACIÓN STAFF',
     category: 'Postulaciones',
     imageId: 'img-staff',
     price: 0.00,
