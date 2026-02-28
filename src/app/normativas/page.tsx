@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Shield, BadgeCheck, Video, Building2, FileText, ExternalLink, Skull } from 'lucide-react';
+import { Shield, BadgeCheck, Video, Building2, FileText, ExternalLink, Skull, Wrench } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 export default function NormativasPage() {
@@ -10,6 +10,11 @@ export default function NormativasPage() {
       title: 'Normativa General',
       icon: Shield,
       content: 'Respeto absoluto hacia todos los miembros de la comunidad. No se tolerará toxicidad, acoso ni discriminación de ningún tipo.'
+    },
+    {
+      title: 'Normativa Mecánicos',
+      icon: Wrench,
+      content: 'Regulación para los talleres, servicios de reparación, tunning y comportamiento del personal mecánico del servidor.'
     },
     {
       title: 'Normativa Negocios/Establecimientos',
