@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { UserCheck, ShieldCheck, ClipboardCheck, FileText } from 'lucide-react';
+import { UserCheck, ShieldCheck, ClipboardCheck, FileText, UserPlus, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -18,6 +18,7 @@ export default function WhitelistPage() {
       </div>
 
       <div className="max-w-4xl mx-auto space-y-8">
+        {/* Pasos principales */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-card p-8 rounded-lg border border-border/20 flex flex-col items-center text-center group hover:border-destructive/50 transition-all duration-300">
             <div className="p-4 rounded-full bg-destructive/10 mb-4 group-hover:bg-destructive/20 transition-colors">
@@ -48,6 +49,51 @@ export default function WhitelistPage() {
           </div>
         </div>
 
+        {/* Nueva sección: Whitelist por Invitación */}
+        <div className="bg-card p-8 rounded-lg border border-destructive/20 relative overflow-hidden group">
+          <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+            <UserPlus className="h-32 w-32 text-destructive" />
+          </div>
+          
+          <div className="relative z-10">
+            <div className="flex items-center gap-3 mb-4">
+              <Zap className="h-6 w-6 text-destructive animate-pulse" />
+              <h2 className="font-headline text-3xl text-white uppercase tracking-wider">
+                ¡Trae a tus amigos al servidor! (Acceso Directo)
+              </h2>
+            </div>
+            
+            <p className="text-muted-foreground mb-6 leading-relaxed">
+              ¿Tienes a alguien de confianza que quiere unirse a nuestra comunidad? ¡Ahora es más fácil que nunca! Hemos habilitado un sistema de <strong>Whitelist por Invitación</strong>.
+            </p>
+
+            <div className="bg-background/40 p-6 rounded-lg border border-border/10 space-y-4">
+              <h4 className="font-headline text-xl text-destructive tracking-wide flex items-center gap-2">
+                🚀 ¿Cómo funciona?
+              </h4>
+              <p className="text-sm text-muted-foreground">
+                Si ya eres miembro oficial del servidor y tienes tu WL aprobada, puedes invitar a tus amigos para que se salten todo el proceso de entrevistas y formularios.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                <div className="p-3 bg-card/50 rounded border border-border/5">
+                  <span className="text-destructive font-bold block mb-1">Paso 1</span>
+                  <p className="text-xs text-muted-foreground">Envía el enlace de invitación a tu conocido.</p>
+                </div>
+                <div className="p-3 bg-card/50 rounded border border-border/5">
+                  <span className="text-destructive font-bold block mb-1">Paso 2</span>
+                  <p className="text-xs text-muted-foreground">Una vez dentro, verificaremos la invitación.</p>
+                </div>
+                <div className="p-3 bg-card/50 rounded border border-border/5">
+                  <span className="text-destructive font-bold block mb-1">Paso 3</span>
+                  <p className="text-xs text-muted-foreground">¡Listo! Acceso automático sin Whitelist estándar.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Requisitos Mínimos */}
         <div className="bg-card p-8 rounded-lg border border-border/20">
           <div className="flex items-center gap-4 mb-8">
             <div className="p-3 rounded-lg bg-destructive/10">
