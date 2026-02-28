@@ -83,4 +83,13 @@ export const products: Product[] = [
     features: ['Gestión de equipo', 'Rol serio', 'Responsabilidad'],
     description: '¿Tienes experiencia liderando cuerpos policiales? Esta es tu oportunidad.',
   },
+  {
+    id: 7,
+    name: 'VIP BRONCE',
+    category: 'VIP',
+    imageId: 'product2',
+    price: 15.00,
+    features: ['Acceso prioritario', 'Ropa exclusiva', 'Discord Role'],
+    description: 'Nivel básico de membresía VIP con beneficios esenciales.',
+  },
 ];
