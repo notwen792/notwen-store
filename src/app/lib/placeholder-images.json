@@ -3,14 +3,14 @@
   "placeholderImages": [
     {
       "id": "product1",
-      "description": "Boulangerie Marie Blachere Style Interior",
+      "description": "Marie Blachere Interior",
       "imageUrl": "https://media.discordapp.net/attachments/1269644412875440128/1477384251002585099/image.png?ex=69a490cd&is=69a33f4d&hm=bc0f98a51ca0f9f3759173bf1becb5e64d599fafe22eab5972dd54625992772b&=&format=webp&quality=lossless&width=1465&height=864",
-      "imageHint": "bakery boulangerie"
+      "imageHint": "bakery shop"
     },
     {
       "id": "product2",
       "description": "GTA Style City Night",
-      "imageUrl": "https://images.unsplash.com/photo-1529619768328-e37af76c6fe5?q=80&w=2000",
+      "imageUrl": "https://media.discordapp.net/attachments/1269644412875440128/1477391344900247692/e75a2fb4f137ea2af97ba697755ec674.webp?ex=69a49769&is=69a345e9&hm=2ca5c0f73f6f04a19690151b44f2c5495a85f173572f4392b586e470bd2eeee2&=&format=webp",
       "imageHint": "city night"
     },
     {
