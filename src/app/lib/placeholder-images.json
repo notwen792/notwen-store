@@ -39,9 +39,9 @@
     },
     {
       "id": "negocios-hero",
-      "description": "Business city view",
-      "imageUrl": "https://picsum.photos/seed/negocios/1200/400",
-      "imageHint": "city business"
+      "description": "City night skyline",
+      "imageUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=1200&h=400&fit=crop",
+      "imageHint": "city night"
     }
   ]
 }
