@@ -1,6 +1,6 @@
 'use client';
 
-import { Home, Package, ShoppingCart, BookText, Server, Shield, Gem } from 'lucide-react';
+import { Home, Package, ShoppingCart, BookText, Server, Shield, Gem, UserCheck } from 'lucide-react';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -15,6 +15,7 @@ const iconMap: { [key: string]: React.ElementType } = {
   BookText,
   Shield,
   Gem,
+  UserCheck,
 };
 
 export function Sidebar() {
@@ -27,6 +28,7 @@ export function Sidebar() {
 
   const navItems = [
     { href: '/', icon: 'Home', label: 'Home' },
+    { href: '/whitelist', icon: 'UserCheck', label: 'Whitelist' },
     { href: '/scripts', icon: 'ShoppingCart', label: 'Negocios/Postulaciones' },
     { href: '/packs', icon: 'Package', label: 'Packs' },
     { href: '/vip', icon: 'Gem', label: 'VIP' },
