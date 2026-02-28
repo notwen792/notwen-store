@@ -30,9 +30,9 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    name: "BENNY'S",
+    name: "UpnAtom",
     category: 'Negocios',
-    imageId: 'pearls',
+    imageId: 'bennys',
     price: 60.50,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
     description: formatDescription(
@@ -60,7 +60,7 @@ export const products: Product[] = [
     id: 8,
     name: 'PEARLS',
     category: 'Negocios',
-    imageId: 'bahamas',
+    imageId: 'pearls',
     price: 120.00,
     features: ['Tuning avanzado', 'Pinturas únicas', 'Plug & Play'],
     description: formatDescription(
@@ -72,16 +72,16 @@ export const products: Product[] = [
   },
   {
     id: 9,
-    name: 'LTD',
+    name: 'BURGERSHOT',
     category: 'Negocios',
     imageId: 'ltd',
     price: 150.00,
     features: ['Sistema de DJ', 'Luces LED', 'Bebidas'],
     description: formatDescription(
-      "Gasolinera y tienda de conveniencia abierta las 24 horas para todos tus suministros.",
-      "Del Perro Pier",
-      "Min 4 / Max 20",
-      "Venta de alcohol, snacks y suministros básicos."
+      "Restaurante de comida rápida icónico especializado en las mejores hamburguesas de la ciudad.",
+      "Vespucci Canals",
+      "Min 2 / Max 8",
+      "Hamburguesas, patatas, bebidas y helados."
     ),
   },
   {
