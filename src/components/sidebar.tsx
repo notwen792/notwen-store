@@ -26,7 +26,7 @@ export function Sidebar() {
 
   const navItems = [
     { href: '/', icon: 'Home', label: 'Home' },
-    { href: '/scripts', icon: 'ShoppingCart', label: 'Negocios' },
+    { href: '/scripts', icon: 'ShoppingCart', label: 'Negocios/Postulaciones' },
     { href: '/packs', icon: 'Package', label: 'Packs' },
     { href: '/notwen-rp', icon: 'Server', label: 'notwen rp' },
     { href: '/normativas', icon: 'Shield', label: 'Normativas' },
