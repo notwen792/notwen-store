@@ -87,7 +87,7 @@ export const products: Product[] = [
     id: 5,
     name: 'POSTULACIÓN STAFF (SOPORTE)',
     category: 'Postulaciones',
-    imageId: 'img-city',
+    imageId: 'img-staff',
     price: 0.00,
     features: ['Formación incluida', 'Comunidad activa', 'Ascensos'],
     description: 'Buscamos personas comprometidas para ayudar a nuestra comunidad en el día a día.',
