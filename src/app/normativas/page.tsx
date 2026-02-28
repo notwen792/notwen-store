@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Shield, AlertCircle, Scale, Users, FileText, ExternalLink } from 'lucide-react';
+import { Shield, AlertCircle, Scale, Building2, FileText, ExternalLink } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 export default function NormativasPage() {
@@ -12,9 +12,9 @@ export default function NormativasPage() {
       content: 'Respeto absoluto hacia todos los miembros de la comunidad. No se tolerará toxicidad, acoso ni discriminación de ningún tipo.'
     },
     {
-      title: 'Conceptos de Rol',
-      icon: Users,
-      content: 'Es obligatorio conocer y aplicar conceptos básicos como RDM, VDM, MG, PG y NJ para mantener la inmersión del servidor.'
+      title: 'Normativa Negocios/Establecimientos',
+      icon: Building2,
+      content: 'Regulación sobre la gestión de locales, precios, eventos públicos y comportamiento dentro de los establecimientos comerciales.'
     },
     {
       title: 'Normativa de Crímenes',
