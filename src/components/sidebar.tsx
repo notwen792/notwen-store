@@ -30,7 +30,7 @@ export function Sidebar() {
     { href: '/', icon: 'Server', label: 'NOTWEN RP' },
     { href: '/whitelist', icon: 'UserCheck', label: 'WHITELIST' },
     { href: '/normativas', icon: 'Shield', label: 'NORMATIVAS' },
-    { href: '/scripts', icon: 'ShoppingCart', label: 'NEGOCIOS/POSTULACIONES' },
+    { href: '/scripts', icon: 'ShoppingCart', label: 'NEGOCIOS/POSTULACION' },
     { href: '/vip', icon: 'Gem', label: 'VIP' },
     { href: '/packs', icon: 'Package', label: 'PACKS' },
     { href: '/installation-guide', icon: 'BookText', label: 'GUÍA DE INSTALACIÓN' },

@@ -32,7 +32,7 @@ export default function ScriptsPage() {
         <div>
           <div className="text-center mb-12 px-6">
             <h1 className="font-headline text-5xl uppercase tracking-wider text-white px-4">
-              POSTULACIONES-NOTWEN
+              POSTULACION-NOTWEN
             </h1>
             <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
               ¿Quieres formar parte de nuestro equipo o liderar una facción? Presenta tu candidatura.
