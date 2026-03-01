@@ -13,7 +13,7 @@ export default function WhitelistPage() {
           WHITELIST-NOTWEN
         </h1>
         <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-          ¿Quieres formar parte de notwen rp? Aquí tienes los pasos necesarios para superar el proceso de whitelist y empezar tu historia en la ciudad.
+          ¿Quieres formar parte de NOTWEN RP? Aquí tienes los pasos necesarios para superar el proceso de whitelist y empezar tu historia en la ciudad.
         </p>
       </div>
 

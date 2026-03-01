@@ -51,7 +51,7 @@ export default function NormativasPage() {
           Normativa del Servidor
         </h1>
         <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-          Lee atentamente las reglas de notwen rp para asegurar una experiencia de juego óptima para todos.
+          Lee atentamente las reglas de NOTWEN RP para asegurar una experiencia de juego óptima para todos.
         </p>
       </div>
 
@@ -62,7 +62,7 @@ export default function NormativasPage() {
             <h2 className="font-headline text-2xl text-white uppercase tracking-wider">Aviso Importante</h2>
           </div>
           <p className="text-muted-foreground text-sm leading-relaxed">
-            Al entrar en notwen rp, aceptas cumplir todas las normativas aquí presentes. El desconocimiento de las mismas no exime de su cumplimiento. Nos reservamos el derecho de admisión para garantizar la calidad del rol.
+            Al entrar en NOTWEN RP, aceptas cumplir todas las normativas aquí presentes. El desconocimiento de las mismas no exime de su cumplimiento. Nos reservamos el derecho de admisión para garantizar la calidad del rol.
           </p>
         </div>
 

@@ -27,7 +27,7 @@ export function Sidebar() {
   }, []);
 
   const navItems = [
-    { href: '/notwen-rp', icon: 'Server', label: 'notwen rp' },
+    { href: '/notwen-rp', icon: 'Server', label: 'NOTWEN RP' },
     { href: '/whitelist', icon: 'UserCheck', label: 'Whitelist' },
     { href: '/normativas', icon: 'Shield', label: 'Normativas' },
     { href: '/scripts', icon: 'ShoppingCart', label: 'Negocios/Postulaciones' },
@@ -45,9 +45,9 @@ export function Sidebar() {
           isMounted && "animate-logo-pulse"
         )}
       >
-        <h1 className="font-headline text-5xl text-white">notwen</h1>
+        <h1 className="font-headline text-5xl text-white">NOTWEN</h1>
         <p className="font-headline text-2xl uppercase tracking-widest -mt-2 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] bg-clip-text text-transparent">
-          rp
+          RP
         </p>
       </Link>
 
@@ -82,7 +82,7 @@ export function Sidebar() {
             <BookText className="h-4 w-4" /> WE HELP YOU IN WHAT YOU NEED
           </p>
           <p className="text-muted-foreground text-xs mt-2 pl-6">
-            At notwen Network we are committed to providing the best possible experience for our customers.
+            At NOTWEN RP Network we are committed to providing the best possible experience for our customers.
           </p>
           <p className="text-muted-foreground text-xs mt-2 pl-6">
             If you need help or have questions about our scripts or mapping for GTA V, please contact us on our Discord server or via email. Our support team is available 24 hours a day to help you. We are here to make sure you have a smooth and exciting gaming experience.

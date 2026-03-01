@@ -14,11 +14,11 @@ export default function NotwenRpPage() {
         <div className="relative z-20 flex flex-col items-center">
             <h1 className="font-headline text-6xl md:text-9xl uppercase tracking-widest text-white animate-title-float select-none">
                 <span className="bg-clip-text text-transparent bg-gradient-to-b from-white via-white/90 to-destructive/20 drop-shadow-sm">
-                  notwen rp
+                  NOTWEN RP
                 </span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-                Bienvenidos a nuestra comunidad notwen rp, un servidor de roleplay creado por entusiastas con la ambición de crecer.
+                Bienvenidos a nuestra comunidad NOTWEN RP, un servidor de roleplay creado por entusiastas con la ambición de crecer.
             </p>
             <Button asChild size="lg" className="mt-10 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] hover:brightness-110 transition-all duration-300 shadow-xl shadow-destructive/20 hover:scale-105 active:scale-95">
                 <Link href="https://discord.gg/Z6KvkfFVts" target="_blank" rel="noopener noreferrer">
@@ -34,7 +34,7 @@ export default function NotwenRpPage() {
             <div className="text-center mb-12">
                 <h2 className="font-headline text-4xl text-white tracking-wider uppercase">Sobre Nuestro Servidor</h2>
                 <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-                    Descubre lo que hace de notwen rp una experiencia de roleplay única.
+                    Descubre lo que hace de NOTWEN RP una experiencia de roleplay única.
                 </p>
             </div>
 
@@ -43,7 +43,7 @@ export default function NotwenRpPage() {
                     <h3 className="font-headline text-3xl tracking-wider mb-6 text-destructive">¿Quiénes somos?</h3>
                     <div className="space-y-4 text-muted-foreground leading-relaxed">
                         <p>
-                            notwen rp is a Grand Theft Auto V roleplay server where you can live a new life. Whether you want to be a law-abiding citizen, a cunning criminal, or anything in between, our server provides the platform to create your own story.
+                            NOTWEN RP is a Grand Theft Auto V roleplay server where you can live a new life. Whether you want to be a law-abiding citizen, a cunning criminal, or anything in between, our server provides the platform to create your own story.
                         </p>
                         <p>
                             Our server is built on a custom framework with unique scripts and features to ensure an immersive and engaging experience. We have an active development team constantly working on new updates and listening to community feedback.

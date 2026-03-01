@@ -14,10 +14,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent z-10" />
         <div className="relative z-20 flex flex-col items-center">
             <h1 className="font-headline text-6xl md:text-8xl uppercase tracking-widest">
-                notwen
+                NOTWEN
             </h1>
             <p className="text-4xl md:text-6xl font-headline uppercase bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] bg-clip-text text-transparent -mt-2">
-                rp
+                RP
             </p>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
                 High-quality businesses and maps to enhance your Grand Theft Auto V experience.
@@ -35,7 +35,7 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
             <div className="lg:col-span-2">
                 <div className="text-center md:text-left mb-12">
-                    <h2 className="font-headline text-4xl text-white tracking-wider">¿Qué es notwen?</h2>
+                    <h2 className="font-headline text-4xl text-white tracking-wider">¿Qué es NOTWEN?</h2>
                     <p className="text-muted-foreground mt-2 max-w-2xl mx-auto md:mx-0">
                       Somos tu destino especializado en activos de alta calidad y una comunidad de roleplay única actualmente en pleno desarrollo. Ofrecemos soluciones profesionales para elevar tu servidor al siguiente nivel.
                     </p>
@@ -49,8 +49,8 @@ export default function Home() {
                     </div>
                     <div className="bg-card p-8 rounded-lg border border-border/20">
                         <Gamepad2 className="h-10 w-10 text-destructive mb-4" />
-                        <h3 className="font-headline text-2xl tracking-wider mb-2">notwen rp</h3>
-                        <p className="text-muted-foreground text-sm">bienvenidos a nuestra comunidad notwen rp un servidor de roleplay creados por unos randoms que les apetecia y estan intentando crecer</p>
+                        <h3 className="font-headline text-2xl tracking-wider mb-2">NOTWEN RP</h3>
+                        <p className="text-muted-foreground text-sm">bienvenidos a nuestra comunidad NOTWEN RP un servidor de roleplay creados por unos randoms que les apetecia y estan intentando crecer</p>
                     </div>
                 </div>
             </div>
