@@ -84,7 +84,7 @@ export const products: Product[] = [
   },
   {
     id: 13,
-    name: 'PREMIUM SHOWROOM',
+    name: 'CORRETTO',
     category: 'Negocios',
     imageId: 'img-showroom',
     price: 0.00,
