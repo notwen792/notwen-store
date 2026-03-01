@@ -27,13 +27,13 @@ export function Sidebar() {
   }, []);
 
   const navItems = [
-    { href: '/', icon: 'Server', label: 'NOTWEN RP' },
-    { href: '/whitelist', icon: 'UserCheck', label: 'Whitelist' },
-    { href: '/normativas', icon: 'Shield', label: 'Normativas' },
-    { href: '/scripts', icon: 'ShoppingCart', label: 'Negocios/Postulaciones' },
+    { href: '/', icon: 'Server', label: 'Notwen rp' },
+    { href: '/whitelist', icon: 'UserCheck', label: 'WHITELIST' },
+    { href: '/normativas', icon: 'Shield', label: 'NORMATIVAS' },
+    { href: '/scripts', icon: 'ShoppingCart', label: 'NEGOCIOS/POSTULACIONES' },
     { href: '/vip', icon: 'Gem', label: 'VIP' },
-    { href: '/packs', icon: 'Package', label: 'Packs' },
-    { href: '/installation-guide', icon: 'BookText', label: 'Guía de instalación' },
+    { href: '/packs', icon: 'Package', label: 'PACKS' },
+    { href: '/installation-guide', icon: 'BookText', label: 'GUÍA DE INSTALACIÓN' },
   ];
 
   return (
