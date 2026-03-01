@@ -12,11 +12,20 @@ const iconMap: { [key: string]: React.ElementType } = {
   ShoppingCart,
   Package,
   Server,
-  BookText,
   Shield,
   Gem,
   UserCheck,
+  BookText,
 };
+
+const NAV_ITEMS = [
+  { href: '/', icon: 'Server', label: 'NOTWEN RP' },
+  { href: '/whitelist', icon: 'UserCheck', label: 'WHITELIST' },
+  { href: '/normativas', icon: 'Shield', label: 'NORMATIVAS' },
+  { href: '/scripts', icon: 'ShoppingCart', label: 'NEGOCIOS/POSTULACION' },
+  { href: '/vip', icon: 'Gem', label: 'VIP' },
+  { href: '/installation-guide', icon: 'BookText', label: 'GUÍA DE INSTALACIÓN' },
+];
 
 export function Sidebar() {
   const pathname = usePathname();
@@ -25,15 +34,6 @@ export function Sidebar() {
   useEffect(() => {
     setIsMounted(true);
   }, []);
-
-  const navItems = [
-    { href: '/', icon: 'Server', label: 'NOTWEN RP' },
-    { href: '/whitelist', icon: 'UserCheck', label: 'WHITELIST' },
-    { href: '/normativas', icon: 'Shield', label: 'NORMATIVAS' },
-    { href: '/scripts', icon: 'ShoppingCart', label: 'NEGOCIOS/POSTULACION' },
-    { href: '/vip', icon: 'Gem', label: 'VIP' },
-    { href: '/installation-guide', icon: 'BookText', label: 'GUÍA DE INSTALACIÓN' },
-  ];
 
   return (
     <aside className="w-72 min-h-screen bg-card flex-col p-6 border-r border-border hidden md:flex">
@@ -51,28 +51,29 @@ export function Sidebar() {
       </Link>
 
       <nav className="flex flex-col gap-2">
-        {navItems.map((item) => {
-          const Icon = iconMap[item.icon];
+        {NAV_ITEMS.map((item) => {
+          const Icon = iconMap[item.icon] || Server;
+          const isActive = isMounted && pathname === item.href;
+          
           return (
-          <Button
-            key={item.label}
-            variant="ghost"
-            className={cn(
-              'justify-start gap-3 h-12 text-sm group px-3',
-              pathname === item.href
-                ? 'font-semibold text-white bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] transition-all duration-300 hover:brightness-110'
-                : 'text-muted-foreground hover:text-white hover:bg-white/5'
-            )}
-            asChild
-          >
-            <Link
-              href={item.href}
+            <Button
+              key={item.label}
+              variant="ghost"
+              className={cn(
+                'justify-start gap-3 h-12 text-sm group px-3 transition-all duration-300',
+                isActive
+                  ? 'font-semibold text-white bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] hover:brightness-110'
+                  : 'text-muted-foreground hover:text-white hover:bg-white/5'
+              )}
+              asChild
             >
-              <Icon className="h-5 w-5 transition-transform duration-300 ease-in-out group-hover:rotate-[15deg] shrink-0" />
-              <span className="truncate">{item.label}</span>
-            </Link>
-          </Button>
-        )})}
+              <Link href={item.href}>
+                <Icon className="h-5 w-5 transition-transform duration-300 ease-in-out group-hover:rotate-[15deg] shrink-0" />
+                <span className="truncate">{item.label}</span>
+              </Link>
+            </Button>
+          );
+        })}
       </nav>
 
       <div className="mt-auto flex flex-col gap-4">
