@@ -27,7 +27,7 @@ export function Sidebar() {
   }, []);
 
   const navItems = [
-    { href: '/notwen-rp', icon: 'Server', label: 'NOTWEN RP' },
+    { href: '/', icon: 'Server', label: 'NOTWEN RP' },
     { href: '/whitelist', icon: 'UserCheck', label: 'Whitelist' },
     { href: '/normativas', icon: 'Shield', label: 'Normativas' },
     { href: '/scripts', icon: 'ShoppingCart', label: 'Negocios/Postulaciones' },
