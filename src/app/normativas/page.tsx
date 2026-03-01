@@ -1,10 +1,19 @@
+
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Shield, BadgeCheck, Video, Building2, FileText, ExternalLink, Skull, Wrench } from 'lucide-react';
 import { Card } from '@/components/ui/card';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 export default function NormativasPage() {
+  const [selectedNormativa, setSelectedNormativa] = useState<{ title: string; link: string } | null>(null);
+
   const normativas = [
     {
       title: 'Normativa General',
@@ -79,20 +88,39 @@ export default function NormativasPage() {
                 {norma.content}
               </p>
               <div className="pt-4 mt-auto">
-                <a 
-                  href={norma.link}
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                <button 
+                  onClick={() => setSelectedNormativa({ title: norma.title, link: norma.link })}
                   className="inline-flex items-center justify-center gap-2 w-full px-4 py-2 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] text-white rounded-md text-sm font-bold hover:brightness-110 transition-all shadow-lg shadow-destructive/20"
                 >
                   VER NORMATIVA
                   <ExternalLink className="h-4 w-4" />
-                </a>
+                </button>
               </div>
             </Card>
           ))}
         </div>
       </div>
+
+      {/* Visor de Normativa Interno */}
+      <Dialog open={!!selectedNormativa} onOpenChange={(isOpen) => !isOpen && setSelectedNormativa(null)}>
+        <DialogContent className="max-w-[95vw] w-[1200px] h-[90vh] p-0 bg-card border-border/40 overflow-hidden flex flex-col">
+          <DialogHeader className="p-4 border-b border-white/5 shrink-0">
+            <DialogTitle className="font-headline text-2xl text-white uppercase tracking-wider">
+              {selectedNormativa?.title}
+            </DialogTitle>
+          </DialogHeader>
+          <div className="flex-grow relative bg-black">
+             {selectedNormativa && (
+               <iframe 
+                src={selectedNormativa.link} 
+                className="w-full h-full border-none"
+                title={selectedNormativa.title}
+                allowFullScreen
+               />
+             )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </main>
   );
 }
