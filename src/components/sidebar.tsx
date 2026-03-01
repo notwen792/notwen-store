@@ -32,7 +32,6 @@ export function Sidebar() {
     { href: '/normativas', icon: 'Shield', label: 'NORMATIVAS' },
     { href: '/scripts', icon: 'ShoppingCart', label: 'NEGOCIOS/POSTULACION' },
     { href: '/vip', icon: 'Gem', label: 'VIP' },
-    { href: '/packs', icon: 'Package', label: 'PACKS' },
     { href: '/installation-guide', icon: 'BookText', label: 'GUÍA DE INSTALACIÓN' },
   ];
 
@@ -85,7 +84,7 @@ export function Sidebar() {
             EN LA RED NOTWEN RP ESTAMOS COMPROMETIDOS A BRINDAR LA MEJOR EXPERIENCIA POSIBLE A NUESTROS CLIENTES.
           </p>
           <p className="text-muted-foreground text-[10px] mt-2 pl-6 uppercase leading-tight">
-            SI NECESITAS AYUDA O TIENES PREGUNTAS SOBRE NUESTROS SCRIPTS O MAPEOS PARA GTA V, CONTÁCTANOS EN NUESTRO SERVIDOR DE DISCORD. NUESTRO EQUIPO DE SOPORTE ESTÁ DISPONIBLE LAS 24 HORAS DEL DÍA.
+            SI NECESITAS AYUDA O TIENES PREGUNTAS SOBRE NUESTROS SCRIPTS OR MAPEOS PARA GTA V, CONTÁCTANOS EN NUESTRO SERVIDOR DE DISCORD. NUESTRO EQUIPO DE SOPORTE ESTÁ DISPONIBLE LAS 24 HORAS DEL DÍA.
           </p>
         </div>
       </div>
