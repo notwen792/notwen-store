@@ -1,64 +1,94 @@
 {
   "placeholderImages": [
     {
-      "id": "product1",
+      "id": "img-marie",
       "description": "Marie Blachere Interior",
       "imageUrl": "https://media.discordapp.net/attachments/1269644412875440128/1477384251002585099/image.png?ex=69a490cd&is=69a33f4d&hm=bc0f98a51ca0f9f3759173bf1becb5e64d599fafe22eab5972dd54625992772b&=&format=webp&quality=lossless&width=1465&height=864",
       "imageHint": "bakery shop"
     },
     {
-      "id": "product-city",
-      "description": "GTA Style City Night",
-      "imageUrl": "https://media.discordapp.net/attachments/1110302343133663323/1477390984093630535/image.png?ex=69a49713&is=69a34593&hm=0db7e9898ade96a7cc124726894f7e7d22f6c210504971a1daa3dae13d224e13&=&format=webp&quality=lossless",
-      "imageHint": "city night"
-    },
-    {
-      "id": "bennys",
-      "description": "Pearls Night Club Image",
-      "imageUrl": "https://media.discordapp.net/attachments/1110302343133663323/1477390984093630535/image.png?ex=69a49713&is=69a34593&hm=0db7e9898ade96a7cc124726894f7e7d22f6c210504971a1daa3dae13d224e13&=&format=webp&quality=lossless",
-      "imageHint": "night club"
-    },
-    {
-      "id": "bean-machine",
-      "description": "Bean Machine House",
-      "imageUrl": "https://cdn.discordapp.com/attachments/1110302343133663323/1477392002160132278/image.png?ex=69a49805&is=69a34685&hm=95ae40f9f77572502cabd80efbe4032897323e24cf06b59cb25c214dee7202c6&",
-      "imageHint": "modern house"
-    },
-    {
-      "id": "pearls",
-      "description": "Benny's Car Image",
+      "id": "img-bennys",
+      "description": "Benny's Customs Garage",
       "imageUrl": "https://cdn.discordapp.com/attachments/1110302343133663323/1477393948589822042/image.png?ex=69a499d5&is=69a34855&hm=e57d0531a018a056e95bfe1253e0e245962cf22a174ec11ea0c5ba01fe5ec4ab&",
-      "imageHint": "mechanical car"
+      "imageHint": "mechanical car garage"
     },
     {
-      "id": "bahamas",
-      "description": "Nightclub interior",
-      "imageUrl": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1080",
-      "imageHint": "nightclub party"
+      "id": "img-bean",
+      "description": "Bean Machine Coffee Shop",
+      "imageUrl": "https://cdn.discordapp.com/attachments/1110302343133663323/1477392002160132278/image.png?ex=69a49805&is=69a34685&hm=95ae40f9f77572502cabd80efbe4032897323e24cf06b59cb25c214dee7202c6&",
+      "imageHint": "coffee house"
     },
     {
-      "id": "ltd",
-      "description": "Gas station",
+      "id": "img-upnatom",
+      "description": "UpnAtom Exterior Image",
+      "imageUrl": "https://media.discordapp.net/attachments/1465487706850066545/1477415693648400384/image.png?ex=69a4ae16&is=69a35c96&hm=db53cb998d1ef0b882ad7512efe7e0ed12873a068f9c66e5e0e752f9f01d5532&=&format=webp&quality=lossless&width=1715&height=864",
+      "imageHint": "restaurant exterior"
+    },
+    {
+      "id": "img-burgershot",
+      "description": "Burgershot Restaurant",
+      "imageUrl": "https://media.discordapp.net/attachments/1465487706850066545/1477420111743680835/image.png?ex=69a4b233&is=69a360b3&hm=9283c5ee1c0b3a072f5252bd8fca457b831a193809724fc650bdea8e2130287b&=&format=webp&quality=lossless&width=550&height=271",
+      "imageHint": "burger shop"
+    },
+    {
+      "id": "img-fruit",
+      "description": "Fruit Machine Shop",
+      "imageUrl": "https://media.discordapp.net/attachments/1465487706850066545/1477418427097420047/image.png?ex=69a4b0a2&is=69a35f22&hm=a8f1585cc4fe6ce61ddedc6483b12d970e66c7037d2b2760114368cda5c04ef7&=&format=webp&quality=lossless&width=1815&height=864",
+      "imageHint": "fruit shop juice"
+    },
+    {
+      "id": "img-fitness",
+      "description": "Power Fitness Center",
+      "imageUrl": "https://media.discordapp.net/attachments/1465487706850066545/1477419011959689499/Screenshot_1.png?ex=69a4b12d&is=69a35fad&hm=71d958bcdca8eb37541f7c891de316cdbce2095b57d3433eab68e9db6877136a&=&format=webp&quality=lossless&width=550&height=271",
+      "imageHint": "gym fitness center"
+    },
+    {
+      "id": "img-staff",
+      "description": "Staff Application Image",
+      "imageUrl": "https://media.discordapp.net/attachments/1465487706850066545/1477424362889154783/logo_staff.png?ex=69a4b629&is=69a364a9&hm=c0c6521f2359ba86ec8d7d02392b87681037811071a2a2d00e23474efb2d76d1&=&format=webp&quality=lossless&width=350&height=350",
+      "imageHint": "staff team"
+    },
+    {
+      "id": "img-lspd",
+      "description": "LSPD Logo",
+      "imageUrl": "https://media.discordapp.net/attachments/1465487706850066545/1477425065309114379/logo_lspd.png?ex=69a4b6d0&is=69a36550&hm=e4c4198f02e7b6e876b7480f488c5fb1fdcf21bd2c02db50593dc9a382fd3d92&=&format=webp&quality=lossless&width=968&height=968",
+      "imageHint": "police department logo"
+    },
+    {
+      "id": "img-city",
+      "description": "GTA City View",
+      "imageUrl": "https://media.discordapp.net/attachments/1110302343133663323/1477390984093630535/image.png?ex=69a49713&is=69a34593&hm=0db7e9898ade96a7cc124726894f7e7d22f6c210504971a1daa3dae13d224e13&=&format=webp&quality=lossless",
+      "imageHint": "city lights"
+    },
+    {
+      "id": "img-showroom",
+      "description": "Corretto Italian Cafe",
+      "imageUrl": "https://media.discordapp.net/attachments/1269644412875440128/1477717823068442748/image.png?ex=69a5c777&is=69a475f7&hm=c9082e4f5a6d9918dbabc55cd20d2de25e5ef0f374f0cb8c2ad8d8dc33635a46&",
+      "imageHint": "italian cafe interior"
+    },
+    {
+      "id": "img-ltd",
+      "description": "LTD Gas Station",
       "imageUrl": "https://images.unsplash.com/photo-1563906267088-b02d4471f1f9?q=80&w=1080",
-      "imageHint": "gas station"
+      "imageHint": "gas station neon"
     },
     {
-      "id": "vanilla",
-      "description": "Bar club",
-      "imageUrl": "https://images.unsplash.com/photo-1514525253361-b83f859b73c0?q=80&w=1080",
-      "imageHint": "bar neon"
-    },
-    {
-      "id": "pillbox",
-      "description": "Hospital hallway",
+      "id": "img-ems",
+      "description": "EMS Hospital Image",
       "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1080",
-      "imageHint": "hospital"
+      "imageHint": "hospital medical"
     },
     {
-      "id": "burgershot",
-      "description": "Fast food burger",
-      "imageUrl": "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1080",
-      "imageHint": "burger"
+      "id": "img-taxi",
+      "description": "Downtown Cab Co",
+      "imageUrl": "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?q=80&w=1080",
+      "imageHint": "taxi cab"
+    },
+    {
+      "id": "img-mechanic",
+      "description": "Mechanic Workshop",
+      "imageUrl": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=1080",
+      "imageHint": "car mechanic"
     }
   ]
 }

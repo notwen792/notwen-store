@@ -3,7 +3,7 @@ import { products } from '@/lib/data';
 
 export default function ScriptsPage() {
   const negociosProducts = products.filter(p => p.category === 'Negocios');
-  const postulacionesProducts = products.filter(p => p.category === 'Postulaciones');
+  const postulacionesProducts = products.filter(p => p.category === 'Postulacion');
 
   return (
     <main className="flex-grow bg-background">
