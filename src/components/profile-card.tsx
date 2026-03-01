@@ -46,9 +46,13 @@ export function ProductCard({ product }: { product: Product }) {
 
           <div className="flex justify-between items-center mt-auto pt-6 border-t border-white/10 gap-4">
               <div className="flex flex-col">
-                  {product.price > 0 && (
+                  {product.price > 0 ? (
                     <p className="text-3xl font-headline tracking-widest text-white">
                       {product.price.toFixed(2)} <span className="text-sm font-body text-muted-foreground">EUR</span>
+                    </p>
+                  ) : (
+                    <p className="text-3xl font-headline tracking-widest text-destructive animate-pulse">
+                      GRATIS
                     </p>
                   )}
                   {product.originalPrice && (
