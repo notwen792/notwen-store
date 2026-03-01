@@ -1,11 +1,20 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { UserCheck, ShieldCheck, ClipboardCheck, FileText, UserPlus, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { WhitelistForm } from '@/components/whitelist-form';
 
 export default function WhitelistPage() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <main className="flex-grow p-8 md:p-12 bg-background">
       <div className="text-center mb-12">
@@ -41,16 +50,17 @@ export default function WhitelistPage() {
             <p className="text-muted-foreground text-sm mb-6">
               Completa el formulario de acceso oficial para que nuestro equipo pueda revisar tu solicitud y perfil.
             </p>
-            <Button asChild className="w-full bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] hover:brightness-110 transition-all">
-              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdpm3H2lJuFcuk5sNwmjr9rGyN1icNFwtLieGlsf2GhgYw7Zw/viewform?usp=sharing&ouid=108918823333102439282" target="_blank" rel="noopener noreferrer">
-                FORMULARIO
-              </Link>
+            <Button 
+              onClick={() => setIsFormOpen(true)}
+              className="w-full bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] hover:brightness-110 transition-all"
+            >
+              RELLENAR FORMULARIO
             </Button>
           </div>
         </div>
 
         {/* Nueva sección: Whitelist por Invitación */}
-        <div className="bg-card p-8 rounded-lg border border-border/20 relative overflow-hidden group">
+        <div className="bg-card p-8 rounded-lg border border-border/20 relative overflow-hidden group transition-all duration-700 hover:border-destructive/30">
           <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
             <UserPlus className="h-32 w-32 text-destructive" />
           </div>
@@ -128,6 +138,19 @@ export default function WhitelistPage() {
           </div>
         </div>
       </div>
+
+      {/* Cuadro del Formulario Interno */}
+      <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
+        <DialogContent className="max-w-2xl bg-card border-border/40 p-0 overflow-hidden">
+          <DialogHeader className="p-6 border-b border-white/5 bg-background/20">
+            <DialogTitle className="font-headline text-3xl text-white uppercase tracking-wider flex items-center gap-3">
+              <FileText className="h-7 w-7 text-destructive" />
+              Formulario de Whitelist
+            </DialogTitle>
+          </DialogHeader>
+          <WhitelistForm onSuccess={() => setIsFormOpen(false)} />
+        </DialogContent>
+      </Dialog>
     </main>
   );
 }
