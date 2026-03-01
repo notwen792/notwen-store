@@ -46,17 +46,22 @@ export function ProductCard({ product }: { product: Product }) {
 
           <div className="flex justify-between items-center mt-auto pt-6 border-t border-white/10 gap-4">
               <div className="flex flex-col">
-                  {product.price > 0 ? (
-                    <p className="text-3xl font-headline tracking-widest text-white">
-                      {product.price.toFixed(2)} <span className="text-sm font-body text-muted-foreground">EUR</span>
-                    </p>
-                  ) : (
-                    <p className="text-3xl font-headline tracking-widest text-white animate-pulse">
-                      GRATIS
-                    </p>
-                  )}
+                  <div className={cn(
+                    "px-4 py-2 rounded-md border-2 transition-all duration-300",
+                    isAvailable ? "border-chart-2/80 bg-chart-2/5" : "border-destructive/80 bg-destructive/5"
+                  )}>
+                    {product.price > 0 ? (
+                      <p className="text-2xl font-headline tracking-widest text-white">
+                        {product.price.toFixed(2)} <span className="text-sm font-body text-muted-foreground">EUR</span>
+                      </p>
+                    ) : (
+                      <p className="text-2xl font-headline tracking-widest text-white">
+                        GRATIS
+                      </p>
+                    )}
+                  </div>
                   {product.originalPrice && (
-                      <p className="text-sm text-muted-foreground line-through decoration-destructive/50">
+                      <p className="text-sm text-muted-foreground line-through decoration-destructive/50 mt-1 pl-1">
                           {product.originalPrice.toFixed(2)} EUR
                       </p>
                   )}
