@@ -88,8 +88,8 @@ export const products: Product[] = [
     category: 'Negocios',
     imageId: 'img-showroom',
     price: 0.00,
-    features: ['Exposición de lujo', 'Venta de vehículos', 'Plug & Play'],
-    description: "El concesionario más prestigioso de Los Santos, donde la elegancia y la potencia se encuentran para los ciudadanos más exigentes.\n\n📍 Ubicación: Rockford Hills\n👥 Trabajadores: Min 2 / Max 6\n🥐 Servicios y productos: Importación de vehículos de lujo, personalización exclusiva y planes de financiación premium.",
+    features: ['Café de Autor', 'Pastelería Italiana', 'Plug & Play'],
+    description: "La auténtica experiencia del espresso italiano llega a la ciudad. Un rincón exclusivo donde el aroma del grano recién molido y la elegancia se fusionan para los paladares más refinados.\n\n📍 Ubicación: Rockford Hills\n👥 Trabajadores: Min 2 / Max 5\n🥐 Servicios y productos: Café premium, repostería artesanal italiana, paninis gourmet y el mejor ambiente de la zona.",
     available: true,
   },
   {
