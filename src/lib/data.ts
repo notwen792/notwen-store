@@ -103,6 +103,16 @@ export const products: Product[] = [
     available: true,
   },
   {
+    id: 18,
+    name: 'VANILLA UNICORN',
+    category: 'Negocios',
+    imageId: 'img-vanilla',
+    price: 0.00,
+    features: ['Ambiente nocturno', 'Música en vivo', 'Exclusivo'],
+    description: "El club nocturno más famoso de Los Santos. Disfruta de la mejor música y un ambiente inigualable.\n\n📍 Ubicación: Strawberry\n👥 Trabajadores: Min 5 / Max 12\n🥐 Servicios y productos: Bebidas premium, reservados VIP y eventos especiales.",
+    available: true,
+  },
+  {
     id: 2,
     name: 'NOTWEN ALL SCRIPTS (40% OFF)',
     category: 'Packs',

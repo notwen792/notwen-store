@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -71,6 +72,12 @@
       "description": "LTD Gas Station",
       "imageUrl": "https://images.unsplash.com/photo-1563906267088-b02d4471f1f9?q=80&w=1080",
       "imageHint": "gas station neon"
+    },
+    {
+      "id": "img-vanilla",
+      "description": "Vanilla Unicorn Nightclub",
+      "imageUrl": "https://media.discordapp.net/attachments/1269644412875440128/1477719750959169597/image.png?ex=69a5c943&is=69a477c3&hm=2f272986b42fbc9ebf5e8074315c5173b561cd7bd4b2149db97e8281786fda0a&",
+      "imageHint": "nightclub interior"
     },
     {
       "id": "img-ems",
