@@ -27,7 +27,7 @@ export default function Home() {
                       <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-white/10 hover:bg-white/5 transition-all">
+              <Button asChild size="lg" className="bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] hover:brightness-110 transition-all duration-300 shadow-xl shadow-destructive/20 hover:scale-105 active:scale-95">
                   <Link href="/scripts">
                       Explorar Negocios
                   </Link>
