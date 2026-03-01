@@ -104,7 +104,7 @@ export const products: Product[] = [
   },
   {
     id: 18,
-    name: 'VANILLA UNICORN',
+    name: 'PEARLS',
     category: 'Negocios',
     imageId: 'img-vanilla',
     price: 0.00,
