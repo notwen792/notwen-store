@@ -89,7 +89,7 @@ export const products: Product[] = [
     imageId: 'img-showroom',
     price: 0.00,
     features: ['Exposición de lujo', 'Venta de vehículos', 'Plug & Play'],
-    description: "El concesionario más exclusivo de la ciudad para los ciudadanos más exigentes.\n\n📍 Ubicación: Rockford Hills\n👥 Trabajadores: Min 2 / Max 5\n🥐 Servicios y productos: Vehículos de alta gama, financiación y seguros.",
+    description: "El concesionario más prestigioso de Los Santos, donde la elegancia y la potencia se encuentran para los ciudadanos más exigentes.\n\n📍 Ubicación: Rockford Hills\n👥 Trabajadores: Min 2 / Max 6\n🥐 Servicios y productos: Importación de vehículos de lujo, personalización exclusiva y planes de financiación premium.",
     available: true,
   },
   {
