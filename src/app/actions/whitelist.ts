@@ -12,7 +12,7 @@ export async function sendWhitelistToDiscord(formData: any) {
     return { success: false, error: 'Configuración de Webhook no encontrada.' };
   }
 
-  // Respuestas correctas: 2, 3, 3, 4, 1, 3, 3, 2
+  // Respuestas correctas: 2, 3, 3, 4, 1, 3, 3, 2, 3, 3, 2
   const correctAnswers = {
     q_restart: '2',
     q_911: '3',
@@ -22,6 +22,9 @@ export async function sendWhitelistToDiscord(formData: any) {
     q_fear: '3',
     q_mg: '3',
     q_pg: '2',
+    q_priority: '3',
+    q_do: '3',
+    q_combat: '2',
   };
 
   const validate = (key: string, value: string) => {
@@ -48,6 +51,9 @@ export async function sendWhitelistToDiscord(formData: any) {
       { name: '😨 Valoración Vida', value: validate('q_fear', formData.q_fear), inline: true },
       { name: '🖥️ MetaGaming', value: validate('q_mg', formData.q_mg), inline: true },
       { name: '🦾 PowerGaming', value: validate('q_pg', formData.q_pg), inline: true },
+      { name: '🏆 Prioridad Atraco', value: validate('q_priority', formData.q_priority), inline: true },
+      { name: '📢 Uso de /do', value: validate('q_do', formData.q_do), inline: true },
+      { name: '🔌 Combat Logging', value: validate('q_combat', formData.q_combat), inline: true },
     ],
     timestamp: new Date().toISOString(),
     footer: { text: 'Sistema de Whitelist Interno - NOTWEN' }

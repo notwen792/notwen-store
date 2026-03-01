@@ -34,6 +34,9 @@ const formSchema = z.object({
   q_fear: z.string().min(1, 'Selecciona una opción'),
   q_mg: z.string().min(1, 'Selecciona una opción'),
   q_pg: z.string().min(1, 'Selecciona una opción'),
+  q_priority: z.string().min(1, 'Selecciona una opción'),
+  q_do: z.string().min(1, 'Selecciona una opción'),
+  q_combat: z.string().min(1, 'Selecciona una opción'),
 });
 
 export function WhitelistForm({ onSuccess }: { onSuccess: () => void }) {
@@ -56,6 +59,9 @@ export function WhitelistForm({ onSuccess }: { onSuccess: () => void }) {
       q_fear: '',
       q_mg: '',
       q_pg: '',
+      q_priority: '',
+      q_do: '',
+      q_combat: '',
     },
   });
 
@@ -434,6 +440,111 @@ export function WhitelistForm({ onSuccess }: { onSuccess: () => void }) {
                     <FormItem className="flex items-center space-x-3 space-y-0">
                       <FormControl><RadioGroupItem value="4" /></FormControl>
                       <FormLabel className="font-normal">Digo que no me ha pasado nada y sigo conduciendo.</FormLabel>
+                    </FormItem>
+                  </RadioGroup>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="q_priority"
+            render={({ field }) => (
+              <FormItem className="space-y-3">
+                <FormLabel>En un atraco a un establecimiento con rehén, ¿qué tiene PRIORIDAD absoluta?</FormLabel>
+                <FormControl>
+                  <RadioGroup
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                    className="flex flex-col space-y-2"
+                  >
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="1" /></FormControl>
+                      <FormLabel className="font-normal">Asegurar el botín y el dinero robado.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="2" /></FormControl>
+                      <FormLabel className="font-normal">Abatir a los policías si intentan entrar.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="3" /></FormControl>
+                      <FormLabel className="font-normal">Salvaguardar la vida del rehén en todo momento.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="4" /></FormControl>
+                      <FormLabel className="font-normal">Conseguir la huida lo más rápido posible sin negociar.</FormLabel>
+                    </FormItem>
+                  </RadioGroup>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="q_do"
+            render={({ field }) => (
+              <FormItem className="space-y-3">
+                <FormLabel>¿Cuál es el uso correcto del comando /do?</FormLabel>
+                <FormControl>
+                  <RadioGroup
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                    className="flex flex-col space-y-2"
+                  >
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="1" /></FormControl>
+                      <FormLabel className="font-normal">Para insultar o quejarme de un rol por OOC.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="2" /></FormControl>
+                      <FormLabel className="font-normal">Para describir acciones físicas de mi propio personaje.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="3" /></FormControl>
+                      <FormLabel className="font-normal">Para describir el entorno o situaciones no visibles a simple vista.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="4" /></FormControl>
+                      <FormLabel className="font-normal">Para hablar con mis amigos fuera de rol sin que nadie lea.</FormLabel>
+                    </FormItem>
+                  </RadioGroup>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="q_combat"
+            render={({ field }) => (
+              <FormItem className="space-y-3">
+                <FormLabel>Te detiene la policía y "se te cae" el internet. ¿Qué debes hacer?</FormLabel>
+                <FormControl>
+                  <RadioGroup
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                    className="flex flex-col space-y-2"
+                  >
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="1" /></FormControl>
+                      <FormLabel className="font-normal">Nada, aprovecho que ya me he librado de la cárcel.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="2" /></FormControl>
+                      <FormLabel className="font-normal">Avisar por Discord lo antes posible y volver para retomar el rol.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="3" /></FormControl>
+                      <FormLabel className="font-normal">Esperar a mañana para entrar con otro personaje.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="4" /></FormControl>
+                      <FormLabel className="font-normal">Borrar mi personaje para que no me fichen.</FormLabel>
                     </FormItem>
                   </RadioGroup>
                 </FormControl>
