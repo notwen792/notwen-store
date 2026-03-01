@@ -20,7 +20,7 @@ export default function Home() {
                 RP
             </p>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                High-quality businesses and maps to enhance your Grand Theft Auto V experience.
+                Bienvenidos a NOTWEN RP, la mejor experiencia en rol. Calidad y realismo en cada detalle.
             </p>
             <Button asChild size="lg" className="mt-8 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] hover:brightness-110 transition-all duration-300">
                 <Link href="/scripts">
