@@ -51,7 +51,7 @@ export function ProductCard({ product }: { product: Product }) {
                       {product.price.toFixed(2)} <span className="text-sm font-body text-muted-foreground">EUR</span>
                     </p>
                   ) : (
-                    <p className="text-3xl font-headline tracking-widest text-destructive animate-pulse">
+                    <p className="text-3xl font-headline tracking-widest text-white animate-pulse">
                       GRATIS
                     </p>
                   )}
