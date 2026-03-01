@@ -59,6 +59,18 @@
       "description": "GTA City View",
       "imageUrl": "https://media.discordapp.net/attachments/1110302343133663323/1477390984093630535/image.png?ex=69a49713&is=69a34593&hm=0db7e9898ade96a7cc124726894f7e7d22f6c210504971a1daa3dae13d224e13&=&format=webp&quality=lossless",
       "imageHint": "city lights"
+    },
+    {
+      "id": "img-showroom",
+      "description": "Premium Showroom",
+      "imageUrl": "https://media.discordapp.net/attachments/1269644412875440128/1477717823068442748/image.png?ex=69a5c777&is=69a475f7&hm=c9082e4f5a6d9918dbabc55cd20d2de25e5ef0f374f0cb8c2ad8d8dc33635a46&",
+      "imageHint": "luxury car showroom"
+    },
+    {
+      "id": "img-ltd",
+      "description": "LTD Gas Station",
+      "imageUrl": "https://images.unsplash.com/photo-1563906267088-b02d4471f1f9?q=80&w=1080",
+      "imageHint": "gas station neon"
     }
   ]
 }
