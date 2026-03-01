@@ -31,6 +31,9 @@ const formSchema = z.object({
   q_recognition: z.string().min(1, 'Selecciona una opción'),
   q_hostage: z.string().min(1, 'Selecciona una opción'),
   q_shooting: z.string().min(1, 'Selecciona una opción'),
+  q_fear: z.string().min(1, 'Selecciona una opción'),
+  q_mg: z.string().min(1, 'Selecciona una opción'),
+  q_pg: z.string().min(1, 'Selecciona una opción'),
 });
 
 export function WhitelistForm({ onSuccess }: { onSuccess: () => void }) {
@@ -50,6 +53,9 @@ export function WhitelistForm({ onSuccess }: { onSuccess: () => void }) {
       q_recognition: '',
       q_hostage: '',
       q_shooting: '',
+      q_fear: '',
+      q_mg: '',
+      q_pg: '',
     },
   });
 
@@ -205,19 +211,19 @@ export function WhitelistForm({ onSuccess }: { onSuccess: () => void }) {
                   >
                     <FormItem className="flex items-center space-x-3 space-y-0">
                       <FormControl><RadioGroupItem value="1" /></FormControl>
-                      <FormLabel className="font-normal">/911 Se verían dos sujetos con pasamontañas forcejeando con un hombre junto a una tienda 24/7...</FormLabel>
+                      <FormLabel className="font-normal">/911 Se verían dos sujetos con pasamontañas forcejeando...</FormLabel>
                     </FormItem>
                     <FormItem className="flex items-center space-x-3 space-y-0">
                       <FormControl><RadioGroupItem value="2" /></FormControl>
-                      <FormLabel className="font-normal">/911 Se escucharían gritos y se vería a tres individuos empujando a una persona hacia una furgoneta blanca...</FormLabel>
+                      <FormLabel className="font-normal">/911 Se escucharían gritos y se vería a tres individuos...</FormLabel>
                     </FormItem>
                     <FormItem className="flex items-center space-x-3 space-y-0">
                       <FormControl><RadioGroupItem value="3" /></FormControl>
-                      <FormLabel className="font-normal">/911 Soy Pablo y acabo de ver a Kevin atracando. Eran cinco seguro (aunque no lo he visto bien)...</FormLabel>
+                      <FormLabel className="font-normal">/911 Soy Pablo y acabo de ver a Kevin atracando. Eran cinco seguro...</FormLabel>
                     </FormItem>
                     <FormItem className="flex items-center space-x-3 space-y-0">
                       <FormControl><RadioGroupItem value="4" /></FormControl>
-                      <FormLabel className="font-normal">/911 Se vería a tres individuos intentando forzar una puerta trasera de una joyería...</FormLabel>
+                      <FormLabel className="font-normal">/911 Se vería a tres individuos intentando forzar una puerta...</FormLabel>
                     </FormItem>
                   </RadioGroup>
                 </FormControl>
@@ -240,19 +246,19 @@ export function WhitelistForm({ onSuccess }: { onSuccess: () => void }) {
                   >
                     <FormItem className="flex items-center space-x-3 space-y-0">
                       <FormControl><RadioGroupItem value="1" /></FormControl>
-                      <FormLabel className="font-normal">Si alguien lleva una máscara que cubre cara y pelo, lo trato como desconocido y no afirmo su identidad.</FormLabel>
+                      <FormLabel className="font-normal">Si alguien lleva una máscara que cubre cara y pelo, lo trato como desconocido.</FormLabel>
                     </FormItem>
                     <FormItem className="flex items-center space-x-3 space-y-0">
                       <FormControl><RadioGroupItem value="2" /></FormControl>
-                      <FormLabel className="font-normal">Si recibo una llamada en anónimo, no puedo dar por hecho quién es; continúo el rol sin identificar.</FormLabel>
+                      <FormLabel className="font-normal">Si recibo una llamada en anónimo, no puedo dar por hecho quién es.</FormLabel>
                     </FormItem>
                     <FormItem className="flex items-center space-x-3 space-y-0">
                       <FormControl><RadioGroupItem value="3" /></FormControl>
-                      <FormLabel className="font-normal">Puedo reconocer a alguien con máscara completa si lo identifico por la voz, aunque me llame en anónimo.</FormLabel>
+                      <FormLabel className="font-normal">Puedo reconocer a alguien con máscara completa si lo identifico por la voz.</FormLabel>
                     </FormItem>
                     <FormItem className="flex items-center space-x-3 space-y-0">
                       <FormControl><RadioGroupItem value="4" /></FormControl>
-                      <FormLabel className="font-normal">Puedo describir rasgos generales (altura aproximada, ropa, vehículo), sin decir quién es.</FormLabel>
+                      <FormLabel className="font-normal">Puedo describir rasgos generales (altura, ropa) sin decir quién es.</FormLabel>
                     </FormItem>
                   </RadioGroup>
                 </FormControl>
@@ -275,19 +281,19 @@ export function WhitelistForm({ onSuccess }: { onSuccess: () => void }) {
                   >
                     <FormItem className="flex items-center space-x-3 space-y-0">
                       <FormControl><RadioGroupItem value="1" /></FormControl>
-                      <FormLabel className="font-normal">Está completamente prohibido utilizar a un amigo como rehén para un intercambio con la policía.</FormLabel>
+                      <FormLabel className="font-normal">Prohibido utilizar a un amigo como rehén.</FormLabel>
                     </FormItem>
                     <FormItem className="flex items-center space-x-3 space-y-0">
                       <FormControl><RadioGroupItem value="2" /></FormControl>
-                      <FormLabel className="font-normal">No se puede retener a una persona más de 40 minutos sin su acuerdo.</FormLabel>
+                      <FormLabel className="font-normal">No se puede retener a una persona más de 40 minutos sin acuerdo.</FormLabel>
                     </FormItem>
                     <FormItem className="flex items-center space-x-3 space-y-0">
                       <FormControl><RadioGroupItem value="3" /></FormControl>
-                      <FormLabel className="font-normal">En una negociación donde se está pidiendo dinero u objeto a cambio del rehén, el rol puede exceder el tiempo estipulado.</FormLabel>
+                      <FormLabel className="font-normal">En una negociación con intercambio, el rol puede exceder el tiempo.</FormLabel>
                     </FormItem>
                     <FormItem className="flex items-center space-x-3 space-y-0">
                       <FormControl><RadioGroupItem value="4" /></FormControl>
-                      <FormLabel className="font-normal">Si las negociaciones se rompen durante un robo con rehén, no se puede hacer PK al rehén si ha colaborado.</FormLabel>
+                      <FormLabel className="font-normal">Si se rompen las negociaciones, se puede hacer PK al rehén aunque colabore.</FormLabel>
                     </FormItem>
                   </RadioGroup>
                 </FormControl>
@@ -301,7 +307,7 @@ export function WhitelistForm({ onSuccess }: { onSuccess: () => void }) {
             name="q_shooting"
             render={({ field }) => (
               <FormItem className="space-y-3">
-                <FormLabel>En una persecución, vas dentro de un vehículo en marcha y decides usar un arma. ¿Qué opción es la correcta según normativa?</FormLabel>
+                <FormLabel>En una persecución en vehículo, decides usar un arma. ¿Qué opción es CORRECTA?</FormLabel>
                 <FormControl>
                   <RadioGroup
                     onValueChange={field.onChange}
@@ -310,19 +316,124 @@ export function WhitelistForm({ onSuccess }: { onSuccess: () => void }) {
                   >
                     <FormItem className="flex items-center space-x-3 space-y-0">
                       <FormControl><RadioGroupItem value="1" /></FormControl>
-                      <FormLabel className="font-normal">Desde un vehículo en marcha solo puedes disparar a la carrocería o a las ruedas del otro vehículo; si quieres abatir a una persona, debes bajarte del vehículo antes.</FormLabel>
+                      <FormLabel className="font-normal">Solo disparar a carrocería/ruedas; para abatir personas debes bajarte.</FormLabel>
                     </FormItem>
                     <FormItem className="flex items-center space-x-3 space-y-0">
                       <FormControl><RadioGroupItem value="2" /></FormControl>
-                      <FormLabel className="font-normal">Puedes disparar desde el vehículo en marcha a los ocupantes (incluido el conductor) si el otro vehículo también va armado.</FormLabel>
+                      <FormLabel className="font-normal">Disparar a ocupantes si el otro vehículo va armado.</FormLabel>
                     </FormItem>
                     <FormItem className="flex items-center space-x-3 space-y-0">
                       <FormControl><RadioGroupItem value="3" /></FormControl>
-                      <FormLabel className="font-normal">Puedes disparar desde el vehículo en marcha a los ocupantes si te están cerrando el paso, aunque no haya un rol agresivo previo.</FormLabel>
+                      <FormLabel className="font-normal">Disparar a ocupantes si te cierran el paso sin rol previo.</FormLabel>
                     </FormItem>
                     <FormItem className="flex items-center space-x-3 space-y-0">
                       <FormControl><RadioGroupItem value="4" /></FormControl>
-                      <FormLabel className="font-normal">Puedes iniciar el rol agresivo disparando desde el vehículo en marcha, siempre que después envíes un /911 (entorno).</FormLabel>
+                      <FormLabel className="font-normal">Iniciar rol agresivo disparando desde el coche enviando un /911.</FormLabel>
+                    </FormItem>
+                  </RadioGroup>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="q_fear"
+            render={({ field }) => (
+              <FormItem className="space-y-3">
+                <FormLabel>Valoración de vida (Fear RP). Te apuntan 3 personas y estás solo y desarmado. ¿Qué haces?</FormLabel>
+                <FormControl>
+                  <RadioGroup
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                    className="flex flex-col space-y-2"
+                  >
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="1" /></FormControl>
+                      <FormLabel className="font-normal">Saco mi arma rápido y trato de matarlos.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="2" /></FormControl>
+                      <FormLabel className="font-normal">Salgo corriendo haciendo zigzag.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="3" /></FormControl>
+                      <FormLabel className="font-normal">Levanto las manos y sigo sus instrucciones valorando mi vida.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="4" /></FormControl>
+                      <FormLabel className="font-normal">Insulto por OOC porque es un rol sucio.</FormLabel>
+                    </FormItem>
+                  </RadioGroup>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="q_mg"
+            render={({ field }) => (
+              <FormItem className="space-y-3">
+                <FormLabel>MetaGaming (MG). Ves en stream que atracan a tu amigo en un callejón. ¿Qué haces?</FormLabel>
+                <FormControl>
+                  <RadioGroup
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                    className="flex flex-col space-y-2"
+                  >
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="1" /></FormControl>
+                      <FormLabel className="font-normal">Voy rápidamente con mi coche porque sé dónde está.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="2" /></FormControl>
+                      <FormLabel className="font-normal">Llamo a la policía dando la ubicación exacta del stream.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="3" /></FormControl>
+                      <FormLabel className="font-normal">No hago nada IC, mi personaje no lo sabe.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="4" /></FormControl>
+                      <FormLabel className="font-normal">Le mando un mensaje por Discord diciendo que voy.</FormLabel>
+                    </FormItem>
+                  </RadioGroup>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="q_pg"
+            render={({ field }) => (
+              <FormItem className="space-y-3">
+                <FormLabel>PowerGaming (PG). Tienes un accidente fuerte volcando varias veces. ¿Qué haces?</FormLabel>
+                <FormControl>
+                  <RadioGroup
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                    className="flex flex-col space-y-2"
+                  >
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="1" /></FormControl>
+                      <FormLabel className="font-normal">Uso /flip, reparo y sigo la persecución.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="2" /></FormControl>
+                      <FormLabel className="font-normal">Roleo las heridas y estado del vehículo esperando emergencias.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="3" /></FormControl>
+                      <FormLabel className="font-normal">Me bajo y salgo corriendo porque tengo prisa.</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl><RadioGroupItem value="4" /></FormControl>
+                      <FormLabel className="font-normal">Digo que no me ha pasado nada y sigo conduciendo.</FormLabel>
                     </FormItem>
                   </RadioGroup>
                 </FormControl>
