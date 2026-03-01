@@ -5,8 +5,8 @@
  */
 
 export async function sendWhitelistToDiscord(formData: any) {
-  // REEMPLAZA ESTA URL con tu Webhook real de Discord
-  const DISCORD_WEBHOOK_URL = ''; 
+  // URL del Webhook proporcionada por el usuario
+  const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1477726817933856880/PT0Q7VP3_V41by32EW32VmVIm0KWfac4ogP423p-nj02dY0lD68KiFEpzYr794ArlA9_'; 
 
   if (!DISCORD_WEBHOOK_URL) {
     console.error('Discord Webhook URL no configurada.');
