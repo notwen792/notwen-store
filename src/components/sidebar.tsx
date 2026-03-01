@@ -78,14 +78,14 @@ export function Sidebar() {
 
       <div className="mt-auto flex flex-col gap-4">
         <div className="bg-background/50 rounded-lg p-4 text-sm">
-          <p className="flex items-center gap-2 font-semibold text-white">
-            <BookText className="h-4 w-4" /> WE HELP YOU IN WHAT YOU NEED
+          <p className="flex items-center gap-2 font-semibold text-white uppercase">
+            <BookText className="h-4 w-4" /> TE AYUDAMOS EN LO QUE NECESITES
           </p>
           <p className="text-muted-foreground text-xs mt-2 pl-6">
-            At NOTWEN RP Network we are committed to providing the best possible experience for our customers.
+            En la red NOTWEN RP estamos comprometidos a brindar la mejor experiencia posible a nuestros clientes.
           </p>
           <p className="text-muted-foreground text-xs mt-2 pl-6">
-            If you need help or have questions about our scripts or mapping for GTA V, please contact us on our Discord server or via email. Our support team is available 24 hours a day to help you. We are here to make sure you have a smooth and exciting gaming experience.
+            Si necesitas ayuda o tienes preguntas sobre nuestros scripts o mapeos para GTA V, contáctanos en nuestro servidor de Discord. Nuestro equipo de soporte está disponible las 24 horas del día.
           </p>
         </div>
       </div>
