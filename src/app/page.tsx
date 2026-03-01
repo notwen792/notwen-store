@@ -95,34 +95,34 @@ export default function Home() {
             <div className="bg-card p-8 rounded-lg border border-border/20 text-white transition-all duration-700 ease-in-out hover:rotate-[-0.3deg] hover:scale-[1.005] hover:border-destructive/30 shadow-sm hover:shadow-destructive/5 cursor-default">
                 <h3 className="font-headline text-3xl tracking-wider mb-6 text-destructive">¿Cómo entrar?</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="flex gap-4 p-4 rounded-lg bg-background/40 border border-border/10">
-                        <MessageSquare className="h-6 w-6 text-destructive shrink-0" />
+                    <Link href="https://discord.gg/Z6KvkfFVts" target="_blank" rel="noopener noreferrer" className="flex gap-4 p-4 rounded-lg bg-background/40 border border-border/10 hover:bg-destructive/10 hover:border-destructive/30 transition-all group">
+                        <MessageSquare className="h-6 w-6 text-destructive shrink-0 group-hover:scale-110 transition-transform" />
                         <div>
                             <h4 className="font-bold text-white mb-1">1. Únete al Discord</h4>
                             <p className="text-sm text-muted-foreground">El primer paso es entrar en nuestra comunidad oficial para estar al tanto de todo.</p>
                         </div>
-                    </div>
-                    <div className="flex gap-4 p-4 rounded-lg bg-background/40 border border-border/10">
-                        <BookOpen className="h-6 w-6 text-destructive shrink-0" />
+                    </Link>
+                    <Link href="/normativas" className="flex gap-4 p-4 rounded-lg bg-background/40 border border-border/10 hover:bg-destructive/10 hover:border-destructive/30 transition-all group">
+                        <BookOpen className="h-6 w-6 text-destructive shrink-0 group-hover:scale-110 transition-transform" />
                         <div>
                             <h4 className="font-bold text-white mb-1">2. Lee la Normativa</h4>
                             <p className="text-sm text-muted-foreground">Es fundamental conocer las reglas para asegurar una buena convivencia y un rol de calidad.</p>
                         </div>
-                    </div>
-                    <div className="flex gap-4 p-4 rounded-lg bg-background/40 border border-border/10">
-                        <CheckCircle className="h-6 w-6 text-destructive shrink-0" />
+                    </Link>
+                    <Link href="/whitelist" className="flex gap-4 p-4 rounded-lg bg-background/40 border border-border/10 hover:bg-destructive/10 hover:border-destructive/30 transition-all group">
+                        <CheckCircle className="h-6 w-6 text-destructive shrink-0 group-hover:scale-110 transition-transform" />
                         <div>
                             <h4 className="font-bold text-white mb-1">3. Pasa la Whitelist</h4>
                             <p className="text-sm text-muted-foreground">Realiza una pequeña entrevista con nuestro equipo de soporte para validar tu perfil.</p>
                         </div>
-                    </div>
-                    <div className="flex gap-4 p-4 rounded-lg bg-background/40 border border-border/10">
-                        <Play className="h-6 w-6 text-destructive shrink-0" />
+                    </Link>
+                    <Link href="fivem://connect/cfx.re/join/6abmzj" className="flex gap-4 p-4 rounded-lg bg-background/40 border border-border/10 hover:bg-chart-2/10 hover:border-chart-2/30 transition-all group border-l-4 border-l-chart-2">
+                        <Play className="h-6 w-6 text-chart-2 shrink-0 group-hover:scale-110 transition-transform" />
                         <div>
-                            <h4 className="font-bold text-white mb-1">4. ¡A Rolear!</h4>
+                            <h4 className="font-bold text-white mb-1">4. ¡A Rolear! (Conexión Directa)</h4>
                             <p className="text-sm text-muted-foreground">Una vez aprobado, solo tienes que conectarte a la IP del servidor y empezar tu historia.</p>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </div>
