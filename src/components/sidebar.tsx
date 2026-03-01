@@ -59,7 +59,7 @@ export function Sidebar() {
             key={item.label}
             variant="ghost"
             className={cn(
-              'justify-start gap-3 h-12 text-base group',
+              'justify-start gap-3 h-12 text-sm group px-3',
               pathname === item.href
                 ? 'font-semibold text-white bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] transition-all duration-300 hover:brightness-110'
                 : 'text-muted-foreground hover:text-white hover:bg-white/5'
@@ -69,8 +69,8 @@ export function Sidebar() {
             <Link
               href={item.href}
             >
-              <Icon className="h-5 w-5 transition-transform duration-300 ease-in-out group-hover:rotate-[15deg]" />
-              <span>{item.label}</span>
+              <Icon className="h-5 w-5 transition-transform duration-300 ease-in-out group-hover:rotate-[15deg] shrink-0" />
+              <span className="truncate">{item.label}</span>
             </Link>
           </Button>
         )})}
@@ -81,10 +81,10 @@ export function Sidebar() {
           <p className="flex items-center gap-2 font-semibold text-white uppercase">
             <BookText className="h-4 w-4" /> TE AYUDAMOS EN LO QUE NECESITES
           </p>
-          <p className="text-muted-foreground text-xs mt-2 pl-6 uppercase">
+          <p className="text-muted-foreground text-[10px] mt-2 pl-6 uppercase leading-tight">
             EN LA RED NOTWEN RP ESTAMOS COMPROMETIDOS A BRINDAR LA MEJOR EXPERIENCIA POSIBLE A NUESTROS CLIENTES.
           </p>
-          <p className="text-muted-foreground text-xs mt-2 pl-6 uppercase">
+          <p className="text-muted-foreground text-[10px] mt-2 pl-6 uppercase leading-tight">
             SI NECESITAS AYUDA O TIENES PREGUNTAS SOBRE NUESTROS SCRIPTS O MAPEOS PARA GTA V, CONTÁCTANOS EN NUESTRO SERVIDOR DE DISCORD. NUESTRO EQUIPO DE SOPORTE ESTÁ DISPONIBLE LAS 24 HORAS DEL DÍA.
           </p>
         </div>
