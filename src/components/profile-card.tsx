@@ -51,11 +51,17 @@ export function ProductCard({ product }: { product: Product }) {
                     isAvailable ? "border-chart-2/80 bg-chart-2/5" : "border-destructive/80 bg-destructive/5"
                   )}>
                     {product.price > 0 ? (
-                      <p className="text-2xl font-headline tracking-widest text-white">
+                      <p className={cn(
+                        "text-2xl font-headline tracking-widest",
+                        isAvailable ? "text-white" : "text-destructive"
+                      )}>
                         {product.price.toFixed(2)} <span className="text-sm font-body text-muted-foreground">EUR</span>
                       </p>
                     ) : (
-                      <p className="text-2xl font-headline tracking-widest text-white">
+                      <p className={cn(
+                        "text-2xl font-headline tracking-widest",
+                        isAvailable ? "text-white" : "text-destructive"
+                      )}>
                         GRATIS
                       </p>
                     )}

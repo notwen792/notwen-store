@@ -27,7 +27,7 @@ export const products: Product[] = [
     name: "BENNY'S",
     category: 'Negocios',
     imageId: 'img-bennys',
-    price: 60.50,
+    price: 0.00,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
     description: "Taller mecánico especializado en modificaciones de alto rendimiento.\n\n📍 Ubicación: Strawberry\n👥 Trabajadores: Min 5 / Max 15\n🥐 Servicios y productos: Tuning motor, estética avanzada y reparaciones.",
     available: false,
