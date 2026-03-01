@@ -24,7 +24,6 @@ const NAV_ITEMS = [
   { href: '/normativas', icon: 'Shield', label: 'NORMATIVAS' },
   { href: '/scripts', icon: 'ShoppingCart', label: 'NEGOCIOS/POSTULACION' },
   { href: '/vip', icon: 'Gem', label: 'VIP' },
-  { href: '/installation-guide', icon: 'BookText', label: 'GUÍA DE INSTALACIÓN' },
 ];
 
 export function Sidebar() {
