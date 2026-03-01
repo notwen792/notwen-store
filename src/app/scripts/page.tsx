@@ -10,8 +10,8 @@ export default function ScriptsPage() {
       {/* Hero Section for Negocios - Sin imagen de fondo */}
       <section className="relative h-64 w-full flex items-center justify-center overflow-hidden border-b border-white/5 bg-card/20">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/90" />
-        <div className="relative z-10 text-center px-4">
-          <h1 className="font-headline text-5xl md:text-7xl uppercase tracking-widest text-white">
+        <div className="relative z-10 text-center px-6">
+          <h1 className="font-headline text-5xl md:text-7xl uppercase tracking-widest text-white px-4">
             NEGOCIOS-NOTWEN
           </h1>
           <p className="text-muted-foreground mt-2 max-w-2xl mx-auto font-medium">
@@ -30,8 +30,8 @@ export default function ScriptsPage() {
         </div>
 
         <div>
-          <div className="text-center mb-12">
-            <h1 className="font-headline text-5xl uppercase tracking-wider text-white">
+          <div className="text-center mb-12 px-6">
+            <h1 className="font-headline text-5xl uppercase tracking-wider text-white px-4">
               POSTULACIONES-NOTWEN
             </h1>
             <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
