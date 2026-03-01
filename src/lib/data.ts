@@ -109,7 +109,7 @@ export const products: Product[] = [
     imageId: 'img-vanilla',
     price: 0.00,
     features: ['Ambiente nocturno', 'Música en vivo', 'Exclusivo'],
-    description: "El club nocturno más famoso de Los Santos. Disfruta de la mejor música y un ambiente inigualable.\n\n📍 Ubicación: Strawberry\n👥 Trabajadores: Min 5 / Max 12\n🥐 Servicios y productos: Bebidas premium, reservados VIP y eventos especiales.",
+    description: "La joya de la corona de la vida nocturna. Pearls redefine la exclusividad con un ambiente refinado, coctelería de clase mundial y los eventos más cotizados de la ciudad.\n\n📍 Ubicación: Vespucci Beach\n👥 Trabajadores: Min 4 / Max 12\n🥐 Servicios y productos: Reservados VIP, coctelería premium, seguridad privada y la mejor atmósfera de la costa.",
     available: true,
   },
   {
