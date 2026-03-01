@@ -20,7 +20,7 @@ export const products: Product[] = [
     price: 99.83,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
     description: "Panaderia pequeña, donde pararte a comprar un buen bocadillo o una barra de pan.\n\n📍 Ubicación: Grove Street\n👥 Trabajadores: Min 3 / Max 8\n🥐 Servicios y productos: Bollería, bocadillos fríos y calientes, comida para llevar.",
-    available: false,
+    available: true,
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ export const products: Product[] = [
     price: 80.00,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
     description: "Cafetería icónica de Los Santos, el lugar perfecto para un café rápido y un donut.\n\n📍 Ubicación: Mission Row\n👥 Trabajadores: Min 2 / Max 6\n🥐 Servicios y productos: Café, donuts, bollería y snacks.",
-    available: false,
+    available: true,
   },
   {
     id: 8,
@@ -50,7 +50,7 @@ export const products: Product[] = [
     price: 120.00,
     features: ['Exclusividad', 'Eventos VIP', 'Plug & Play'],
     description: "Restaurante de comida rápida con temática atómica, el lugar ideal para una hamburguesa rápida y deliciosa.\n\n📍 Ubicación: Del Perro Pier\n👥 Trabajadores: Min 3 / Max 10\n🥐 Servicios y productos: Hamburguesas, batidos, patatas fritas y servicio rápido.",
-    available: false,
+    available: true,
   },
   {
     id: 9,
@@ -60,7 +60,7 @@ export const products: Product[] = [
     price: 150.00,
     features: ['Cocina rápida', 'Menú icónico', 'Gestión de stock'],
     description: "Restaurante de comida rápida especializado en las mejores hamburguesas de la ciudad.\n\n📍 Ubicación: Vespucci Canals\n👥 Trabajadores: Min 2 / Max 8\n🥐 Servicios y productos: Hamburguesas, patatas, bebidas y helados.",
-    available: false,
+    available: true,
   },
   {
     id: 11,
@@ -70,7 +70,7 @@ export const products: Product[] = [
     price: 180.00,
     features: ['Zumos naturales', 'Batidos', 'Vida sana'],
     description: "Tu parada ideal para disfrutar de los mejores zumos y batidos naturales de Los Santos.\n\n📍 Ubicación: Vespucci Beach\n👥 Trabajadores: Min 2 / Max 6\n🥐 Servicios y productos: Batidos de frutas, bowls de açai y snacks saludables.",
-    available: false,
+    available: true,
   },
   {
     id: 12,
@@ -80,7 +80,7 @@ export const products: Product[] = [
     price: 200.00,
     features: ['Entrenamiento', 'Nutrición', 'Maquinaria'],
     description: "Centro deportivo de alto rendimiento equipado con la mejor tecnología para tu entrenamiento físico.\n\n📍 Ubicación: Legion Square\n👥 Trabajadores: Min 4 / Max 12\n🥐 Servicios y productos: Membresías, batidos de proteínas y planes de entrenamiento.",
-    available: false,
+    available: true,
   },
   {
     id: 2,
@@ -96,7 +96,7 @@ export const products: Product[] = [
   {
     id: 5,
     name: 'POSTULACIÓN STAFF',
-    category: 'Postulaciones',
+    category: 'Postulacion',
     imageId: 'img-staff',
     price: 0.00,
     features: ['Formación incluida', 'Comunidad activa', 'Ascensos'],
@@ -106,7 +106,7 @@ export const products: Product[] = [
   {
     id: 6,
     name: 'LSPD',
-    category: 'Postulaciones',
+    category: 'Postulacion',
     imageId: 'img-lspd',
     price: 0.00,
     features: ['Gestión de equipo', 'Rol serio', 'Responsabilidad'],
