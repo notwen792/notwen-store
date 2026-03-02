@@ -50,68 +50,52 @@ export function ProductCard({ product, onApply }: ProductCardProps) {
           )}
 
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-auto pt-6 border-t border-white/10 gap-4">
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3">
+                  {/* Unified Price and Status Label */}
                   <div className={cn(
-                    "px-4 py-2 rounded-md border-2 transition-all duration-300",
-                    isAvailable ? "border-chart-2/80 bg-chart-2/5" : "border-destructive/80 bg-destructive/5"
+                    "px-5 py-2 rounded-md border-2 transition-all duration-300 flex flex-col items-center justify-center min-w-[140px]",
+                    isAvailable 
+                      ? "border-chart-2 bg-chart-2/20 shadow-lg shadow-chart-2/10" 
+                      : "border-destructive bg-destructive/20 shadow-lg shadow-destructive/10"
                   )}>
-                    {product.price > 0 ? (
-                      <p className={cn(
-                        "text-2xl font-headline tracking-widest",
-                        isAvailable ? "text-white" : "text-destructive"
-                      )}>
-                        {product.price.toFixed(2)} <span className="text-sm font-body text-muted-foreground">EUR</span>
-                      </p>
-                    ) : (
-                      <p className={cn(
-                        "text-2xl font-headline tracking-widest",
-                        isAvailable ? "text-white" : "text-destructive"
-                      )}>
-                        GRATIS
-                      </p>
-                    )}
+                    <span className={cn(
+                      "text-2xl font-headline tracking-widest leading-none",
+                      isAvailable ? "text-white" : "text-destructive"
+                    )}>
+                      {product.price > 0 ? `${product.price.toFixed(2)}€` : "GRATIS"}
+                    </span>
+                    <span className={cn(
+                      "text-[9px] font-black uppercase tracking-[0.2em] mt-1 whitespace-nowrap",
+                      isAvailable ? "text-chart-2" : "text-destructive"
+                    )}>
+                      {isAvailable ? "Y DISPONIBLE" : "Y NO DISPONIBLE"}
+                    </span>
                   </div>
 
                   {isAvailable && onApply && (
                     <Button 
                       onClick={() => onApply(product)}
-                      className="bg-destructive hover:bg-destructive/90 text-white font-headline tracking-wider text-lg px-6 h-11 shadow-lg shadow-destructive/20 transition-all active:scale-95"
+                      className="bg-destructive hover:bg-destructive/90 text-white font-headline tracking-wider text-lg px-6 h-12 shadow-lg shadow-destructive/20 transition-all active:scale-95"
                     >
                       LO QUIERO
                     </Button>
                   )}
               </div>
               
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <div className={cn(
-                      "flex items-center gap-2 border px-4 py-2 rounded-full cursor-help group/status shadow-lg shrink-0",
-                      isAvailable 
-                        ? "bg-chart-2/10 border-chart-2/20" 
-                        : "bg-destructive/10 border-destructive/20"
-                    )}>
-                      <div className={cn(
-                        "h-2 w-2 rounded-full animate-pulse",
-                        isAvailable ? "bg-chart-2" : "bg-destructive"
-                      )} />
-                      <span className={cn(
-                        "text-[10px] font-black uppercase tracking-widest whitespace-nowrap",
-                        isAvailable ? "text-chart-2" : "text-destructive"
-                      )}>
-                        {isAvailable ? 'Disponible' : 'No Disponible'}
-                      </span>
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent className="bg-card border-border text-white text-xs p-2">
-                    <p>
-                      {isAvailable 
-                        ? 'Este producto está disponible para su adquisición' 
-                        : 'Este producto no está disponible en este momento'}
-                    </p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
+              {!isAvailable && (
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <div className="bg-destructive/10 border border-destructive/20 p-2 rounded-full cursor-help shadow-lg shrink-0">
+                        <div className="h-2 w-2 rounded-full bg-destructive animate-pulse" />
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent className="bg-card border-border text-white text-xs p-2">
+                      <p>Este producto no está disponible en este momento</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              )}
           </div>
       </div>
     </Card>
