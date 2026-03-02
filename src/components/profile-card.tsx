@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import type { Product } from '@/lib/data';
 import { Card } from './ui/card';
@@ -11,7 +10,6 @@ import {
 } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
-import { CheckCircle2 } from 'lucide-react';
 
 interface ProductCardProps {
   product: Product;
@@ -46,12 +44,12 @@ export function ProductCard({ product, onApply }: ProductCardProps) {
           </p>
           
           {product.description && (
-            <div className="mb-8 text-lg text-muted-foreground/95 whitespace-pre-line leading-relaxed border-l-4 border-destructive pl-6 py-2 bg-white/5 rounded-r-lg">
+            <div className="mb-8 text-lg text-muted-foreground/95 whitespace-pre-line leading-relaxed border-l-4 border-destructive pl-6 py-2 bg-white/5 rounded-lg">
               {product.description}
             </div>
           )}
 
-          <div className="flex justify-between items-center mt-auto pt-6 border-t border-white/10 gap-4">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-auto pt-6 border-t border-white/10 gap-4">
               <div className="flex items-center gap-3">
                   <div className={cn(
                     "px-4 py-2 rounded-md border-2 transition-all duration-300",
@@ -77,7 +75,7 @@ export function ProductCard({ product, onApply }: ProductCardProps) {
                   {isAvailable && onApply && (
                     <Button 
                       onClick={() => onApply(product)}
-                      className="bg-destructive/10 border border-destructive/20 text-destructive hover:bg-destructive hover:text-white font-headline tracking-wider text-lg px-6 h-11"
+                      className="bg-destructive hover:bg-destructive/90 text-white font-headline tracking-wider text-lg px-6 h-11 shadow-lg shadow-destructive/20 transition-all active:scale-95"
                     >
                       LO QUIERO
                     </Button>
@@ -88,7 +86,7 @@ export function ProductCard({ product, onApply }: ProductCardProps) {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <div className={cn(
-                      "flex items-center gap-2 border px-4 py-2 rounded-full cursor-not-allowed group/status shadow-lg shrink-0",
+                      "flex items-center gap-2 border px-4 py-2 rounded-full cursor-help group/status shadow-lg shrink-0",
                       isAvailable 
                         ? "bg-chart-2/10 border-chart-2/20" 
                         : "bg-destructive/10 border-destructive/20"
