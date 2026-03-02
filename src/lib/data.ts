@@ -1,4 +1,3 @@
-
 export type Product = {
   id: number;
   name: string;
@@ -20,6 +19,16 @@ export const products: Product[] = [
     price: 0.00,
     features: ['QBCore & ESX Compatible', 'Plug & Play', 'Support'],
     description: "Panaderia pequeña, donde pararte a comprar un buen bocadillo o una barra de pan.\n\n📍 Ubicación: Grove Street\n👥 Trabajadores: Min 3 / Max 8\n🥐 Servicios y productos: Bollería, bocadillos fríos y calientes, comida para llevar.",
+    available: true,
+  },
+  {
+    id: 18,
+    name: 'PEARLS',
+    category: 'Negocios',
+    imageId: 'img-vanilla',
+    price: 0.00,
+    features: ['Ambiente nocturno', 'Música en vivo', 'Exclusivo'],
+    description: "La joya de la corona de la vida nocturna. Pearls redefine la exclusividad con un ambiente refinado, coctelería de clase mundial y los eventos más cotizados de la ciudad.\n\n📍 Ubicación: Vespucci Beach\n👥 Trabajadores: Min 4 / Max 12\n🥐 Servicios y productos: Reservados VIP, coctelería premium, seguridad privada y la mejor atmósfera de la costa.",
     available: true,
   },
   {
@@ -60,16 +69,6 @@ export const products: Product[] = [
     price: 0.00,
     features: ['Cocina rápida', 'Menú icónico', 'Gestión de stock'],
     description: "Restaurante de comida rápida especializado en las mejores hamburguesas de la ciudad.\n\n📍 Ubicación: Vespucci Canals\n👥 Trabajadores: Min 2 / Max 8\n🥐 Servicios y productos: Hamburguesas, patatas, bebidas y helados.",
-    available: true,
-  },
-  {
-    id: 18,
-    name: 'PEARLS',
-    category: 'Negocios',
-    imageId: 'img-vanilla',
-    price: 0.00,
-    features: ['Ambiente nocturno', 'Música en vivo', 'Exclusivo'],
-    description: "La joya de la corona de la vida nocturna. Pearls redefine la exclusividad con un ambiente refinado, coctelería de clase mundial y los eventos más cotizados de la ciudad.\n\n📍 Ubicación: Vespucci Beach\n👥 Trabajadores: Min 4 / Max 12\n🥐 Servicios y productos: Reservados VIP, coctelería premium, seguridad privada y la mejor atmósfera de la costa.",
     available: true,
   },
   {

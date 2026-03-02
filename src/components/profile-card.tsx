@@ -2,12 +2,6 @@ import Image from 'next/image';
 import type { Product } from '@/lib/data';
 import { Card } from './ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 
@@ -81,21 +75,6 @@ export function ProductCard({ product, onApply }: ProductCardProps) {
                     </Button>
                   )}
               </div>
-              
-              {!isAvailable && (
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <div className="bg-destructive/10 border border-destructive/20 p-2 rounded-full cursor-help shadow-lg shrink-0">
-                        <div className="h-2 w-2 rounded-full bg-destructive animate-pulse" />
-                      </div>
-                    </TooltipTrigger>
-                    <TooltipContent className="bg-card border-border text-white text-xs p-2">
-                      <p>Este producto no está disponible en este momento</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-              )}
           </div>
       </div>
     </Card>
