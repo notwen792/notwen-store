@@ -68,7 +68,7 @@ export function ProductCard({ product, onApply }: ProductCardProps) {
                       "text-[9px] font-black uppercase tracking-[0.2em] mt-1 whitespace-nowrap",
                       isAvailable ? "text-chart-2" : "text-destructive"
                     )}>
-                      {isAvailable ? "Y DISPONIBLE" : "Y NO DISPONIBLE"}
+                      {isAvailable ? "DISPONIBLE" : "NO DISPONIBLE"}
                     </span>
                   </div>
 
