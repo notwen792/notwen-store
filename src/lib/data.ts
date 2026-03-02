@@ -177,7 +177,7 @@ export const products: Product[] = [
     id: 7,
     name: 'VIP BRONCE',
     category: 'VIP',
-    imageId: 'img-city',
+    imageId: 'img-vip-bronce',
     price: 15.00,
     features: ['Acceso prioritario', 'Ropa exclusiva', 'Discord Role'],
     description: 'Nivel básico de membresía VIP con beneficios esenciales.',

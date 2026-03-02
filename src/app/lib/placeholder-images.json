@@ -94,9 +94,14 @@
     {
       "id": "img-mechanic",
       "description": "Mechanic Workshop",
-      "imageId": "img-mechanic",
       "imageUrl": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=1080",
       "imageHint": "car mechanic"
+    },
+    {
+      "id": "img-vip-bronce",
+      "description": "VIP Bronze Membership",
+      "imageUrl": "https://i.ibb.co/Y747fQQz/Gemini-Generated-Image-gphcpygphcpygphc.png",
+      "imageHint": "vip bronze"
     }
   ]
 }

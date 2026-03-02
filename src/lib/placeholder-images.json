@@ -77,6 +77,12 @@
       "description": "Pearls Nightclub",
       "imageUrl": "https://i.ibb.co/84dqpDcH/image.png",
       "imageHint": "nightclub interior"
+    },
+    {
+      "id": "img-vip-bronce",
+      "description": "VIP Bronze Membership",
+      "imageUrl": "https://i.ibb.co/Y747fQQz/Gemini-Generated-Image-gphcpygphcpygphc.png",
+      "imageHint": "vip bronze"
     }
   ]
 }
