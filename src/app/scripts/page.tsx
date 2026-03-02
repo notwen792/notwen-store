@@ -1,9 +1,26 @@
+'use client';
+
+import React, { useState } from 'react';
 import { ProductCard } from '@/components/profile-card';
-import { products } from '@/lib/data';
+import { products, type Product } from '@/lib/data';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { NegocioForm } from '@/components/negocio-form';
+import { ClipboardList } from 'lucide-react';
 
 export default function ScriptsPage() {
   const negociosProducts = products.filter(p => p.category === 'Negocios');
   const postulacionesProducts = products.filter(p => p.category === 'Postulacion');
+  
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
+  const handleApply = (product: Product) => {
+    setSelectedProduct(product);
+  };
 
   return (
     <main className="flex-grow bg-background">
@@ -26,7 +43,11 @@ export default function ScriptsPage() {
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
             {negociosProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
+              <ProductCard 
+                key={product.id} 
+                product={product} 
+                onApply={handleApply}
+              />
             ))}
           </div>
         </div>
@@ -45,7 +66,11 @@ export default function ScriptsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
             {postulacionesProducts.length > 0 ? (
               postulacionesProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <ProductCard 
+                  key={product.id} 
+                  product={product} 
+                  onApply={handleApply}
+                />
               ))
             ) : (
               <p className="col-span-full text-center text-muted-foreground italic text-lg">No hay postulaciones abiertas en este momento.</p>
@@ -53,6 +78,24 @@ export default function ScriptsPage() {
           </div>
         </div>
       </div>
+
+      {/* Dialogo de Postulación */}
+      <Dialog open={!!selectedProduct} onOpenChange={(open) => !open && setSelectedProduct(null)}>
+        <DialogContent className="max-w-2xl bg-card border-border/40 p-0 overflow-hidden">
+          <DialogHeader className="p-6 border-b border-white/5 bg-background/20">
+            <DialogTitle className="font-headline text-3xl text-white uppercase tracking-wider flex items-center gap-3">
+              <ClipboardList className="h-7 w-7 text-destructive" />
+              Postulación: {selectedProduct?.name}
+            </DialogTitle>
+          </DialogHeader>
+          {selectedProduct && (
+            <NegocioForm 
+              initialBusinessName={selectedProduct.name} 
+              onSuccess={() => setSelectedProduct(null)} 
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </main>
   );
 }

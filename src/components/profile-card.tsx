@@ -10,8 +10,15 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
+import { Button } from './ui/button';
+import { CheckCircle2 } from 'lucide-react';
 
-export function ProductCard({ product }: { product: Product }) {
+interface ProductCardProps {
+  product: Product;
+  onApply?: (product: Product) => void;
+}
+
+export function ProductCard({ product, onApply }: ProductCardProps) {
   const image = PlaceHolderImages.find((img) => img.id === product.imageId);
   const isAvailable = product.available;
 
@@ -45,7 +52,7 @@ export function ProductCard({ product }: { product: Product }) {
           )}
 
           <div className="flex justify-between items-center mt-auto pt-6 border-t border-white/10 gap-4">
-              <div className="flex flex-col">
+              <div className="flex items-center gap-3">
                   <div className={cn(
                     "px-4 py-2 rounded-md border-2 transition-all duration-300",
                     isAvailable ? "border-chart-2/80 bg-chart-2/5" : "border-destructive/80 bg-destructive/5"
@@ -66,10 +73,14 @@ export function ProductCard({ product }: { product: Product }) {
                       </p>
                     )}
                   </div>
-                  {product.originalPrice && (
-                      <p className="text-sm text-muted-foreground line-through decoration-destructive/50 mt-1 pl-1">
-                          {product.originalPrice.toFixed(2)} EUR
-                      </p>
+
+                  {isAvailable && onApply && (
+                    <Button 
+                      onClick={() => onApply(product)}
+                      className="bg-destructive/10 border border-destructive/20 text-destructive hover:bg-destructive hover:text-white font-headline tracking-wider text-lg px-6 h-11"
+                    >
+                      LO QUIERO
+                    </Button>
                   )}
               </div>
               
