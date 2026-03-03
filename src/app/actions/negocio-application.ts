@@ -12,16 +12,18 @@ export async function sendNegocioApplicationToDiscord(formData: any) {
   }
 
   const embed = {
-    title: '🏢 NUEVA POSTULACIÓN A NEGOCIO / PUESTO',
+    title: '🏢 NUEVA POSTULACIÓN A NEGOCIO / ACTIVO',
     color: 0xe11d48, // Rojo destructivo de la marca
     description: `Nueva postulación recibida para un activo de **NOTWEN RP**.`,
     fields: [
-      { name: '👤 Usuario', value: formData.discordName, inline: true },
+      { name: '👤 Nombre (OOC)', value: formData.realName, inline: true },
       { name: '🎂 Edad', value: formData.age, inline: true },
-      { name: '🏢 Activo', value: formData.businessName, inline: false },
-      { name: '🎮 Experiencia', value: formData.experience, inline: false },
-      { name: '📝 Proyecto / Motivo', value: formData.project, inline: false },
-      { name: '⏰ Disponibilidad', value: formData.availability, inline: false },
+      { name: '🎮 Discord', value: formData.discordName, inline: true },
+      { name: '🏢 Activo / Negocio', value: formData.businessName, inline: false },
+      { name: '🎯 Enfoque del Negocio', value: formData.businessFocus, inline: false },
+      { name: '💡 Items e Ideas', value: formData.itemsAndIdeas, inline: false },
+      { name: '❓ ¿Por qué tú?', value: formData.whyMe, inline: false },
+      { name: '📝 Información Extra', value: formData.extraInfo || 'No proporcionada', inline: false },
     ],
     timestamp: new Date().toISOString(),
     footer: { text: 'Sistema de Gestión de Activos - NOTWEN' }

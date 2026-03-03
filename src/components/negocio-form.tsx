@@ -20,12 +20,14 @@ import { useToast } from '@/hooks/use-toast';
 import { Loader2, Send, Building2 } from 'lucide-react';
 
 const formSchema = z.object({
-  discordName: z.string().min(2, 'Nombre de Discord es obligatorio'),
+  realName: z.string().min(2, 'El nombre es obligatorio'),
   age: z.string().min(1, 'La edad es obligatoria'),
+  discordName: z.string().min(2, 'El Discord es obligatorio'),
   businessName: z.string().min(1, 'El nombre del negocio es obligatorio'),
-  experience: z.string().min(10, 'Cuéntanos tu experiencia previa'),
-  project: z.string().min(10, 'Explica tu proyecto o motivo de postulación'),
-  availability: z.string().min(5, 'Dinos tu disponibilidad horaria'),
+  businessFocus: z.string().min(10, 'Cuéntanos el enfoque que le darás'),
+  itemsAndIdeas: z.string().min(10, 'Dinos qué items o ideas tienes'),
+  whyMe: z.string().min(10, 'Explica por qué deberías ser tú'),
+  extraInfo: z.string().optional(),
 });
 
 export function NegocioForm({ 
@@ -41,12 +43,14 @@ export function NegocioForm({
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      discordName: '',
+      realName: '',
       age: '',
+      discordName: '',
       businessName: initialBusinessName || '',
-      experience: '',
-      project: '',
-      availability: '',
+      businessFocus: '',
+      itemsAndIdeas: '',
+      whyMe: '',
+      extraInfo: '',
     },
   });
 
@@ -72,17 +76,17 @@ export function NegocioForm({
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 p-6">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 p-6 overflow-y-auto max-h-[70vh] custom-scrollbar">
         <div className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
-              name="discordName"
+              name="realName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Nombre de Discord</FormLabel>
+                  <FormLabel>Nombre (Real/OOC)</FormLabel>
                   <FormControl>
-                    <Input placeholder="Ej: User#0000" {...field} className="bg-background/50" />
+                    <Input placeholder="Tu nombre" {...field} className="bg-background/50" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -103,17 +107,46 @@ export function NegocioForm({
             />
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <FormField
+              control={form.control}
+              name="discordName"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Discord</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Ej: User#0000" {...field} className="bg-background/50" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="businessName"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Activo / Negocio</FormLabel>
+                  <FormControl>
+                    <div className="relative">
+                      <Building2 className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+                      <Input {...field} readOnly className="pl-10 bg-muted/20 cursor-default" />
+                    </div>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+
           <FormField
             control={form.control}
-            name="businessName"
+            name="businessFocus"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Negocio / Puesto a Postular</FormLabel>
+                <FormLabel>Enfoque que le quieras dar al negocio</FormLabel>
                 <FormControl>
-                  <div className="relative">
-                    <Building2 className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-                    <Input {...field} readOnly className="pl-10 bg-muted/20 cursor-default" />
-                  </div>
+                  <Textarea placeholder="Describe tu visión para el negocio..." {...field} className="bg-background/50 min-h-[80px]" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -122,12 +155,12 @@ export function NegocioForm({
 
           <FormField
             control={form.control}
-            name="experience"
+            name="itemsAndIdeas"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Experiencia previa (Gestión/Rol)</FormLabel>
+                <FormLabel>Items que quieras añadir o ideas</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="Cuéntanos si has llevado negocios antes..." {...field} className="bg-background/50 min-h-[80px]" />
+                  <Textarea placeholder="¿Qué añadirías al negocio?" {...field} className="bg-background/50 min-h-[80px]" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -136,12 +169,12 @@ export function NegocioForm({
 
           <FormField
             control={form.control}
-            name="project"
+            name="whyMe"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>¿Cuál es tu proyecto o motivo?</FormLabel>
+                <FormLabel>¿Por qué tú?</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="Describe qué harías con este activo..." {...field} className="bg-background/50 min-h-[100px]" />
+                  <Textarea placeholder="Cuéntanos por qué eres el candidato ideal..." {...field} className="bg-background/50 min-h-[80px]" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -150,12 +183,12 @@ export function NegocioForm({
 
           <FormField
             control={form.control}
-            name="availability"
+            name="extraInfo"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Disponibilidad horaria</FormLabel>
+                <FormLabel>Algo más que veas tú (Opcional)</FormLabel>
                 <FormControl>
-                  <Input placeholder="Ej: Tardes y noches (España)" {...field} className="bg-background/50" />
+                  <Textarea placeholder="Cualquier otro detalle..." {...field} className="bg-background/50 min-h-[80px]" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
