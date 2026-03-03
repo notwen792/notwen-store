@@ -133,16 +133,6 @@ export const products: Product[] = [
     available: true,
   },
   {
-    id: 17,
-    name: 'POSTULACIÓN MECÁNICOS',
-    category: 'Postulacion',
-    imageId: 'img-mechanic',
-    price: 0.00,
-    features: ['Reparaciones', 'Modificaciones', 'Tuning'],
-    description: 'Forma parte de nuestro equipo de taller y demuestra tus habilidades mecánicas.',
-    available: true,
-  },
-  {
     id: 7,
     name: 'VIP BRONCE',
     category: 'VIP',
