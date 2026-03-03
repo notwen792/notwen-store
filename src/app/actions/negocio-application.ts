@@ -2,7 +2,7 @@
 
 /**
  * Acción de servidor para enviar los datos del formulario de postulación a Discord.
- * Adaptado para manejar diferentes tipos de postulaciones (Negocios, LSPD, Staff, Mecánicos).
+ * Adaptado para manejar diferentes tipos de postulaciones (Negocios, LSPD, Staff, Mecánicos, Bandas).
  */
 
 export async function sendNegocioApplicationToDiscord(formData: any) {
@@ -47,6 +47,17 @@ export async function sendNegocioApplicationToDiscord(formData: any) {
       { name: '🏎️ Conocimiento Tuning/Motores', value: formData.tuningKnowledge, inline: false },
       { name: '⏰ Disponibilidad', value: formData.activityHours, inline: true },
       { name: '❓ Por qué Mecánico', value: formData.whyMe, inline: false }
+    );
+  } else if (formData.businessName.includes('BANDAS')) {
+    title = '💀 NUEVA POSTULACIÓN BANDAS';
+    color = 0x8b5cf6; // Púrpura
+    fields.push(
+      { name: '📜 Historia / Lore', value: formData.gangHistory, inline: false },
+      { name: '🎯 Objetivos Criminales', value: formData.gangObjectives, inline: false },
+      { name: '📍 Zona Deseada', value: formData.gangLocation, inline: true },
+      { name: '👥 Miembros Iniciales', value: formData.teamSize, inline: true },
+      { name: '⏰ Disponibilidad', value: formData.activityHours, inline: true },
+      { name: '❓ Por qué elegirle', value: formData.whyMe, inline: false }
     );
   } else {
     // Formulario de Negocio Estándar

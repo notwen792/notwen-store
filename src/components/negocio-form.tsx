@@ -17,7 +17,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { sendNegocioApplicationToDiscord } from '@/app/actions/negocio-application';
 import { useToast } from '@/hooks/use-toast';
-import { Loader2, Send, Building2, Briefcase, Clock, Users, Star, Shield, Wrench, BadgeCheck } from 'lucide-react';
+import { Loader2, Send, Building2, Briefcase, Clock, Users, Star, Shield, Wrench, BadgeCheck, Skull } from 'lucide-react';
 
 const baseSchema = z.object({
   realName: z.string().min(2, 'El nombre es obligatorio'),
@@ -53,7 +53,14 @@ const mechanicSchema = baseSchema.extend({
   tuningKnowledge: z.string().min(10, '¿Qué conocimientos tienes sobre modificaciones y motores?'),
 });
 
-type FormValues = z.infer<typeof negocioSchema> & z.infer<typeof lspdSchema> & z.infer<typeof staffSchema> & z.infer<typeof mechanicSchema>;
+const bandaSchema = baseSchema.extend({
+  gangHistory: z.string().min(10, 'Cuéntanos la historia de tu banda/organización'),
+  gangObjectives: z.string().min(10, '¿Qué objetivos tenéis en la ciudad?'),
+  gangLocation: z.string().min(2, '¿Qué zona o barrio os gustaría habitar?'),
+  teamSize: z.string().min(1, 'Indica cuántos miembros sois inicialmente'),
+});
+
+type FormValues = z.infer<typeof negocioSchema> & z.infer<typeof lspdSchema> & z.infer<typeof staffSchema> & z.infer<typeof mechanicSchema> & z.infer<typeof bandaSchema>;
 
 export function NegocioForm({ 
   onSuccess, 
@@ -68,11 +75,13 @@ export function NegocioForm({
   const isLSPD = initialBusinessName?.includes('LSPD');
   const isStaff = initialBusinessName?.includes('STAFF');
   const isMechanic = initialBusinessName?.includes('MECÁNICOS');
+  const isBanda = initialBusinessName?.includes('BANDAS');
 
   let schema: any = negocioSchema;
   if (isLSPD) schema = lspdSchema;
   else if (isStaff) schema = staffSchema;
   else if (isMechanic) schema = mechanicSchema;
+  else if (isBanda) schema = bandaSchema;
   
   const form = useForm<FormValues>({
     resolver: zodResolver(schema),
@@ -99,6 +108,10 @@ export function NegocioForm({
       // Mechanic
       mechanicExperience: '',
       tuningKnowledge: '',
+      // Banda
+      gangHistory: '',
+      gangObjectives: '',
+      gangLocation: '',
     },
   });
 
@@ -182,7 +195,8 @@ export function NegocioForm({
                         {isLSPD && <BadgeCheck className="absolute left-3 top-2.5 h-4 w-4 text-blue-500" />}
                         {isStaff && <Shield className="absolute left-3 top-2.5 h-4 w-4 text-emerald-500" />}
                         {isMechanic && <Wrench className="absolute left-3 top-2.5 h-4 w-4 text-amber-500" />}
-                        {!isLSPD && !isStaff && !isMechanic && <Building2 className="absolute left-3 top-2.5 h-4 w-4 text-destructive" />}
+                        {isBanda && <Skull className="absolute left-3 top-2.5 h-4 w-4 text-purple-500" />}
+                        {!isLSPD && !isStaff && !isMechanic && !isBanda && <Building2 className="absolute left-3 top-2.5 h-4 w-4 text-destructive" />}
                         <Input {...field} readOnly className="pl-10 bg-muted/20 border-white/10 cursor-default font-bold text-white" />
                       </div>
                     </FormControl>
@@ -194,7 +208,7 @@ export function NegocioForm({
           </div>
 
           <div className="space-y-4">
-            <h4 className="text-xs font-black uppercase tracking-widest text-destructive/80 border-b border-white/5 pb-2">Perfil y Experiencia</h4>
+            <h4 className="text-xs font-black uppercase tracking-widest text-destructive/80 border-b border-white/5 pb-2">Perfil y Proyecto</h4>
             
             {/* CAMPOS DINÁMICOS SEGÚN EL TIPO */}
             {isLSPD && (
@@ -265,19 +279,19 @@ export function NegocioForm({
               </>
             )}
 
-            {isMechanic && (
+            {isBanda && (
               <>
                 <FormField
                   control={form.control}
-                  name="mechanicExperience"
+                  name="gangHistory"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="flex items-center gap-2">
-                        <Wrench className="h-4 w-4 text-amber-500" />
-                        Experiencia previa en mecánica
+                        <Skull className="h-4 w-4 text-purple-500" />
+                        Historia y Lore de la Banda
                       </FormLabel>
                       <FormControl>
-                        <Textarea placeholder="¿Has trabajado antes en talleres? ¿Qué roles has desempeñado?" {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
+                        <Textarea placeholder="¿De dónde vienen? ¿Cuál es su trasfondo en la ciudad?" {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -285,22 +299,50 @@ export function NegocioForm({
                 />
                 <FormField
                   control={form.control}
-                  name="tuningKnowledge"
+                  name="gangObjectives"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Conocimientos técnicos de vehículos</FormLabel>
+                      <FormLabel>Objetivos y metas criminales</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="Describe tus conocimientos sobre tunning, motores y reparaciones..." {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
+                        <Textarea placeholder="¿A qué se dedicarán principalmente? ¿Qué quieren lograr?" {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <FormField
+                    control={form.control}
+                    name="gangLocation"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Zona / Territorio deseado</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Ej: Davis, Rancho, etc." {...field} className="bg-background/50 border-white/10" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="teamSize"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Miembros iniciales</FormLabel>
+                        <FormControl>
+                          <Input type="number" placeholder="Ej: 5" {...field} className="bg-background/50 border-white/10" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
               </>
             )}
 
             {/* Campos originales para negocios si no es ninguno de los anteriores */}
-            {!isLSPD && !isStaff && !isMechanic && (
+            {!isLSPD && !isStaff && !isMechanic && !isBanda && (
               <>
                 <FormField
                   control={form.control}
@@ -397,8 +439,8 @@ export function NegocioForm({
               </>
             )}
 
-            {/* Campos comunes que siempre aparecen para postulaciones básicas */}
-            {(isLSPD || isStaff || isMechanic) && (
+            {/* Campos comunes para postulaciones básicas */}
+            {(isLSPD || isStaff || isMechanic || isBanda) && (
                <FormField
                   control={form.control}
                   name="activityHours"

@@ -133,6 +133,16 @@ export const products: Product[] = [
     available: true,
   },
   {
+    id: 15,
+    name: 'POSTULACIÓN BANDAS',
+    category: 'Postulacion',
+    imageId: 'img-gangs',
+    price: 0.00,
+    features: ['Rol ilegal', 'Mafias y Bandas', 'Liderazgo'],
+    description: '¿Quieres liderar una organización criminal? Presenta tu historia y equipo.',
+    available: true,
+  },
+  {
     id: 7,
     name: 'VIP BRONCE',
     category: 'VIP',
