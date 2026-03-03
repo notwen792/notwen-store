@@ -44,7 +44,7 @@ export function ProductCard({ product, onApply }: ProductCardProps) {
           )}
 
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-auto pt-6 border-t border-white/10 gap-4">
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3 w-full">
                   {/* Unified Price and Status Label */}
                   <div className={cn(
                     "px-5 py-2 rounded-md border-2 transition-all duration-300 flex flex-col items-center justify-center min-w-[140px]",
@@ -52,15 +52,14 @@ export function ProductCard({ product, onApply }: ProductCardProps) {
                       ? "border-chart-2 bg-chart-2/20 shadow-lg shadow-chart-2/10" 
                       : "border-destructive bg-destructive/20 shadow-lg shadow-destructive/10"
                   )}>
+                    {isAvailable && (
+                      <span className="text-2xl font-headline tracking-widest leading-none text-white">
+                        {product.price > 0 ? `${product.price.toFixed(2)}€` : "GRATIS"}
+                      </span>
+                    )}
                     <span className={cn(
-                      "text-2xl font-headline tracking-widest leading-none",
-                      isAvailable ? "text-white" : "text-destructive"
-                    )}>
-                      {product.price > 0 ? `${product.price.toFixed(2)}€` : "GRATIS"}
-                    </span>
-                    <span className={cn(
-                      "text-[9px] font-black uppercase tracking-[0.2em] mt-1 whitespace-nowrap",
-                      isAvailable ? "text-chart-2" : "text-destructive"
+                      "font-black uppercase tracking-[0.2em] whitespace-nowrap",
+                      isAvailable ? "text-chart-2 text-[9px] mt-1" : "text-destructive text-sm py-1"
                     )}>
                       {isAvailable ? "DISPONIBLE" : "NO DISPONIBLE"}
                     </span>
@@ -69,7 +68,7 @@ export function ProductCard({ product, onApply }: ProductCardProps) {
                   {isAvailable && onApply && (
                     <Button 
                       onClick={() => onApply(product)}
-                      className="bg-destructive hover:bg-destructive/90 text-white font-headline tracking-wider text-lg px-6 h-12 shadow-lg shadow-destructive/20 transition-all active:scale-95"
+                      className="bg-destructive hover:bg-destructive/90 text-white font-headline tracking-wider text-lg px-6 h-12 shadow-lg shadow-destructive/20 transition-all active:scale-95 ml-auto"
                     >
                       LO QUIERO
                     </Button>
