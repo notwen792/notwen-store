@@ -133,16 +133,6 @@ export const products: Product[] = [
     available: true,
   },
   {
-    id: 15,
-    name: 'POSTULACIÓN EMS',
-    category: 'Postulacion',
-    imageId: 'img-ems',
-    price: 0.00,
-    features: ['Servicio médico', 'Rescate', 'Compromiso'],
-    description: 'Buscamos médicos y enfermeros dedicados para salvar vidas en Los Santos.',
-    available: true,
-  },
-  {
     id: 17,
     name: 'POSTULACIÓN MECÁNICOS',
     category: 'Postulacion',
