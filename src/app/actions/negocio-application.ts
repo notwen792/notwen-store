@@ -8,6 +8,7 @@
 export async function sendNegocioApplicationToDiscord(formData: any) {
   const DEFAULT_WEBHOOK_URL = 'https://discord.com/api/webhooks/1478153331380588556/_BiJY0PI5A2CKBhH3r4Ep1q8b2B77-PhkOJWUC2SciW2zIN45vwwzVfxpSGPNXlqnLNO'; 
   const STAFF_WEBHOOK_URL = 'https://discord.com/api/webhooks/1478478593469452309/yWwTN8mwT7CrapIhcZAMK3bdnw8a2O5Or5QK7A8Gldn8yRTGQQR0o1d-TRgU-ZU4Im06';
+  const LSPD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1478478354557702164/VqgHRhyKBZEYsAYkoqh41tF4nyAuZYgd0cawuI8wZlTvAHADY2pMPgZGrkIOgohDh_Vo';
 
   let DISCORD_WEBHOOK_URL = DEFAULT_WEBHOOK_URL;
   let title = '🏢 NUEVA POSTULACIÓN';
@@ -20,6 +21,7 @@ export async function sendNegocioApplicationToDiscord(formData: any) {
 
   // Personalización según el tipo de postulación
   if (formData.businessName.includes('LSPD')) {
+    DISCORD_WEBHOOK_URL = LSPD_WEBHOOK_URL; // Webhook específico para LSPD
     title = '👮 NUEVA POSTULACIÓN LSPD';
     color = 0x2563eb; // Azul
     fields.push(
