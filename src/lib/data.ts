@@ -143,16 +143,6 @@ export const products: Product[] = [
     available: true,
   },
   {
-    id: 16,
-    name: 'POSTULACIÓN TAXI',
-    category: 'Postulacion',
-    imageId: 'img-taxi',
-    price: 0.00,
-    features: ['Transporte público', 'Conocimiento ciudad', 'Ingresos'],
-    description: '¿Te gusta conducir y conocer gente? Downtown Cab Co. te está esperando.',
-    available: true,
-  },
-  {
     id: 17,
     name: 'POSTULACIÓN MECÁNICOS',
     category: 'Postulacion',
