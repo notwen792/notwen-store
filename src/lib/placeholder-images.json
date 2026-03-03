@@ -83,6 +83,12 @@
       "description": "VIP Bronze Membership",
       "imageUrl": "https://i.ibb.co/Y747fQQz/Gemini-Generated-Image-gphcpygphcpygphc.png",
       "imageHint": "vip bronze"
+    },
+    {
+      "id": "img-mechanic",
+      "description": "Mechanic Postulation Image",
+      "imageUrl": "https://i.ibb.co/QvThVKty/Chat-GPT-Image-3-mar-2026-11-15-03.png",
+      "imageHint": "mechanic workshop"
     }
   ]
 }
