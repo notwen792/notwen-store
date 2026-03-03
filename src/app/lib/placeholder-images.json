@@ -1,4 +1,3 @@
-
 {
   "placeholderImages": [
     {
@@ -46,13 +45,13 @@
     {
       "id": "img-staff",
       "description": "Staff Application Image",
-      "imageUrl": "https://media.discordapp.net/attachments/1465487706850066545/1477424362889154783/logo_staff.png?ex=69a4b629&is=69a364a9&hm=c0c6521f2359ba86ec8d7d02392b87681037811071a2a2d00e23474efb2d76d1&=&format=webp&quality=lossless&width=350&height=350",
+      "imageUrl": "https://i.ibb.co/Xry36RGM/Chat-GPT-Image-3-mar-2026-11-09-11.png",
       "imageHint": "staff team"
     },
     {
       "id": "img-lspd",
       "description": "LSPD Logo",
-      "imageUrl": "https://media.discordapp.net/attachments/1465487706850066545/1477425065309114379/logo_lspd.png?ex=69a4b6d0&is=69a36550&hm=e4c4198f02e7b6e876b7480f488c5fb1fdcf21bd2c02db50593dc9a382fd3d92&=&format=webp&quality=lossless&width=968&height=968",
+      "imageUrl": "https://i.ibb.co/N6b768G1/Chat-GPT-Image-3-mar-2026-11-11-23.png",
       "imageHint": "police department logo"
     },
     {
@@ -68,12 +67,6 @@
       "imageHint": "italian cafe interior"
     },
     {
-      "id": "img-ltd",
-      "description": "LTD Gas Station",
-      "imageUrl": "https://images.unsplash.com/photo-1563906267088-b02d4471f1f9?q=80&w=1080",
-      "imageHint": "gas station neon"
-    },
-    {
       "id": "img-vanilla",
       "description": "Pearls Nightclub",
       "imageUrl": "https://i.ibb.co/84dqpDcH/image.png",
@@ -82,20 +75,8 @@
     {
       "id": "img-ems",
       "description": "EMS Hospital Image",
-      "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/21ShsqZQ/Chat-GPT-Image-3-mar-2026-11-13-46.png",
       "imageHint": "hospital medical"
-    },
-    {
-      "id": "img-taxi",
-      "description": "Downtown Cab Co",
-      "imageUrl": "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?q=80&w=1080",
-      "imageHint": "taxi cab"
-    },
-    {
-      "id": "img-mechanic",
-      "description": "Mechanic Workshop",
-      "imageUrl": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=1080",
-      "imageHint": "car mechanic"
     },
     {
       "id": "img-vip-bronce",

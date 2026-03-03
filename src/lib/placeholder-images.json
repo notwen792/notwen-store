@@ -73,6 +73,12 @@
       "imageHint": "nightclub interior"
     },
     {
+      "id": "img-ems",
+      "description": "EMS Hospital Image",
+      "imageUrl": "https://i.ibb.co/21ShsqZQ/Chat-GPT-Image-3-mar-2026-11-13-46.png",
+      "imageHint": "hospital medical"
+    },
+    {
       "id": "img-vip-bronce",
       "description": "VIP Bronze Membership",
       "imageUrl": "https://i.ibb.co/Y747fQQz/Gemini-Generated-Image-gphcpygphcpygphc.png",
