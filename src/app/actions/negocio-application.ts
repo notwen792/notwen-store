@@ -1,8 +1,8 @@
 'use server';
 
 /**
- * Acción de servidor para enviar los datos del formulario de postulación a Discord.
- * Adaptado para manejar diferentes tipos de postulaciones con Webhooks específicos.
+ * Acción de servidor profesionalizada para enviar los datos de postulación a Discord.
+ * Captura campos detallados para LSPD, Staff, Bandas y Negocios.
  */
 
 export async function sendNegocioApplicationToDiscord(formData: any) {
@@ -12,79 +12,73 @@ export async function sendNegocioApplicationToDiscord(formData: any) {
 
   let DISCORD_WEBHOOK_URL = DEFAULT_WEBHOOK_URL;
   let title = '🏢 NUEVA POSTULACIÓN';
-  let color = 0xe11d48; // Rojo por defecto
+  let color = 0xe11d48; // Rojo
   const fields = [
     { name: '👤 Candidato (OOC)', value: formData.realName, inline: true },
     { name: '🎂 Edad', value: formData.age, inline: true },
     { name: '🎮 Discord', value: formData.discordName, inline: true },
   ];
 
-  // Personalización según el tipo de postulación
+  // LÓGICA DE CAMPOS ESPECÍFICOS POR ROL
   if (formData.businessName.includes('LSPD')) {
-    DISCORD_WEBHOOK_URL = LSPD_WEBHOOK_URL; // Webhook específico para LSPD
-    title = '👮 NUEVA POSTULACIÓN LSPD';
+    DISCORD_WEBHOOK_URL = LSPD_WEBHOOK_URL;
+    title = '👮 INFORME DE POSTULACIÓN LSPD';
     color = 0x2563eb; // Azul
     fields.push(
-      { name: '🚔 Experiencia Policial', value: formData.policeExperience, inline: false },
-      { name: '📚 Conocimiento Código Penal', value: formData.lawKnowledge, inline: false },
+      { name: '🚔 Trayectoria Policial', value: formData.policeExperience, inline: false },
+      { name: '📚 Conocimiento Legal', value: formData.lawKnowledge, inline: false },
+      { name: '💡 Motivación', value: formData.motivation, inline: false },
       { name: '⏰ Disponibilidad', value: formData.activityHours, inline: true },
-      { name: '❓ Por qué LSPD', value: formData.whyMe, inline: false }
+      { name: '❓ Por qué seleccionarle', value: formData.whyMe, inline: false }
     );
   } else if (formData.businessName.includes('STAFF')) {
-    DISCORD_WEBHOOK_URL = STAFF_WEBHOOK_URL; // Webhook específico para Staff
-    title = '🛡️ NUEVA POSTULACIÓN STAFF';
+    DISCORD_WEBHOOK_URL = STAFF_WEBHOOK_URL;
+    title = '🛡️ INFORME DE POSTULACIÓN STAFF';
     color = 0x10b981; // Verde
     fields.push(
       { name: '🛠️ Experiencia Moderación', value: formData.modExperience, inline: false },
-      { name: '🤝 Resolución de Conflictos', value: formData.conflictResolution, inline: false },
+      { name: '🤝 Resolución Conflictos', value: formData.conflictResolution, inline: false },
+      { name: '🌟 Aporte al Equipo', value: formData.contribution, inline: false },
       { name: '⏰ Disponibilidad', value: formData.activityHours, inline: true },
-      { name: '❓ Por qué Staff', value: formData.whyMe, inline: false }
-    );
-  } else if (formData.businessName.includes('MECÁNICOS')) {
-    title = '🔧 NUEVA POSTULACIÓN MECÁNICOS';
-    color = 0xf59e0b; // Ámbar
-    fields.push(
-      { name: '🛠️ Experiencia Mecánica', value: formData.mechanicExperience, inline: false },
-      { name: '🏎️ Conocimiento Tuning/Motores', value: formData.tuningKnowledge, inline: false },
-      { name: '⏰ Disponibilidad', value: formData.activityHours, inline: true },
-      { name: '❓ Por qué Mecánico', value: formData.whyMe, inline: false }
+      { name: '❓ Por qué seleccionarle', value: formData.whyMe, inline: false }
     );
   } else if (formData.businessName.includes('BANDAS')) {
-    title = '💀 NUEVA POSTULACIÓN BANDAS';
+    title = '💀 INFORME DE POSTULACIÓN BANDAS';
     color = 0x8b5cf6; // Púrpura
     fields.push(
-      { name: '📜 Historia / Lore', value: formData.gangHistory, inline: false },
-      { name: '🎯 Objetivos Criminales', value: formData.gangObjectives, inline: false },
-      { name: '📍 Zona Deseada', value: formData.gangLocation, inline: true },
+      { name: '📜 Lore / Historia', value: formData.gangHistory, inline: false },
+      { name: '🎯 Objetivos Estratégicos', value: formData.gangObjectives, inline: false },
+      { name: '📍 Territorio', value: formData.gangLocation, inline: true },
       { name: '👥 Miembros Iniciales', value: formData.teamSize, inline: true },
       { name: '⏰ Disponibilidad', value: formData.activityHours, inline: true },
-      { name: '❓ Por qué elegirle', value: formData.whyMe, inline: false }
+      { name: '❓ Por qué seleccionarle', value: formData.whyMe, inline: false }
     );
   } else {
-    // Formulario de Negocio Estándar
-    title = `🏢 POSTULACIÓN ACTIVO: ${formData.businessName}`;
+    // Negocios Estándar
+    title = `🏢 INFORME DE ACTIVO: ${formData.businessName}`;
     fields.push(
-      { name: '🏢 Negocio', value: `**${formData.businessName}**`, inline: false },
-      { name: '💼 Experiencia Gestión', value: formData.previousExperience, inline: false },
-      { name: '⏰ Disponibilidad', value: formData.activityHours, inline: true },
-      { name: '👥 Equipo Inicial', value: formData.teamSize, inline: true },
-      { name: '🎯 Enfoque', value: formData.businessFocus, inline: false },
-      { name: '💡 Ideas/Items', value: formData.itemsAndIdeas, inline: false },
-      { name: '🌟 Aporte', value: formData.valueProposition, inline: false },
-      { name: '❓ Por qué elegirle', value: formData.whyMe, inline: false }
+      { name: '🏢 Activo Solicitado', value: `**${formData.businessName}**`, inline: false },
+      { name: '💼 Exp. Gestión', value: formData.previousExperience, inline: false },
+      { name: '🎯 Enfoque RP', value: formData.businessFocus, inline: false },
+      { name: '💡 Items/Mecánicas', value: formData.itemsAndIdeas, inline: false },
+      { name: '🌟 Valor Añadido', value: formData.valueProposition, inline: false },
+      { name: '👥 Equipo', value: formData.teamSize, inline: true },
+      { name: '⏰ Horas', value: formData.activityHours, inline: true },
+      { name: '❓ Por qué seleccionarle', value: formData.whyMe, inline: false }
     );
   }
 
   if (formData.extraInfo) {
-    fields.push({ name: '📝 Info Extra', value: formData.extraInfo, inline: false });
+    fields.push({ name: '📝 Información Adicional', value: formData.extraInfo, inline: false });
   }
 
   const embed = {
     title,
+    description: `Se ha recibido una nueva solicitud profesional para el servidor.`,
     color,
     fields,
     timestamp: new Date().toISOString(),
-    footer: { text: 'Sistema de Gestión de Solicitudes - NOTWEN RP' }
+    footer: { text: 'NOTWEN RP - Sistema de Gestión de RRHH' }
   };
 
   try {
@@ -99,6 +93,6 @@ export async function sendNegocioApplicationToDiscord(formData: any) {
     return { success: true };
   } catch (error) {
     console.error(error);
-    return { success: false, error: 'No se pudo enviar la solicitud.' };
+    return { success: false, error: 'No se pudo procesar la solicitud en Discord.' };
   }
 }
