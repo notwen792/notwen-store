@@ -12,21 +12,25 @@ export async function sendNegocioApplicationToDiscord(formData: any) {
   }
 
   const embed = {
-    title: '🏢 NUEVA POSTULACIÓN A NEGOCIO / ACTIVO',
-    color: 0xe11d48, // Rojo destructivo de la marca
-    description: `Nueva postulación recibida para un activo de **NOTWEN RP**.`,
+    title: '🏢 NUEVA POSTULACIÓN PROFESIONAL A NEGOCIO',
+    color: 0xe11d48,
+    description: `Se ha recibido un nuevo proyecto de gestión para un activo en **NOTWEN RP**.`,
     fields: [
-      { name: '👤 Nombre (OOC)', value: formData.realName, inline: true },
+      { name: '👤 Candidato (OOC)', value: formData.realName, inline: true },
       { name: '🎂 Edad', value: formData.age, inline: true },
       { name: '🎮 Discord', value: formData.discordName, inline: true },
-      { name: '🏢 Activo / Negocio', value: formData.businessName, inline: false },
-      { name: '🎯 Enfoque del Negocio', value: formData.businessFocus, inline: false },
-      { name: '💡 Items e Ideas', value: formData.itemsAndIdeas, inline: false },
-      { name: '❓ ¿Por qué tú?', value: formData.whyMe, inline: false },
+      { name: '🏢 Activo / Negocio', value: `**${formData.businessName}**`, inline: false },
+      { name: '💼 Experiencia Previa', value: formData.previousExperience, inline: false },
+      { name: '⏰ Disponibilidad Semanal', value: formData.activityHours, inline: true },
+      { name: '👥 Equipo Inicial', value: formData.teamSize, inline: true },
+      { name: '🎯 Enfoque y Visión', value: formData.businessFocus, inline: false },
+      { name: '💡 Items e Ideas Técnicas', value: formData.itemsAndIdeas, inline: false },
+      { name: '🌟 Aporte a la Comunidad', value: formData.valueProposition, inline: false },
+      { name: '❓ Por qué elegirle', value: formData.whyMe, inline: false },
       { name: '📝 Información Extra', value: formData.extraInfo || 'No proporcionada', inline: false },
     ],
     timestamp: new Date().toISOString(),
-    footer: { text: 'Sistema de Gestión de Activos - NOTWEN' }
+    footer: { text: 'Sistema de Gestión de Activos - NOTWEN RP' }
   };
 
   try {
