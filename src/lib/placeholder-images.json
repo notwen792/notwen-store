@@ -45,7 +45,7 @@
     {
       "id": "img-staff",
       "description": "Staff Application Image",
-      "imageUrl": "https://media.discordapp.net/attachments/1465487706850066545/1477424362889154783/logo_staff.png?ex=69a4b629&is=69a364a9&hm=c0c6521f2359ba86ec8d7d02392b87681037811071a2a2d00e23474efb2d76d1&=&format=webp&quality=lossless&width=350&height=350",
+      "imageUrl": "https://i.ibb.co/PZF34c3k/Chat-GPT-Image-3-mar-2026-11-04-36.png",
       "imageHint": "staff team"
     },
     {
@@ -65,12 +65,6 @@
       "description": "Corretto Italian Cafe",
       "imageUrl": "https://i.ibb.co/Y7ncD6Cj/image.png",
       "imageHint": "italian cafe interior"
-    },
-    {
-      "id": "img-ltd",
-      "description": "LTD Gas Station",
-      "imageUrl": "https://images.unsplash.com/photo-1563906267088-b02d4471f1f9?q=80&w=1080",
-      "imageHint": "gas station neon"
     },
     {
       "id": "img-vanilla",
