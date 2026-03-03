@@ -17,22 +17,43 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { sendNegocioApplicationToDiscord } from '@/app/actions/negocio-application';
 import { useToast } from '@/hooks/use-toast';
-import { Loader2, Send, Building2, Briefcase, Clock, Users, Star } from 'lucide-react';
+import { Loader2, Send, Building2, Briefcase, Clock, Users, Star, Shield, Wrench, BadgeCheck } from 'lucide-react';
 
-const formSchema = z.object({
+const baseSchema = z.object({
   realName: z.string().min(2, 'El nombre es obligatorio'),
   age: z.string().min(1, 'La edad es obligatoria'),
   discordName: z.string().min(2, 'El Discord es obligatorio'),
   businessName: z.string().min(1, 'El nombre del negocio es obligatorio'),
-  previousExperience: z.string().min(10, 'Cuéntanos tu experiencia previa'),
   activityHours: z.string().min(1, 'Indica las horas estimadas'),
+  whyMe: z.string().min(10, 'Explica por qué deberías ser tú'),
+  extraInfo: z.string().optional(),
+});
+
+// Esquemas específicos
+const negocioSchema = baseSchema.extend({
+  previousExperience: z.string().min(10, 'Cuéntanos tu experiencia previa'),
   teamSize: z.string().min(1, 'Indica el tamaño del equipo'),
   businessFocus: z.string().min(10, 'Cuéntanos el enfoque que le darás'),
   itemsAndIdeas: z.string().min(10, 'Dinos qué items o ideas tienes'),
   valueProposition: z.string().min(15, 'Explica qué aportarás al servidor'),
-  whyMe: z.string().min(10, 'Explica por qué deberías ser tú'),
-  extraInfo: z.string().optional(),
 });
+
+const lspdSchema = baseSchema.extend({
+  policeExperience: z.string().min(10, 'Describe tu experiencia previa en cuerpos de seguridad'),
+  lawKnowledge: z.string().min(10, '¿Conoces el código penal y procesal?'),
+});
+
+const staffSchema = baseSchema.extend({
+  modExperience: z.string().min(10, 'Describe tu experiencia moderando comunidades'),
+  conflictResolution: z.string().min(10, '¿Cómo manejas situaciones de conflicto entre usuarios?'),
+});
+
+const mechanicSchema = baseSchema.extend({
+  mechanicExperience: z.string().min(10, 'Describe tu experiencia en talleres mecánicos'),
+  tuningKnowledge: z.string().min(10, '¿Qué conocimientos tienes sobre modificaciones y motores?'),
+});
+
+type FormValues = z.infer<typeof negocioSchema> & z.infer<typeof lspdSchema> & z.infer<typeof staffSchema> & z.infer<typeof mechanicSchema>;
 
 export function NegocioForm({ 
   onSuccess, 
@@ -43,26 +64,45 @@ export function NegocioForm({
 }) {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+
+  const isLSPD = initialBusinessName?.includes('LSPD');
+  const isStaff = initialBusinessName?.includes('STAFF');
+  const isMechanic = initialBusinessName?.includes('MECÁNICOS');
+
+  let schema: any = negocioSchema;
+  if (isLSPD) schema = lspdSchema;
+  else if (isStaff) schema = staffSchema;
+  else if (isMechanic) schema = mechanicSchema;
   
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<FormValues>({
+    resolver: zodResolver(schema),
     defaultValues: {
       realName: '',
       age: '',
       discordName: '',
       businessName: initialBusinessName || '',
-      previousExperience: '',
       activityHours: '',
+      whyMe: '',
+      extraInfo: '',
+      // Negocio
+      previousExperience: '',
       teamSize: '',
       businessFocus: '',
       itemsAndIdeas: '',
       valueProposition: '',
-      whyMe: '',
-      extraInfo: '',
+      // LSPD
+      policeExperience: '',
+      lawKnowledge: '',
+      // Staff
+      modExperience: '',
+      conflictResolution: '',
+      // Mechanic
+      mechanicExperience: '',
+      tuningKnowledge: '',
     },
   });
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: FormValues) {
     setIsLoading(true);
     const result = await sendNegocioApplicationToDiscord(values);
     setIsLoading(false);
@@ -136,10 +176,13 @@ export function NegocioForm({
                 name="businessName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Activo Seleccionado</FormLabel>
+                    <FormLabel>Puesto/Activo</FormLabel>
                     <FormControl>
                       <div className="relative">
-                        <Building2 className="absolute left-3 top-2.5 h-4 w-4 text-destructive" />
+                        {isLSPD && <BadgeCheck className="absolute left-3 top-2.5 h-4 w-4 text-blue-500" />}
+                        {isStaff && <Shield className="absolute left-3 top-2.5 h-4 w-4 text-emerald-500" />}
+                        {isMechanic && <Wrench className="absolute left-3 top-2.5 h-4 w-4 text-amber-500" />}
+                        {!isLSPD && !isStaff && !isMechanic && <Building2 className="absolute left-3 top-2.5 h-4 w-4 text-destructive" />}
                         <Input {...field} readOnly className="pl-10 bg-muted/20 border-white/10 cursor-default font-bold text-white" />
                       </div>
                     </FormControl>
@@ -151,108 +194,228 @@ export function NegocioForm({
           </div>
 
           <div className="space-y-4">
-            <h4 className="text-xs font-black uppercase tracking-widest text-destructive/80 border-b border-white/5 pb-2">Perfil Profesional y Compromiso</h4>
+            <h4 className="text-xs font-black uppercase tracking-widest text-destructive/80 border-b border-white/5 pb-2">Perfil y Experiencia</h4>
             
-            <FormField
-              control={form.control}
-              name="previousExperience"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="flex items-center gap-2">
-                    <Briefcase className="h-4 w-4 text-destructive" />
-                    Experiencia previa en gestión (IC/OOC)
-                  </FormLabel>
-                  <FormControl>
-                    <Textarea placeholder="Describe tu experiencia previa gestionando grupos o negocios..." {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            {/* CAMPOS DINÁMICOS SEGÚN EL TIPO */}
+            {isLSPD && (
+              <>
+                <FormField
+                  control={form.control}
+                  name="policeExperience"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="flex items-center gap-2">
+                        <BadgeCheck className="h-4 w-4 text-blue-500" />
+                        Experiencia previa en cuerpos de seguridad
+                      </FormLabel>
+                      <FormControl>
+                        <Textarea placeholder="Cuéntanos en qué servidores has sido policía y qué rango alcanzaste..." {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="lawKnowledge"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Conocimientos del código penal/procesal</FormLabel>
+                      <FormControl>
+                        <Textarea placeholder="¿Qué nivel de conocimiento tienes sobre las leyes de la ciudad?" {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </>
+            )}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FormField
-                control={form.control}
-                name="activityHours"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="flex items-center gap-2">
-                      <Clock className="h-4 w-4 text-destructive" />
-                      Horas semanales estimadas
-                    </FormLabel>
-                    <FormControl>
-                      <Input placeholder="Ej: 20-30 horas" {...field} className="bg-background/50 border-white/10" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="teamSize"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="flex items-center gap-2">
-                      <Users className="h-4 w-4 text-destructive" />
-                      Tamaño del equipo inicial
-                    </FormLabel>
-                    <FormControl>
-                      <Input type="number" placeholder="Personas confirmadas" {...field} className="bg-background/50 border-white/10" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-          </div>
+            {isStaff && (
+              <>
+                <FormField
+                  control={form.control}
+                  name="modExperience"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="flex items-center gap-2">
+                        <Shield className="h-4 w-4 text-emerald-500" />
+                        Experiencia previa en moderación
+                      </FormLabel>
+                      <FormControl>
+                        <Textarea placeholder="Describe tu experiencia gestionando comunidades o servidores..." {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="conflictResolution"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Resolución de conflictos</FormLabel>
+                      <FormControl>
+                        <Textarea placeholder="¿Cómo actuarías ante una disputa grave entre dos usuarios?" {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </>
+            )}
 
-          <div className="space-y-4">
-            <h4 className="text-xs font-black uppercase tracking-widest text-destructive/80 border-b border-white/5 pb-2">Proyecto de Negocio</h4>
-            
-            <FormField
-              control={form.control}
-              name="businessFocus"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Enfoque y visión del negocio</FormLabel>
-                  <FormControl>
-                    <Textarea placeholder="¿Qué tipo de rol se llevará a cabo? ¿Cómo será el ambiente?" {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            {isMechanic && (
+              <>
+                <FormField
+                  control={form.control}
+                  name="mechanicExperience"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="flex items-center gap-2">
+                        <Wrench className="h-4 w-4 text-amber-500" />
+                        Experiencia previa en mecánica
+                      </FormLabel>
+                      <FormControl>
+                        <Textarea placeholder="¿Has trabajado antes en talleres? ¿Qué roles has desempeñado?" {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="tuningKnowledge"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Conocimientos técnicos de vehículos</FormLabel>
+                      <FormControl>
+                        <Textarea placeholder="Describe tus conocimientos sobre tunning, motores y reparaciones..." {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </>
+            )}
 
-            <FormField
-              control={form.control}
-              name="itemsAndIdeas"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Items personalizados e ideas técnicas</FormLabel>
-                  <FormControl>
-                    <Textarea placeholder="¿Qué items o mecánicas específicas te gustaría implementar?" {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            {/* Campos originales para negocios si no es ninguno de los anteriores */}
+            {!isLSPD && !isStaff && !isMechanic && (
+              <>
+                <FormField
+                  control={form.control}
+                  name="previousExperience"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="flex items-center gap-2">
+                        <Briefcase className="h-4 w-4 text-destructive" />
+                        Experiencia previa en gestión (IC/OOC)
+                      </FormLabel>
+                      <FormControl>
+                        <Textarea placeholder="Describe tu experiencia previa gestionando grupos o negocios..." {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <FormField
+                    control={form.control}
+                    name="teamSize"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="flex items-center gap-2">
+                          <Users className="h-4 w-4 text-destructive" />
+                          Tamaño del equipo inicial
+                        </FormLabel>
+                        <FormControl>
+                          <Input type="number" placeholder="Personas confirmadas" {...field} className="bg-background/50 border-white/10" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="activityHours"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="flex items-center gap-2">
+                          <Clock className="h-4 w-4 text-destructive" />
+                          Horas semanales
+                        </FormLabel>
+                        <FormControl>
+                          <Input placeholder="Ej: 20-30 horas" {...field} className="bg-background/50 border-white/10" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+                <FormField
+                  control={form.control}
+                  name="businessFocus"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Enfoque y visión del negocio</FormLabel>
+                      <FormControl>
+                        <Textarea placeholder="¿Qué tipo de rol se llevará a cabo? ¿Cómo será el ambiente?" {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="itemsAndIdeas"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Items personalizados e ideas técnicas</FormLabel>
+                      <FormControl>
+                        <Textarea placeholder="¿Qué items o mecánicas específicas te gustaría implementar?" {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="valueProposition"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="flex items-center gap-2">
+                        <Star className="h-4 w-4 text-destructive" />
+                        ¿Qué aportará tu gestión a NOTWEN RP?
+                      </FormLabel>
+                      <FormControl>
+                        <Textarea placeholder="Describe por qué tu proyecto mejorará la experiencia..." {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </>
+            )}
 
-            <FormField
-              control={form.control}
-              name="valueProposition"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="flex items-center gap-2">
-                    <Star className="h-4 w-4 text-destructive" />
-                    ¿Qué aportará tu gestión a NOTWEN RP?
-                  </FormLabel>
-                  <FormControl>
-                    <Textarea placeholder="Describe por qué tu proyecto mejorará la experiencia de la comunidad..." {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            {/* Campos comunes que siempre aparecen para postulaciones básicas */}
+            {(isLSPD || isStaff || isMechanic) && (
+               <FormField
+                  control={form.control}
+                  name="activityHours"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="flex items-center gap-2">
+                        <Clock className="h-4 w-4 text-blue-400" />
+                        Horas semanales disponibles
+                      </FormLabel>
+                      <FormControl>
+                        <Input placeholder="Ej: 20-30 horas" {...field} className="bg-background/50 border-white/10" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+               />
+            )}
 
             <FormField
               control={form.control}
@@ -261,7 +424,7 @@ export function NegocioForm({
                 <FormItem>
                   <FormLabel>¿Por qué deberías ser el elegido?</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Tus puntos fuertes como gestor..." {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
+                    <Textarea placeholder="Tus puntos fuertes para este cargo..." {...field} className="bg-background/50 border-white/10 min-h-[80px]" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -292,7 +455,7 @@ export function NegocioForm({
           {isLoading ? (
             <><Loader2 className="mr-2 h-6 w-6 animate-spin" /> PROCESANDO...</>
           ) : (
-            <><Send className="mr-2 h-6 w-6" /> ENVIAR PROYECTO</>
+            <><Send className="mr-2 h-6 w-6" /> ENVIAR POSTULACIÓN</>
           )}
         </Button>
       </form>
