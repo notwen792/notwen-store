@@ -2,16 +2,14 @@
 
 /**
  * Acción de servidor para enviar los datos del formulario de postulación a Discord.
- * Adaptado para manejar diferentes tipos de postulaciones (Negocios, LSPD, Staff, Mecánicos, Bandas).
+ * Adaptado para manejar diferentes tipos de postulaciones con Webhooks específicos.
  */
 
 export async function sendNegocioApplicationToDiscord(formData: any) {
-  const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1478153331380588556/_BiJY0PI5A2CKBhH3r4Ep1q8b2B77-PhkOJWUC2SciW2zIN45vwwzVfxpSGPNXlqnLNO'; 
+  const DEFAULT_WEBHOOK_URL = 'https://discord.com/api/webhooks/1478153331380588556/_BiJY0PI5A2CKBhH3r4Ep1q8b2B77-PhkOJWUC2SciW2zIN45vwwzVfxpSGPNXlqnLNO'; 
+  const STAFF_WEBHOOK_URL = 'https://discord.com/api/webhooks/1478478593469452309/yWwTN8mwT7CrapIhcZAMK3bdnw8a2O5Or5QK7A8Gldn8yRTGQQR0o1d-TRgU-ZU4Im06';
 
-  if (!DISCORD_WEBHOOK_URL) {
-    return { success: false, error: 'Configuración de Webhook no encontrada.' };
-  }
-
+  let DISCORD_WEBHOOK_URL = DEFAULT_WEBHOOK_URL;
   let title = '🏢 NUEVA POSTULACIÓN';
   let color = 0xe11d48; // Rojo por defecto
   const fields = [
@@ -31,6 +29,7 @@ export async function sendNegocioApplicationToDiscord(formData: any) {
       { name: '❓ Por qué LSPD', value: formData.whyMe, inline: false }
     );
   } else if (formData.businessName.includes('STAFF')) {
+    DISCORD_WEBHOOK_URL = STAFF_WEBHOOK_URL; // Webhook específico para Staff
     title = '🛡️ NUEVA POSTULACIÓN STAFF';
     color = 0x10b981; // Verde
     fields.push(
