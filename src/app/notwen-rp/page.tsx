@@ -21,7 +21,7 @@ export default function NotwenRpPage() {
                 Bienvenidos a nuestra comunidad NOTWEN RP, un servidor de roleplay creado por entusiastas con la ambición de crecer.
             </p>
             <Button asChild size="lg" className="mt-10 bg-gradient-to-r from-destructive to-[hsl(var(--chart-1))] hover:brightness-110 transition-all duration-300 shadow-xl shadow-destructive/20 hover:scale-105 active:scale-95">
-                <Link href="https://discord.gg/Z6KvkfFVts" target="_blank" rel="noopener noreferrer">
+                <Link href="https://discord.gg/VtEeEzqyEm" target="_blank" rel="noopener noreferrer">
                     Únete al servidor
                     <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -88,7 +88,7 @@ export default function NotwenRpPage() {
             <div className="bg-card p-8 rounded-lg border border-border/20 text-white transition-all duration-700 ease-in-out hover:rotate-[-0.3deg] hover:scale-[1.005] hover:border-destructive/30 shadow-sm hover:shadow-destructive/5 cursor-default">
                 <h3 className="font-headline text-3xl tracking-wider mb-6 text-destructive">¿Cómo entrar?</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <Link href="https://discord.gg/Z6KvkfFVts" target="_blank" rel="noopener noreferrer" className="flex gap-4 p-4 rounded-lg bg-background/40 border border-border/10 hover:bg-destructive/10 hover:border-destructive/30 transition-all group">
+                    <Link href="https://discord.gg/VtEeEzqyEm" target="_blank" rel="noopener noreferrer" className="flex gap-4 p-4 rounded-lg bg-background/40 border border-border/10 hover:bg-destructive/10 hover:border-destructive/30 transition-all group">
                         <MessageSquare className="h-6 w-6 text-destructive shrink-0 group-hover:scale-110 transition-transform" />
                         <div>
                             <h4 className="font-bold text-white mb-1">1. Únete al Discord</h4>

@@ -23,7 +23,7 @@ export function Header() {
           isMounted && "animate-button-bob"
         )}
       >
-        <Link href="https://discord.gg/Z6KvkfFVts" target="_blank" rel="noopener noreferrer">
+        <Link href="https://discord.gg/VtEeEzqyEm" target="_blank" rel="noopener noreferrer">
           DISCORD
           <ShoppingCart className="h-5 w-5" />
         </Link>
